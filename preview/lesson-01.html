@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>01 المضارع البسيط | قواعد الإنجليزية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: a guided lesson — one idea per screen, moved through like slides; header with progress, stage in the middle, navigation at the bottom. */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --ink: #141a2b;
+  --muted: #5f6880;
+  --line: #e2e6ef;
+  --soft: #eef1f7;
+  --accent: #c2362f;          /* section colour: present tenses */
+  --accent-soft: #fbe9e7;
+  --subj: #2563eb;  --subj-soft: #e3ecfe;
+  --verb: #15803d;  --verb-soft: #dcf3e4;
+  --end:  #ea580c;  --end-soft: #ffe8d9;
+  --be:   #7c3aed;  --be-soft: #efe7fe;
+  --ok: #15803d; --ok-soft: #dcf3e4;
+  --bad: #c62828; --bad-soft: #fde4e4;
+  --f: "Cairo", "Segoe UI", Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e121a; --card: #171d29; --ink: #eef1f7; --muted: #9aa3b8; --line: #283043; --soft: #1f2636;
+    --accent: #f2766c; --accent-soft: #3a2224;
+    --subj: #7aa7ff; --subj-soft: #1c2b4a; --verb: #5ad18a; --verb-soft: #16352a;
+    --end: #ffa463; --end-soft: #3e2a1b; --be: #b994ff; --be-soft: #2c2347;
+    --ok: #5ad18a; --ok-soft: #16352a; --bad: #ff8a80; --bad-soft: #3b2121;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e121a; --card: #171d29; --ink: #eef1f7; --muted: #9aa3b8; --line: #283043; --soft: #1f2636;
+  --accent: #f2766c; --accent-soft: #3a2224;
+  --subj: #7aa7ff; --subj-soft: #1c2b4a; --verb: #5ad18a; --verb-soft: #16352a;
+  --end: #ffa463; --end-soft: #3e2a1b; --be: #b994ff; --be-soft: #2c2347;
+  --ok: #5ad18a; --ok-soft: #16352a; --bad: #ff8a80; --bad-soft: #3b2121;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f); font-size: 17px; line-height: 1.7; }
+button { font-family: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+.en { direction: ltr; unicode-bidi: isolate; }
+
+/* ---------- app frame ---------- */
+.app { height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
+.top {
+  padding-top: max(10px, env(safe-area-inset-top, 0px)); padding-bottom: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--card); border-bottom: 1px solid var(--line);
+}
+.top-in { max-width: 980px; margin: 0 auto; display: grid; gap: 8px; }
+.top-row { display: flex; align-items: center; gap: 12px; }
+.badge { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.ttl { min-width: 0; line-height: 1.3; }
+.ttl b { display: block; font-size: 1.05rem; }
+.ttl span { font-size: .85rem; color: var(--muted); }
+.home { margin-inline-start: auto; color: var(--muted); text-decoration: none; font-size: .9rem; white-space: nowrap; }
+.steps { display: flex; gap: 5px; }
+.steps button { flex: 1; height: 7px; border: 0; padding: 0; border-radius: 99px; background: var(--soft); cursor: pointer; }
+.steps button.done { background: color-mix(in srgb, var(--accent) 45%, var(--soft)); }
+.steps button.cur { background: var(--accent); }
+
+.stage { overflow: hidden auto; position: relative;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.screen { max-width: 980px; margin: 0 auto; padding-block: 26px 30px; display: none; }
+.screen.on { display: grid; gap: 22px; align-content: start; animation: in-next .35s ease both; }
+.screen.on.back { animation-name: in-prev; }
+@keyframes in-next { from { opacity: 0; transform: translateX(-36px); } to { opacity: 1; transform: none; } }
+@keyframes in-prev { from { opacity: 0; transform: translateX(36px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .screen.on { animation: none; } }
+
+.kicker { font-size: .85rem; font-weight: 700; color: var(--accent); }
+h1 { font-size: clamp(1.6rem, 4.2vw, 2.4rem); line-height: 1.3; margin: 0; font-weight: 800; text-wrap: balance; }
+h2 { font-size: 1.15rem; margin: 0; font-weight: 700; }
+.lead { font-size: 1.12rem; color: var(--muted); max-width: 60ch; margin: 0; }
+.head { display: grid; gap: 6px; }
+
+.bot {
+  padding-top: 10px; padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  background: var(--card); border-top: 1px solid var(--line);
+}
+.bot-in { max-width: 980px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.btn { border: 0; border-radius: 99px; padding: 10px 22px; font-size: 1rem; font-weight: 700; cursor: pointer; background: var(--accent); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+.btn:disabled { opacity: .35; cursor: default; }
+.count { font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- building blocks ---------- */
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 760px) { .grid3, .grid2 { grid-template-columns: 1fr; } }
+
+.blk { display: inline-block; padding: 4px 14px; border-radius: 12px; font-weight: 700; }
+.b-subj { background: var(--subj-soft); color: var(--subj); }
+.b-verb { background: var(--verb-soft); color: var(--verb); }
+.b-end  { color: var(--end); background: var(--end-soft); border-radius: 6px; padding: 0 3px; margin-inline-start: 1px; }
+.b-be   { background: var(--be-soft); color: var(--be); }
+.b-rest { color: var(--ink); font-weight: 600; }
+
+/* timeline */
+.tl { padding: 64px 8px 6px; direction: ltr; }
+.tl-line { position: relative; height: 4px; background: var(--ink); border-radius: 2px; margin: 0 6px; }
+.tl-line::after { content: ""; position: absolute; right: -8px; top: -6px; border: 8px solid transparent; border-left-color: var(--ink); border-right: 0; }
+.tl-dot { position: absolute; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--card); animation: pop .4s ease both; }
+.tl-now { position: absolute; left: 50%; top: -34px; bottom: -34px; width: 2px; background: repeating-linear-gradient(var(--muted) 0 5px, transparent 5px 10px); }
+.tl-band { position: absolute; height: 14px; top: -34px; left: 0; right: 0; border-radius: 99px; background: color-mix(in srgb, var(--subj) 70%, transparent); }
+.tl-tag { position: absolute; font-size: .95rem; font-weight: 700; white-space: nowrap; transform: translateX(-50%); }
+.tl-labels { display: flex; justify-content: space-between; margin-top: 60px; font-size: .9rem; color: var(--muted); direction: rtl; }
+.tl-labels b { color: var(--accent); }
+@keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
+
+.legend2 { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: .95rem; }
+.legend2 span { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 26px; height: 12px; border-radius: 99px; display: inline-block; }
+
+/* use cards */
+.use { display: grid; gap: 10px; align-content: start; text-align: center; justify-items: center; }
+.ico { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); }
+.ico svg { width: 32px; height: 32px; }
+.use .ex { font-size: 1.15rem; font-weight: 700; }
+.use .ar { color: var(--muted); font-size: .92rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.tag { font-size: .85rem; background: var(--soft); border-radius: 99px; padding: 1px 10px; }
+
+/* builder */
+.pick { display: flex; flex-wrap: wrap; gap: 8px; }
+.pick button { border: 0; background: var(--soft); color: var(--ink); border-radius: 99px; padding: 6px 16px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+.pick button[aria-pressed="true"] { background: var(--subj); color: #fff; }
+.sentence { direction: ltr; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 800; padding: 26px 10px; min-height: 120px; }
+.sentence .blk { padding: 6px 18px; border-radius: 16px; }
+.plus { color: var(--muted); font-weight: 400; font-size: .7em; }
+.ending { display: inline-block; animation: pop .35s ease both; }
+.groups { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grp { border-radius: 22px; padding: 14px; text-align: center; border: 2px dashed var(--line); transition: border-color .2s, background .2s; }
+.grp.lit { border-style: solid; border-color: var(--subj); background: var(--subj-soft); }
+.grp .who { font-weight: 800; font-size: 1.05rem; }
+.grp .res { direction: ltr; font-size: 1.3rem; font-weight: 800; color: var(--verb); }
+
+/* spelling */
+.rules3 .rule { text-align: center; display: grid; gap: 8px; transition: transform .2s, box-shadow .2s; }
+.rule.lit { box-shadow: 0 0 0 3px var(--end); transform: translateY(-3px); }
+.rule .cond { font-size: .95rem; color: var(--muted); }
+.rule .sym { font-size: 1.7rem; font-weight: 800; color: var(--end); direction: ltr; }
+.rule .pair { direction: ltr; font-size: 1.1rem; font-weight: 700; }
+.arrow { color: var(--muted); margin: 0 6px; }
+.result { direction: ltr; text-align: center; font-size: clamp(1.5rem, 5vw, 2.1rem); font-weight: 800; min-height: 1.6em; }
+
+/* be / have */
+.map { display: grid; gap: 8px; }
+.map-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; direction: ltr; }
+.map-row .l { text-align: right; font-weight: 700; color: var(--subj); }
+.map-row .r { font-weight: 800; }
+.map-row .ar2 { width: 46px; height: 2px; background: var(--muted); position: relative; }
+.map-row .ar2::after { content: ""; position: absolute; right: -2px; top: -5px; border: 6px solid transparent; border-left-color: var(--muted); border-right: 0; }
+.warn { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: center; direction: ltr; font-size: 1.25rem; font-weight: 700; }
+.x { color: var(--bad); text-decoration: line-through; text-decoration-thickness: 2px; }
+.v { color: var(--ok); }
+
+/* frequency */
+.freq { direction: ltr; padding: 46px 18px 46px; }
+.freq-track { position: relative; height: 12px; border-radius: 99px; background: linear-gradient(90deg, var(--soft), var(--accent)); }
+.fq { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 18px; height: 18px; border-radius: 50%; background: var(--card); border: 3px solid var(--accent); cursor: pointer; padding: 0; }
+.fq span { position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: .95rem; font-weight: 700; color: var(--ink); }
+.fq.up span { bottom: 22px; } .fq.dn span { top: 22px; }
+.fq span small { display: block; text-align: center; font-weight: 400; color: var(--muted); font-size: .78rem; }
+.fq[aria-pressed="true"] { background: var(--accent); transform: translate(-50%, -50%) scale(1.25); }
+.slot { display: inline-block; min-width: 3.5em; border-bottom: 3px solid var(--accent); color: var(--accent); text-align: center; }
+.pos { display: grid; gap: 12px; }
+.pos .s { direction: ltr; font-size: clamp(1.25rem, 4vw, 1.7rem); font-weight: 800; text-align: center; }
+.pos .why { text-align: center; color: var(--muted); font-size: .92rem; }
+
+/* flip cards */
+.flip { perspective: 900px; cursor: pointer; min-height: 150px; border: 0; padding: 0; background: none; text-align: center; }
+.flip-in { position: relative; width: 100%; height: 100%; min-height: 150px; transition: transform .5s; transform-style: preserve-3d; }
+.flip.on .flip-in { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 22px; padding: 16px; display: grid; align-content: center; gap: 6px; border: 1px solid var(--line); }
+.face.f { background: var(--bad-soft); }
+.face.b { background: var(--ok-soft); transform: rotateY(180deg); }
+.face .s { direction: ltr; font-size: 1.25rem; font-weight: 800; }
+.face .hint { font-size: .82rem; color: var(--muted); }
+.face .why { font-size: .9rem; color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .flip-in { transition: none; } }
+
+/* inline check + quiz */
+.check { border-radius: 22px; padding: 16px 18px; background: var(--card); border: 2px dashed color-mix(in srgb, var(--accent) 40%, var(--line)); display: grid; gap: 10px; }
+.check .lab { font-size: .85rem; font-weight: 700; color: var(--accent); }
+.qtext { direction: ltr; font-size: 1.3rem; font-weight: 700; }
+.blank { display: inline-block; min-width: 3.5em; border-bottom: 3px solid var(--accent); }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; direction: ltr; }
+.opt { border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 99px; padding: 8px 18px; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
+.opt.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+.opt.no { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); text-decoration: line-through; }
+.opt:disabled { cursor: default; }
+.fb { border-radius: 14px; padding: 10px 14px; font-size: .95rem; }
+.fb.ok { background: var(--ok-soft); } .fb.no { background: var(--bad-soft); }
+.fb b { display: block; }
+.fb.ok b { color: var(--ok); } .fb.no b { color: var(--bad); }
+.fb .model { direction: ltr; font-weight: 700; }
+.ansrow { display: flex; gap: 8px; direction: ltr; flex-wrap: wrap; }
+.ansrow input { flex: 1 1 220px; min-width: 0; font: 600 1.1rem var(--f); padding: 9px 16px; border-radius: 99px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); }
+.quiz { max-width: 720px; width: 100%; justify-self: center; display: grid; gap: 14px; }
+.qhead { display: flex; align-items: center; gap: 12px; }
+.qbar { flex: 1; height: 8px; border-radius: 99px; background: var(--soft); overflow: hidden; }
+.qbar i { display: block; height: 100%; background: var(--accent); transition: width .3s; }
+.qtype { font-size: .82rem; font-weight: 700; color: var(--accent); }
+.qask { color: var(--muted); font-size: .95rem; }
+.done-ring { display: grid; justify-items: center; gap: 10px; text-align: center; }
+.done-ring svg { width: 150px; height: 150px; }
+
+/* summary */
+.sum { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 760px) { .sum { grid-template-columns: 1fr; } }
+.sum .card { display: grid; gap: 8px; align-content: start; }
+.sum h2 { color: var(--accent); }
+.sum .line { direction: ltr; font-weight: 700; font-size: 1.1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.note { font-size: .9rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="top-in">
+      <div class="top-row">
+        <div class="badge">01</div>
+        <div class="ttl"><b>المضارع البسيط</b><span class="en">The present simple</span></div>
+        <a class="home" href="../index.html">الفهرس ←</a>
+      </div>
+      <nav class="steps" id="steps" aria-label="خطوات الدرس"></nav>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+
+    <!-- 1 الفكرة -->
+    <section class="screen" data-title="الفكرة">
+      <div class="head">
+        <span class="kicker">الخطوة 1 · الفكرة</span>
+        <h1>المضارع البسيط = ما هو صحيح <span style="color:var(--accent)">بشكل عام</span></h1>
+        <p class="lead">ليس لما يحدث في هذه اللحظة، بل لما يتكرر أو يبقى صحيحًا في الماضي والحاضر والمستقبل.</p>
+      </div>
+      <div class="card">
+        <div class="tl" aria-label="خط زمني">
+          <div class="tl-line">
+            <div class="tl-band"></div>
+            <div class="tl-now"></div>
+            <span class="tl-tag en" style="left:50%;top:-62px;color:var(--subj)">She works in a bank.</span>
+            <span class="tl-dot" style="left:6%"></span><span class="tl-dot" style="left:20%;animation-delay:.05s"></span>
+            <span class="tl-dot" style="left:35%;animation-delay:.1s"></span><span class="tl-dot" style="left:50%;animation-delay:.15s"></span>
+            <span class="tl-dot" style="left:65%;animation-delay:.2s"></span><span class="tl-dot" style="left:80%;animation-delay:.25s"></span>
+            <span class="tl-dot" style="left:94%;animation-delay:.3s"></span>
+            <span class="tl-tag en" style="left:50%;top:22px;color:var(--accent)">I drink coffee every day.</span>
+          </div>
+          <div class="tl-labels"><span>المستقبل</span><b>الآن</b><span>الماضي</span></div>
+        </div>
+      </div>
+      <div class="legend2">
+        <span><i class="sw" style="background:var(--accent)"></i> نقاط متكررة = <b>عادة</b></span>
+        <span><i class="sw" style="background:color-mix(in srgb, var(--subj) 70%, transparent)"></i> شريط ممتد = <b>حقيقة أو وضع دائم</b></span>
+      </div>
+    </section>
+
+    <!-- 2 الاستخدامات -->
+    <section class="screen" data-title="متى نستخدمه">
+      <div class="head">
+        <span class="kicker">الخطوة 2 · متى نستخدمه؟</span>
+        <h1>ثلاث حالات فقط</h1>
+      </div>
+      <div class="grid3">
+        <div class="card use">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div>
+          <h2>عادة متكررة</h2>
+          <div class="ex en">I drink coffee every morning.</div>
+          <div class="ar">أشرب القهوة كل صباح.</div>
+          <div class="tags en"><span class="tag">every day</span><span class="tag">always</span><span class="tag">usually</span></div>
+        </div>
+        <div class="card use">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20"/></svg></div>
+          <h2>حقيقة أو وضع دائم</h2>
+          <div class="ex en">Water boils at 100°C.</div>
+          <div class="ar">يغلي الماء عند 100 درجة.</div>
+          <div class="tags en"><span class="tag">She works in a bank.</span></div>
+        </div>
+        <div class="card use">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h2>جدول ثابت</h2>
+          <div class="ex en">The train leaves at 7:30.</div>
+          <div class="ar">يغادر القطار الساعة 7:30.</div>
+          <div class="tags en"><span class="tag">timetables</span><span class="tag">opening hours</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 البناء -->
+    <section class="screen" data-title="البناء">
+      <div class="head">
+        <span class="kicker">الخطوة 3 · كيف نبني الجملة؟</span>
+        <h1>اختر الفاعل وراقب الفعل</h1>
+        <p class="lead">الفعل يأخذ <b style="color:var(--end)">s</b> مع فاعل واحد غائب فقط.</p>
+      </div>
+      <div class="card">
+        <div class="pick en" id="subjPick" role="group" aria-label="الفاعل"></div>
+        <div class="sentence" id="sent" aria-live="polite"></div>
+        <div class="groups">
+          <div class="grp" id="g1"><div class="who">I · you · we · they</div><div class="who" style="font-weight:400;font-size:.85rem;color:var(--muted)">وأي جمع: my parents</div><div class="res">work</div></div>
+          <div class="grp" id="g2"><div class="who">he · she · it</div><div class="who" style="font-weight:400;font-size:.85rem;color:var(--muted)">وأي مفرد: my father, the shop</div><div class="res">work<span class="b-end">s</span></div></div>
+        </div>
+      </div>
+      <div class="check" data-check='{"q":"My sister ___ in Dammam.","o":["live","lives"],"a":1,"why":"`My sister` مفرد غائب مثل she، فنضيف s: `lives`."}'></div>
+    </section>
+
+    <!-- 4 تهجئة s -->
+    <section class="screen" data-title="كتابة الـ s">
+      <div class="head">
+        <span class="kicker">الخطوة 4 · كيف نكتب الـ s؟</span>
+        <h1>ثلاث طرق حسب آخر الفعل</h1>
+        <p class="lead">اضغط على أي فعل لترى أي قاعدة تنطبق عليه.</p>
+      </div>
+      <div class="grid3 rules3">
+        <div class="card rule" id="r-s"><div class="cond">معظم الأفعال</div><div class="sym">+ s</div><div class="pair">work <span class="arrow">→</span> work<span class="b-end">s</span></div><div class="pair">play <span class="arrow">→</span> play<span class="b-end">s</span></div></div>
+        <div class="card rule" id="r-es"><div class="cond">بعد <span class="en">s · sh · ch · x · o</span></div><div class="sym">+ es</div><div class="pair">watch <span class="arrow">→</span> watch<span class="b-end">es</span></div><div class="pair">go <span class="arrow">→</span> go<span class="b-end">es</span></div></div>
+        <div class="card rule" id="r-ies"><div class="cond">حرف ساكن + <span class="en">y</span></div><div class="sym">y → ies</div><div class="pair">study <span class="arrow">→</span> stud<span class="b-end">ies</span></div><div class="pair">carry <span class="arrow">→</span> carr<span class="b-end">ies</span></div></div>
+      </div>
+      <div class="card" style="display:grid;gap:14px">
+        <div class="pick en" id="verbPick" role="group" aria-label="أفعال"></div>
+        <div class="result" id="verbRes" aria-live="polite"><span style="color:var(--muted);font-weight:600;font-size:1rem">اختر فعلًا ↑</span></div>
+      </div>
+      <div class="check" data-check='{"q":"He ___ cars for a living.","o":["fixs","fixes","fixies"],"a":1,"why":"`fix` ينتهي بـ x، فنضيف es: `fixes`."}'></div>
+    </section>
+
+    <!-- 5 be و have -->
+    <section class="screen" data-title="be و have">
+      <div class="head">
+        <span class="kicker">الخطوة 5 · فعلان لهما شكل خاص</span>
+        <h1>be و have</h1>
+      </div>
+      <div class="grid2">
+        <div class="card map">
+          <h2 style="color:var(--be)">be</h2>
+          <div class="map-row"><span class="l">I</span><span class="ar2"></span><span class="r b-be blk">am</span></div>
+          <div class="map-row"><span class="l">he · she · it</span><span class="ar2"></span><span class="r b-be blk">is</span></div>
+          <div class="map-row"><span class="l">you · we · they</span><span class="ar2"></span><span class="r b-be blk">are</span></div>
+        </div>
+        <div class="card map">
+          <h2 style="color:var(--verb)">have</h2>
+          <div class="map-row"><span class="l">I · you · we · they</span><span class="ar2"></span><span class="r b-verb blk">have</span></div>
+          <div class="map-row"><span class="l">he · she · it</span><span class="ar2"></span><span class="r b-verb blk">has</span></div>
+          <div class="note">لا نقول <span class="en x">haves</span></div>
+        </div>
+      </div>
+      <div class="card" style="display:grid;gap:8px;text-align:center">
+        <h2>لا تجمع is مع فعل آخر</h2>
+        <div class="warn"><span class="x">She is work here.</span><span class="arrow">→</span><span class="v">She works here.</span></div>
+        <div class="note">في المضارع البسيط الجملة فيها فعل واحد فقط.</div>
+      </div>
+      <div class="check" data-check='{"q":"He ___ two sisters.","o":["have","haves","has"],"a":2,"why":"`have` مع he / she / it تصبح `has`."}'></div>
+    </section>
+
+    <!-- 6 ظروف التكرار -->
+    <section class="screen" data-title="كلمات التكرار">
+      <div class="head">
+        <span class="kicker">الخطوة 6 · كلمات التكرار</span>
+        <h1>كم مرة؟ وأين نضع الكلمة؟</h1>
+        <p class="lead">اضغط على كلمة من السلّم لتراها في الجملتين.</p>
+      </div>
+      <div class="card">
+        <div class="freq">
+          <div class="freq-track" id="freq"></div>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="card pos">
+          <h2>قبل الفعل الأساسي</h2>
+          <div class="s"><span class="b-subj blk">She</span> <span class="slot" data-slot>always</span> <span class="b-verb blk">drinks</span> tea.</div>
+        </div>
+        <div class="card pos">
+          <h2>بعد فعل be</h2>
+          <div class="s"><span class="b-subj blk">He</span> <span class="b-be blk">is</span> <span class="slot" data-slot>always</span> late.</div>
+        </div>
+      </div>
+      <div class="check" data-check='{"q":"Which sentence is correct?","o":["He always is late.","He is always late."],"a":1,"why":"مع فعل be تأتي كلمة التكرار **بعده**: `is always`."}'></div>
+    </section>
+
+    <!-- 7 الأخطاء -->
+    <section class="screen" data-title="احذر">
+      <div class="head">
+        <span class="kicker">الخطوة 7 · أخطاء شائعة</span>
+        <h1>اضغط على كل بطاقة لترى التصحيح</h1>
+      </div>
+      <div class="grid2" id="flips"></div>
+    </section>
+
+    <!-- 8 التمارين -->
+    <section class="screen" data-title="تدرّب">
+      <div class="head">
+        <span class="kicker">الخطوة 8 · تدرّب</span>
+        <h1>سؤال واحد في كل مرة</h1>
+      </div>
+      <div class="quiz" id="quiz"></div>
+    </section>
+
+    <!-- 9 الخلاصة -->
+    <section class="screen" data-title="الخلاصة">
+      <div class="head">
+        <span class="kicker">الخطوة 9 · الخلاصة</span>
+        <h1>الدرس في بطاقة واحدة</h1>
+      </div>
+      <div class="sum">
+        <div class="card"><h2>متى؟</h2><div>عادة · حقيقة · جدول ثابت</div><div class="line">I drink coffee every day.</div></div>
+        <div class="card"><h2>البناء</h2><div class="line"><span class="b-subj blk">I / you / we / they</span> + <span class="b-verb blk">work</span></div><div class="line"><span class="b-subj blk">he / she / it</span> + <span class="b-verb blk">work<span class="b-end">s</span></span></div></div>
+        <div class="card"><h2>كتابة الـ s</h2><div class="line">works · watches · studies · plays</div><div class="line">am / is / are · have / has</div></div>
+        <div class="card"><h2>كلمات التكرار</h2><div class="line">She <span style="color:var(--accent)">always</span> drinks tea.</div><div class="line">He is <span style="color:var(--accent)">always</span> late.</div></div>
+      </div>
+      <div class="card" style="background:color-mix(in srgb, var(--subj) 9%, var(--card))">
+        <h2 style="color:var(--subj)">في IELTS</h2>
+        <p style="margin:6px 0">أسئلة <b>Speaking Part 1</b> عن حياتك وعاداتك، وإجابتها بالمضارع البسيط. نسيان الـ s يخفض درجة الدقة مباشرة.</p>
+        <div class="line en" style="font-weight:700">I work in finance, so I usually start my day early.</div>
+      </div>
+      <div class="actions">
+        <button class="btn" type="button" data-goto="7">أعد التمارين</button>
+        <a class="btn ghost" href="../index.html">العودة للفهرس</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bot">
+    <div class="bot-in">
+      <button class="btn ghost" id="prev" type="button">→ السابق</button>
+      <span class="count" id="count"></span>
+      <button class="btn" id="next" type="button">التالي ←</button>
+    </div>
+  </footer>
+</div>
+
+<script src="../data/units/u01.js"></script>
+<script>
+(function () {
+  "use strict";
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function rich(s) {
+    return String(s).split("`").map(function (p, i) {
+      return i % 2 ? '<span class="en" style="font-weight:700">' + esc(p) + "</span>" : esc(p).replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+    }).join("");
+  }
+  function el(tag, cls, html) { var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
+
+  // ---------- التنقل بين الشاشات ----------
+  var screens = [].slice.call(document.querySelectorAll(".screen"));
+  var stepsNav = document.getElementById("steps"), cur = 0, seen = {};
+  screens.forEach(function (s, i) {
+    var b = el("button"); b.type = "button"; b.title = s.dataset.title; b.setAttribute("aria-label", (i + 1) + ". " + s.dataset.title);
+    b.addEventListener("click", function () { go(i); });
+    stepsNav.appendChild(b);
+  });
+  var prev = document.getElementById("prev"), next = document.getElementById("next"), count = document.getElementById("count");
+  function go(i) {
+    if (i < 0 || i >= screens.length) return;
+    var back = i < cur;
+    screens[cur].classList.remove("on", "back");
+    cur = i; seen[i] = true;
+    screens[i].classList.add("on");
+    screens[i].classList.toggle("back", back);
+    [].forEach.call(stepsNav.children, function (b, k) { b.className = k === i ? "cur" : seen[k] ? "done" : ""; });
+    prev.disabled = i === 0;
+    next.disabled = i === screens.length - 1;
+    count.textContent = (i + 1) + " / " + screens.length + " · " + screens[i].dataset.title;
+    document.getElementById("stage").scrollTop = 0;
+    try { history.replaceState(null, "", "#s" + (i + 1)); } catch (e) {}
+  }
+  prev.addEventListener("click", function () { go(cur - 1); });
+  next.addEventListener("click", function () { go(cur + 1); });
+  document.addEventListener("keydown", function (e) {
+    if (e.target.tagName === "INPUT") return;
+    if (e.key === "ArrowLeft") go(cur + 1);   // في الواجهة العربية: اليسار = التالي
+    if (e.key === "ArrowRight") go(cur - 1);
+  });
+  // السحب على الجوال: سحب لليمين = التالي (اتجاه الكتاب العربي)
+  var sx = null, sy = null;
+  var stage = document.getElementById("stage");
+  stage.addEventListener("touchstart", function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener("touchend", function (e) {
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) go(cur + (dx > 0 ? 1 : -1));
+    sx = null;
+  });
+  document.querySelectorAll("[data-goto]").forEach(function (b) { b.addEventListener("click", function () { go(+b.dataset.goto); }); });
+
+  // ---------- سؤال سريع داخل الشاشة ----------
+  function mcq(box, q, onDone) {
+    box.appendChild(el("div", "qtext", esc(q.q).replace("___", '<span class="blank">&nbsp;</span>')));
+    var opts = el("div", "opts"), fb = el("div", "fb"); fb.hidden = true;
+    var bs = q.o.map(function (o, k) {
+      var b = el("button", "opt", esc(o)); b.type = "button";
+      b.addEventListener("click", function () {
+        bs.forEach(function (x) { x.disabled = true; });
+        var ok = k === q.a;
+        b.classList.add(ok ? "ok" : "no");
+        if (!ok) bs[q.a].classList.add("ok");
+        fb.className = "fb " + (ok ? "ok" : "no");
+        fb.innerHTML = "<b>" + (ok ? "✓ صحيح" : "✗ ليس تمامًا") + "</b>" + rich(q.why);
+        fb.hidden = false;
+        if (onDone) onDone(ok);
+      });
+      opts.appendChild(b); return b;
+    });
+    box.appendChild(opts); box.appendChild(fb);
+  }
+  document.querySelectorAll("[data-check]").forEach(function (box) {
+    box.appendChild(el("div", "lab", "تحقق سريع"));
+    mcq(box, JSON.parse(box.dataset.check));
+  });
+
+  // ---------- الخطوة 3: بناء الجملة ----------
+  var SUBJ = [["I", 0], ["You", 0], ["We", 0], ["They", 0], ["He", 1], ["She", 1], ["It", 1], ["My father", 1], ["My parents", 0]];
+  var pick = document.getElementById("subjPick"), sent = document.getElementById("sent");
+  var g1 = document.getElementById("g1"), g2 = document.getElementById("g2");
+  function setSubj(i) {
+    [].forEach.call(pick.children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    var s = SUBJ[i], third = s[1] === 1;
+    sent.innerHTML = '<span class="blk b-subj">' + s[0] + '</span><span class="plus">+</span>' +
+      '<span class="blk b-verb">work' + (third ? '<span class="ending b-end">s</span>' : "") + '</span>' +
+      '<span class="b-rest">every day.</span>';
+    g1.classList.toggle("lit", !third); g2.classList.toggle("lit", third);
+  }
+  SUBJ.forEach(function (s, i) {
+    var b = el("button", "", s[0]); b.type = "button";
+    b.addEventListener("click", function () { setSubj(i); });
+    pick.appendChild(b);
+  });
+  setSubj(4);
+
+  // ---------- الخطوة 4: تهجئة s ----------
+  var VERBS = [["work", "works", "r-s", 4], ["play", "plays", "r-s", 4], ["watch", "watches", "r-es", 5], ["go", "goes", "r-es", 2],
+               ["fix", "fixes", "r-es", 3], ["study", "studies", "r-ies", 4], ["carry", "carries", "r-ies", 4], ["enjoy", "enjoys", "r-s", 5]];
+  var vp = document.getElementById("verbPick"), vr = document.getElementById("verbRes");
+  VERBS.forEach(function (v) {
+    var b = el("button", "", v[0]); b.type = "button";
+    b.addEventListener("click", function () {
+      [].forEach.call(vp.children, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      ["r-s", "r-es", "r-ies"].forEach(function (id) { document.getElementById(id).classList.toggle("lit", id === v[2]); });
+      var stem = v[1].slice(0, v[3]), end = v[1].slice(v[3]);
+      vr.innerHTML = '<span style="color:var(--muted)">he</span> ' + v[0] + ' <span class="arrow">→</span> <span style="color:var(--verb)">' + stem + '<span class="ending b-end">' + end + "</span></span>";
+    });
+    vp.appendChild(b);
+  });
+
+  // ---------- الخطوة 6: سلّم التكرار ----------
+  var FREQ = [["never", 0, "أبدًا"], ["sometimes", 50, "أحيانًا"], ["often", 70, "غالبًا"], ["usually", 88, "عادةً"], ["always", 100, "دائمًا"]];
+  var ft = document.getElementById("freq");
+  function setFreq(i) {
+    [].forEach.call(ft.children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    document.querySelectorAll("[data-slot]").forEach(function (s) { s.textContent = FREQ[i][0]; });
+  }
+  FREQ.forEach(function (f, i) {
+    var b = el("button", "fq " + (i % 2 ? "dn" : "up"), "<span>" + f[0] + "<small>" + f[2] + " · " + f[1] + "%</small></span>");
+    b.type = "button"; b.style.left = f[1] + "%";
+    b.addEventListener("click", function () { setFreq(i); });
+    ft.appendChild(b);
+  });
+  setFreq(4);
+
+  // ---------- الخطوة 7: بطاقات الأخطاء ----------
+  var U = window.UNITS && window.UNITS[1];
+  var flips = document.getElementById("flips");
+  (U ? U.mistakes : []).forEach(function (m) {
+    var b = el("button", "flip"); b.type = "button";
+    b.innerHTML = '<div class="flip-in"><div class="face f"><div class="s x">' + esc(m[0]) + '</div><div class="hint">اضغط لترى الصحيح</div></div>' +
+      '<div class="face b"><div class="s v">' + esc(m[1]) + '</div><div class="why">' + rich(m[2]) + "</div></div></div>";
+    b.addEventListener("click", function () { b.classList.toggle("on"); });
+    flips.appendChild(b);
+  });
+
+  // ---------- الخطوة 8: التمارين سؤالًا سؤالًا ----------
+  var TYPES = { mcq: "اختر الإجابة", fill: "أكمل الفراغ", fix: "صحّح الخطأ", rewrite: "أعد الصياغة" };
+  var ASK = { mcq: "اختر الكلمة المناسبة.", fill: "اكتب الكلمة المناسبة.", fix: "اكتب الجملة صحيحة كاملة.", rewrite: "أعد كتابة الجملة كما هو مطلوب." };
+  function norm(s) {
+    s = String(s).toLowerCase().replace(/[‘’ʼ`]/g, "'");
+    s = s.replace(/\b(do|does|did|is|are|was|were|has|have|had)nt\b/g, "$1 not").replace(/won't/g, "will not").replace(/can't/g, "cannot")
+         .replace(/n't/g, " not").replace(/'m\b/g, " am").replace(/'re\b/g, " are").replace(/\b(he|she|it|that)'s\b/g, "$1 is");
+    return s.replace(/[.,!?;:"]/g, " ").replace(/\s+/g, " ").trim();
+  }
+  var quiz = document.getElementById("quiz");
+  var QS = U ? U.questions : [];
+  var qi = 0, right = 0;
+  function startQuiz() { qi = 0; right = 0; showQ(); }
+  function showQ() {
+    quiz.innerHTML = "";
+    if (qi >= QS.length) return finish();
+    var q = QS[qi];
+    var head = el("div", "qhead", '<span class="count">' + (qi + 1) + " / " + QS.length + '</span><div class="qbar"><i style="width:' + (qi / QS.length * 100) + '%"></i></div>');
+    quiz.appendChild(head);
+    var card = el("div", "card"); card.style.display = "grid"; card.style.gap = "12px";
+    card.appendChild(el("div", "", '<span class="qtype">' + TYPES[q.t] + '</span> · <span class="qask">' + rich(q.ask || ASK[q.t]) + "</span>"));
+    var nextBtn = el("button", "btn", qi === QS.length - 1 ? "النتيجة ←" : "السؤال التالي ←"); nextBtn.type = "button"; nextBtn.hidden = true;
+    nextBtn.addEventListener("click", function () { qi++; showQ(); });
+    function done(ok) { if (ok) right++; nextBtn.hidden = false; nextBtn.focus(); }
+    if (q.t === "mcq") mcq(card, q, done);
+    else {
+      card.appendChild(el("div", "qtext", esc(q.q).replace("___", '<span class="blank">&nbsp;</span>')));
+      var row = el("div", "ansrow"), inp = el("input"); inp.type = "text"; inp.setAttribute("dir", "ltr"); inp.autocomplete = "off"; inp.spellcheck = false;
+      inp.placeholder = q.t === "fill" ? "Type the missing word" : "Type the full sentence";
+      var chk = el("button", "btn", "تحقق"); chk.type = "button";
+      var fb = el("div", "fb"); fb.hidden = true;
+      function submit() {
+        if (!inp.value.trim()) { inp.focus(); return; }
+        var ok = q.a.some(function (a) { return norm(a) === norm(inp.value); });
+        inp.disabled = true; chk.disabled = true;
+        fb.className = "fb " + (ok ? "ok" : "no");
+        fb.innerHTML = "<b>" + (ok ? "✓ صحيح" : "✗ ليس تمامًا") + "</b>" + (ok ? "" : '<div class="model">' + esc(q.a[0]) + "</div>") + rich(q.why);
+        fb.hidden = false; done(ok);
+      }
+      chk.addEventListener("click", submit);
+      inp.addEventListener("keydown", function (e) { if (e.key === "Enter") submit(); });
+      row.appendChild(inp); row.appendChild(chk);
+      card.appendChild(row); card.appendChild(fb);
+      setTimeout(function () { inp.focus(); }, 50);
+    }
+    card.appendChild(nextBtn);
+    quiz.appendChild(card);
+  }
+  function finish() {
+    var pct = Math.round(right / QS.length * 100);
+    try {
+      var KEY = "grammar-progress-v1", p = JSON.parse(localStorage.getItem(KEY)) || {}, old = p[1] || { best: 0, attempts: 0 };
+      p[1] = { best: Math.max(old.best, pct), last: pct, attempts: (old.attempts || 0) + 1, date: new Date().toISOString().slice(0, 10) };
+      localStorage.setItem(KEY, JSON.stringify(p));
+    } catch (e) {}
+    var r = 64, c = 2 * Math.PI * r;
+    var box = el("div", "card done-ring");
+    box.innerHTML = '<svg viewBox="0 0 150 150"><circle cx="75" cy="75" r="' + r + '" fill="none" stroke="var(--soft)" stroke-width="12"/>' +
+      '<circle cx="75" cy="75" r="' + r + '" fill="none" stroke="' + (pct >= 80 ? "var(--ok)" : "var(--accent)") + '" stroke-width="12" stroke-linecap="round" stroke-dasharray="' + c.toFixed(1) + '" stroke-dashoffset="' + (c * (1 - pct / 100)).toFixed(1) + '" transform="rotate(-90 75 75)"/>' +
+      '<text x="75" y="75" text-anchor="middle" dominant-baseline="central" direction="ltr" font-family="Cairo, sans-serif" font-weight="800" font-size="32" fill="var(--ink)">' + pct + "%</text></svg>" +
+      "<h2>" + right + " من " + QS.length + " إجابات صحيحة</h2>" +
+      '<p class="note">' + (pct >= 80 ? "ممتاز، أتقنت الدرس. انتقل إلى الخلاصة." : "راجع الخطوات 3 إلى 6 ثم أعد المحاولة. الهدف 80٪.") + "</p>";
+    var acts = el("div", "actions");
+    var again = el("button", "btn ghost", "أعد التمارين"); again.type = "button"; again.addEventListener("click", startQuiz);
+    var sum = el("button", "btn", "الخلاصة ←"); sum.type = "button"; sum.addEventListener("click", function () { go(8); });
+    acts.appendChild(again); acts.appendChild(sum); box.appendChild(acts);
+    quiz.appendChild(box);
+  }
+  startQuiz();
+
+  var m = /#s(\d+)/.exec(location.hash);
+  go(m ? Math.min(screens.length, Math.max(1, +m[1])) - 1 : 0);
+})();
+</script>
+</body>
+</html>
