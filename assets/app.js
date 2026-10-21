@@ -67,40 +67,63 @@
   // =====================================================
   // الصفحة الرئيسية
   // =====================================================
+  // حلقة تقدم دائرية (SVG)
+  function ringSVG(pct, size, stroke, center) {
+    var r = (size - stroke) / 2, c = 2 * Math.PI * r, off = c * (1 - Math.max(0, Math.min(1, pct)));
+    return '<svg class="ring-svg" viewBox="0 0 ' + size + " " + size + '" width="' + size + '" height="' + size + '" aria-hidden="true">' +
+      '<circle class="ring-bg" cx="' + size / 2 + '" cy="' + size / 2 + '" r="' + r + '" stroke-width="' + stroke + '"/>' +
+      '<circle class="ring-fg" cx="' + size / 2 + '" cy="' + size / 2 + '" r="' + r + '" stroke-width="' + stroke + '" stroke-dasharray="' + c.toFixed(2) + '" stroke-dashoffset="' + off.toFixed(2) + '" transform="rotate(-90 ' + size / 2 + " " + size / 2 + ')"/>' +
+      (center != null ? '<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" direction="ltr" class="ring-txt">' + esc(center) + "</text>" : "") +
+      "</svg>";
+  }
+
   function renderHome(root) {
     var prog = loadProgress();
-    var total = 0, available = AVAILABLE.length, done = 0;
+    var total = 0, done = 0, nextId = null;
     CATALOG.forEach(function (g) { total += g.units.length; });
-    AVAILABLE.forEach(function (id) { if (prog[id] && prog[id].best >= 80) done++; });
+    AVAILABLE.forEach(function (id) {
+      if (prog[id] && prog[id].best >= 80) done++;
+      else if (nextId === null) nextId = id;
+    });
 
+    var hero = document.getElementById("hero-ring");
+    if (hero) hero.innerHTML = ringSVG(done / total, 132, 12, Math.round(done / total * 100) + "%");
     document.getElementById("stat-total").textContent = total;
-    document.getElementById("stat-ready").textContent = available;
     document.getElementById("stat-done").textContent = done;
+    var started = 0;
+    AVAILABLE.forEach(function (id) { if (prog[id]) started++; });
+    document.getElementById("stat-started").textContent = started;
+    var go = document.getElementById("continue-btn");
+    if (go) {
+      var target = nextId || AVAILABLE[0];
+      go.href = "unit.html#u" + target;
+      go.textContent = (started ? "تابع من القاعدة " : "ابدأ بالقاعدة ") + pad(target);
+    }
 
-    CATALOG.forEach(function (g) {
+    CATALOG.forEach(function (g, gi) {
       var list = el("ol", { class: "rules" });
-      var ready = 0;
+      var mastered = 0;
       g.units.forEach(function (u) {
-        var id = u[0], isAvail = AVAILABLE.indexOf(id) !== -1, p = prog[id];
-        if (isAvail) ready++;
-        var name;
-        if (isAvail) name = el("a", { class: "name", href: "unit.html#u" + id, lang: "en" }, [u[1]]);
-        else name = el("span", { class: "name", lang: "en" }, [u[1]]);
+        var id = u[0], p = prog[id];
+        if (p && p.best >= 80) mastered++;
+        var name = el("a", { class: "name", href: "unit.html#u" + id, lang: "en" }, [u[1]]);
         if (IELTS_PRIORITY.indexOf(id) !== -1) name.appendChild(el("span", { class: "star", title: "أولوية في IELTS", text: "★" }));
         var state;
-        if (!isAvail) state = el("span", { class: "state soon", text: "قريبًا" });
-        else if (!p) state = el("span", { class: "state todo", text: "ابدأ" });
+        if (!p) state = el("span", { class: "state todo", title: "لم تبدأ", text: "" });
         else state = el("span", { class: "state " + (p.best >= 80 ? "done" : "mid"), text: p.best + "%" });
-        list.appendChild(el("li", { class: "rule" + (isAvail ? "" : " locked") }, [el("span", { class: "num", text: pad(id) }), name, state]));
+        list.appendChild(el("li", { class: "rule" }, [el("span", { class: "num", text: pad(id) }), name, state]));
       });
-      var gi = CATALOG.indexOf(g), sp = prog["s" + gi];
-      var head = el("div", { class: "group-head" }, [
-        el("h2", { text: g.ar }), el("span", { class: "en", text: g.en }),
-        el("span", { class: "count", text: ready + " / " + g.units.length }),
-        ready ? el("a", { class: "review-link", href: "review.html#s" + gi,
-          text: "اختبار القسم" + (sp ? " · " + sp.best + "%" : "") }) : null
+      var sp = prog["s" + gi];
+      var first = g.units[0][0], last = g.units[g.units.length - 1][0];
+      var head = el("header", { class: "sec-head" }, [
+        el("div", { class: "sec-ring", html: ringSVG(mastered / g.units.length, 58, 6, mastered + "/" + g.units.length) }),
+        el("div", { class: "sec-titles" }, [
+          el("h2", { text: g.ar }),
+          el("div", { class: "sec-meta" }, [el("span", { class: "en", text: g.en }), el("span", { class: "range", text: pad(first) + "–" + pad(last) })])
+        ])
       ]);
-      root.appendChild(el("section", { class: "group c-" + g.color }, [head, list]));
+      var foot = el("a", { class: "review-link", href: "review.html#s" + gi, html: "اختبار القسم" + (sp ? ' <b>' + sp.best + "%</b>" : "") + " ←" });
+      root.appendChild(el("section", { class: "sec-card c-" + g.color }, [head, list, foot]));
     });
   }
 
@@ -122,38 +145,69 @@
     document.head.appendChild(s);
   }
 
+  // الرسوم التوضيحية موزعة على أربعة ملفات (30 قاعدة لكل ملف)
+  var visualsLoaded = {};
+  function loadVisuals(id, cb) {
+    window.VISUALS = window.VISUALS || {};
+    var part = Math.min(4, Math.ceil(id / 30));
+    if (visualsLoaded[part]) return cb(window.VISUALS[id] || []);
+    var s = document.createElement("script");
+    s.src = "data/visuals/v" + part + ".js";
+    s.onload = function () { visualsLoaded[part] = true; cb(window.VISUALS[id] || []); };
+    s.onerror = function () { cb([]); };
+    document.head.appendChild(s);
+  }
+
+  var renderSeq = 0;
   function renderUnitPage(root) {
-    var id = unitIdFromHash();
+    var id = unitIdFromHash(), token = ++renderSeq;
     loadUnit(id, function (u) {
-      root.innerHTML = "";
-      if (!u) {
-        root.appendChild(el("p", { html: "هذه القاعدة لم تُكتب بعد. <a href=\"index.html\">العودة للفهرس</a>" }));
-        return;
-      }
-      var g = groupOf(id);
-      document.body.className = "c-" + (g ? g.color : "red");
-      document.title = pad(id) + " " + u.title + " | قواعد الإنجليزية";
-      buildUnit(root, u, g);
-      window.scrollTo(0, 0);
+      loadVisuals(id, function (vis) {
+        if (token !== renderSeq) return; // طلب أحدث في الطريق
+        root.innerHTML = "";
+        if (!u) {
+          root.appendChild(el("p", { html: "هذه القاعدة غير موجودة. <a href=\"index.html\">العودة للفهرس</a>" }));
+          return;
+        }
+        var g = groupOf(id);
+        document.body.className = "c-" + (g ? g.color : "red");
+        document.title = pad(id) + " " + u.title + " | قواعد الإنجليزية";
+        buildUnit(root, u, g, vis);
+        window.scrollTo(0, 0);
+      });
     });
   }
 
-  function buildUnit(root, u, g) {
+  function buildUnit(root, u, g, vis) {
     var idx = AVAILABLE.indexOf(u.id);
     var prev = AVAILABLE[idx - 1], next = AVAILABLE[idx + 1];
+    var prog = loadProgress();
 
     // شريط علوي
     var pager = el("div", { class: "pager" }, [
       el("a", { href: prev ? "unit.html#u" + prev : "#", "aria-disabled": prev ? "false" : "true", text: "→ السابقة" }),
       el("a", { href: next ? "unit.html#u" + next : "#", "aria-disabled": next ? "false" : "true", text: "التالية ←" })
     ]);
-    root.appendChild(el("nav", { class: "topbar" }, [el("a", { href: "index.html", text: "→ الفهرس" }), pager]));
+    root.appendChild(el("nav", { class: "topbar" }, [el("a", { href: "index.html", class: "home-link", text: "→ الفهرس" }), pager]));
 
-    // العنوان
+    // العنوان: رقم القاعدة داخل دائرة + مكانها بين قواعد القسم
+    var sib = el("nav", { class: "sib", "aria-label": "قواعد القسم" });
+    if (g) g.units.forEach(function (x) {
+      var p = prog[x[0]];
+      sib.appendChild(el("a", {
+        href: "unit.html#u" + x[0], title: x[1],
+        class: "sib-dot" + (x[0] === u.id ? " cur" : "") + (p && p.best >= 80 ? " ok" : p ? " mid" : ""),
+        text: pad(x[0])
+      }));
+    });
     root.appendChild(el("header", { class: "lesson-head" }, [
-      el("div", { class: "tab" }, [el("span", { class: "n", text: pad(u.id) }), el("span", { class: "g", text: g ? g.ar : "" })]),
-      el("h1", { text: u.ar }),
-      el("div", { class: "en-title", lang: "en", text: u.title })
+      el("div", { class: "roundel" }, [el("span", { class: "rn", text: pad(u.id) })]),
+      el("div", { class: "lh-text" }, [
+        el("div", { class: "lh-sec", text: g ? g.ar + " · " + g.en : "" }),
+        el("h1", { text: u.ar }),
+        el("div", { class: "en-title", lang: "en", dir: "ltr", text: u.title })
+      ]),
+      sib
     ]));
 
     // الفكرة
@@ -161,11 +215,18 @@
     if (u.uses && u.uses.length) {
       var ul = el("ul", { class: "uses" });
       u.uses.forEach(function (x) {
-        ul.appendChild(el("li", {}, [el("div", { html: rich(x[0]) + (x[1] ? '<br><span class="en">' + esc(x[1]) + "</span>" : "") })]));
+        ul.appendChild(el("li", {}, [el("div", { html: rich(x[0]) + (x[1] ? '<span class="en use-ex" dir="ltr">' + esc(x[1]) + "</span>" : "") })]));
       });
       ideaSec.appendChild(ul);
     }
     root.appendChild(ideaSec);
+
+    // الصورة الذهنية: الرسوم التوضيحية
+    if (vis && vis.length && window.Diagrams) {
+      var vsec = el("section", { class: "block visuals" }, [el("h2", { text: "الصورة الذهنية" })]);
+      root.appendChild(vsec);
+      vis.forEach(function (spec) { window.Diagrams.render(vsec, spec); });
+    }
 
     // الصيغة
     if (u.formula && u.formula.length) {
