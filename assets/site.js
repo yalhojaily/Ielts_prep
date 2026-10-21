@@ -20,6 +20,7 @@
   var COLORS = { accent: "var(--accent)", subj: "var(--subj)", verb: "var(--verb)", be: "var(--be)", end: "var(--end)", neg: "var(--neg)", qw: "var(--qw)", muted: "var(--muted)", ok: "var(--ok)", bad: "var(--bad)", ink: "var(--ink)",
                  s: "var(--subj)", v: "var(--verb)", a: "var(--be)", n: "var(--neg)", q: "var(--qw)", k: "var(--accent)", e: "var(--end)" };
   function col(c) { return COLORS[c] || c || "var(--accent)"; }
+  function dirA(t) { return AR.test(String(t || "")) ? ' dir="rtl"' : ""; }
 
   // {s:He} {v:work|s} {a:is} {n:not} {q:Where} {k:مفتاح} {o:object} {x:رمادي} {e:s} {d:محذوف}
   var TOK = /\{([savnqkoxed]):([^{}]*)\}/g;
@@ -360,7 +361,7 @@
     if (s.groups) {
       gwrap = el("div", "groups");
       s.groups.forEach(function (g) {
-        var d = el("div", "grp", '<div class="who">' + rich(g.h) + "</div>" + (g.sub ? '<div class="sub">' + rich(g.sub) + "</div>" : "") + (g.res ? '<div class="res">' + tk(g.res) + "</div>" : ""));
+        var d = el("div", "grp", '<div class="who' + (AR.test(g.h) ? "" : " en") + '">' + rich(g.h) + "</div>" + (g.sub ? '<div class="sub">' + rich(g.sub) + "</div>" : "") + (g.res ? '<div class="res">' + tk(g.res) + "</div>" : ""));
         grps.push(d); gwrap.appendChild(d);
       });
     }
@@ -402,7 +403,7 @@
       if (c.txt) h += '<div class="txt">' + rich(c.txt) + "</div>";
       d.innerHTML = h;
       if (c.tl) { var t = B.timeline(c.tl); t.className = ""; d.appendChild(t); }
-      if (c.en) d.appendChild(el("div", "lines", c.en.map(function (e) { return '<div class="line">' + tk(e) + "</div>"; }).join("")));
+      if (c.en) d.appendChild(el("div", "lines", c.en.map(function (e) { return '<div class="line"' + dirA(e) + '>' + tk(e) + "</div>"; }).join("")));
       if (c.ar) d.insertAdjacentHTML("beforeend", '<div class="ar2">' + rich(c.ar) + "</div>");
       if (c.foot) d.insertAdjacentHTML("beforeend", '<div class="cap">' + rich(c.foot) + "</div>");
       g.appendChild(d);
@@ -431,7 +432,7 @@
   // قواعد الكتابة مع تجربة
   B.rules = function (s) {
     var wrap = el("div"); wrap.style.display = "grid"; wrap.style.gap = "14px";
-    var g = el("div", gridFor(s.items.length)), tiles = [];
+    var g = el("div", gridFor(s.items.length) + " rg"), tiles = [];
     s.items.forEach(function (it) {
       var d = el("div", "card rule", '<div class="cond">' + rich(it.cond) + '</div><div class="sym">' + esc(it.sym) + "</div>" +
         (it.pairs || []).map(function (p) { return '<div class="pair">' + esc(p[0]) + ' <span class="arrow">→</span> ' + esc(p[1]) + (p[2] ? '<span class="b-e">' + esc(p[2]) + "</span>" : "") + "</div>"; }).join(""));
@@ -490,7 +491,7 @@
   B.ex = function (s) {
     var card = el("div", "card exs");
     if (s.h) card.appendChild(el("h2", "", rich(s.h)));
-    s.items.forEach(function (e) { card.appendChild(el("div", "exi", '<div class="s">' + tk(e[0]) + "</div>" + (e[1] ? '<div class="ar2">' + rich(e[1]) + "</div>" : ""))); });
+    s.items.forEach(function (e) { card.appendChild(el("div", "exi", '<div class="s"' + dirA(e[0]) + '>' + tk(e[0]) + "</div>" + (e[1] ? '<div class="ar2">' + rich(e[1]) + "</div>" : ""))); });
     return card;
   };
 
@@ -511,8 +512,8 @@
     var h = '<div class="tbl-wrap"><table class="tbl"><thead><tr>' + s.head.map(function (x) { return "<th>" + rich(x) + "</th>"; }).join("") + "</tr></thead><tbody>";
     s.rows.forEach(function (r) {
       h += "<tr>" + r.map(function (c, k) {
-        var isEn = !AR.test(c) || /^\{|^[A-Za-z]/.test(c) && !/`/.test(c);
-        return "<td" + (s.hl === k ? ' class="hl"' : "") + (isEn && !AR.test(c) ? ' dir="ltr" style="text-align:left;font-weight:700"' : "") + ">" + (AR.test(c) ? rich(c) : tk(c)) + "</td>";
+        var lab = ' data-l="' + esc(String(s.head[k] || "").replace(/[`*]/g, "")) + '"';
+        return "<td" + lab + (s.hl === k ? ' class="hl"' : "") + (!AR.test(c) ? ' dir="ltr" style="text-align:left;font-weight:700"' : "") + ">" + (AR.test(c) ? rich(c) : tk(c)) + "</td>";
       }).join("") + "</tr>";
     });
     card.insertAdjacentHTML("beforeend", h + "</tbody></table></div>");
@@ -532,7 +533,7 @@
     items.forEach(function (it) {
       var d = el("div", "card trans");
       if (it.h) d.appendChild(el("h2", "", rich(it.h)));
-      d.insertAdjacentHTML("beforeend", '<div class="s">' + tk(it.from) + '</div><div class="down"><i></i>' + (it.chg ? '<div class="chg">' + it.chg.map(function (c) { return "<span>" + rich(c) + "</span>"; }).join("") + "</div>" : "") + '</div><div class="s">' + tk(it.to) + "</div>");
+      d.insertAdjacentHTML("beforeend", '<div class="s"' + dirA(it.from) + '>' + tk(it.from) + '</div><div class="down"><i></i>' + (it.chg ? '<div class="chg">' + it.chg.map(function (c) { return "<span>" + rich(c) + "</span>"; }).join("") + "</div>" : "") + '</div><div class="s"' + dirA(it.to) + '>' + tk(it.to) + "</div>");
       g.appendChild(d);
     });
     return g;
@@ -543,7 +544,7 @@
     var w = el("div", "chain");
     s.items.forEach(function (it, i) {
       if (i) w.appendChild(el("div", "sep", "←"));
-      w.appendChild(el("div", "card ci", '<span class="n">' + (i + 1) + "</span>" + (it.h ? "<h2>" + rich(it.h) + "</h2>" : "") + (it.en ? '<div class="line">' + tk(it.en) + "</div>" : "") + (it.ar ? '<div class="cap">' + rich(it.ar) + "</div>" : "")));
+      w.appendChild(el("div", "card ci", '<span class="n">' + (i + 1) + "</span>" + (it.h ? "<h2>" + rich(it.h) + "</h2>" : "") + (it.en ? '<div class="line"' + dirA(it.en) + '>' + tk(it.en) + "</div>" : "") + (it.ar ? '<div class="cap">' + rich(it.ar) + "</div>" : "")));
     });
     return w;
   };
@@ -556,7 +557,7 @@
     s.opts.forEach(function (o, i) {
       var d = el("div", "card bx"); d.style.setProperty("--cc", col(o.c || (i ? "bad" : "ok")));
       d.innerHTML = '<span class="yn">' + rich(o.lab || (i ? "لا" : "نعم")) + "</span>" + (o.h ? "<h2>" + rich(o.h) + "</h2>" : "") +
-        (o.en || []).map(function (e) { return '<div class="line">' + tk(e) + "</div>"; }).join("") + (o.txt ? '<div class="cap">' + rich(o.txt) + "</div>" : "");
+        (o.en || []).map(function (e) { return '<div class="line"' + dirA(e) + '>' + tk(e) + "</div>"; }).join("") + (o.txt ? '<div class="cap">' + rich(o.txt) + "</div>" : "");
       br.appendChild(d);
     });
     w.appendChild(br);
@@ -567,7 +568,7 @@
   B.big = function (s) {
     var card = el("div", "card");
     if (s.h) card.appendChild(el("h2", "", rich(s.h)));
-    (s.items || [s.en]).forEach(function (e) { card.appendChild(el("div", "sentence", pills(e))); });
+    (s.items || [s.en]).forEach(function (e) { var d = el("div", "sentence", pills(e)); if (AR.test(e)) d.dir = "rtl"; card.appendChild(d); });
     if (s.cap) card.insertAdjacentHTML("beforeend", '<div class="cap" style="text-align:center">' + rich(s.cap) + "</div>");
     return card;
   };
@@ -680,7 +681,7 @@
     var sumCards = L.sum || (u.formula || []).slice(0, 4).map(function (f) { return { h: f[0], en: [f[1]] }; });
     var sg = el("div", "sum");
     sumCards.forEach(function (c) {
-      sg.appendChild(el("div", "card", "<h2>" + rich(c.h) + "</h2>" + (c.txt ? "<div>" + rich(c.txt) + "</div>" : "") + (c.en || []).map(function (e) { return '<div class="line">' + tk(e) + "</div>"; }).join("")));
+      sg.appendChild(el("div", "card", "<h2>" + rich(c.h) + "</h2>" + (c.txt ? "<div>" + rich(c.txt) + "</div>" : "") + (c.en || []).map(function (e) { return '<div class="line"' + dirA(e) + '>' + tk(e) + "</div>"; }).join("")));
     });
     ss.appendChild(sg);
     if (u.ielts) ss.appendChild(el("div", "card ielts", "<h2>في IELTS</h2><p>" + rich(u.ielts.text) + "</p>" + (u.ielts.en ? '<div class="line">' + tk(u.ielts.en) + "</div>" : "")));

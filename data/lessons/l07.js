@@ -42,8 +42,10 @@ window.LESSONS[7] = {
         "أكثر الأفعال استعمالًا في الكلام اليومي شاذة، لأنها قديمة جدًا في اللغة وحافظت على أشكالها القديمة.",
         "لا قاعدة لها، لكن حفظها في مجموعات متشابهة يسهّل الأمر. ولا نقول `buyed` أو `goed`."
       ],
-      show: [{ t: "table", head: ["الفعل", "الماضي", "الفعل", "الماضي"], hl: 1,
-        rows: [["go", "went", "see", "saw"], ["have", "had", "come", "came"], ["make", "made", "buy", "bought"], ["take", "took", "think", "thought"], ["get", "got", "teach", "taught"], ["put", "put", "cut", "cut"]] }],
+      show: [{ t: "map", cols: [
+        { h: "تغيّر حرف العلة", c: "accent", k: "v", rows: [["go", "went"], ["see", "saw"], ["come", "came"], ["take", "took"], ["get", "got"], ["make", "made"]] },
+        { h: "تنتهي بـ ought / aught · ولا تتغير", c: "subj", k: "v", rows: [["buy", "bought"], ["think", "thought"], ["teach", "taught"], ["have", "had"], ["put", "put"], ["cut", "cut"]] }
+      ] }],
       check: { q: "Yesterday I ___ a new phone.", o: ["buyed", "bought", "buy"], a: 1, why: "`buy` شاذ، وماضيه `bought`." } },
 
     { k: "كلمات الوقت", h: "ago تأتي *بعد* المدة",
