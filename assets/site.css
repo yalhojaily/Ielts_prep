@@ -421,3 +421,12 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
   .tbl td.hl { background: none; color: var(--accent); }
 }
 .trans .s[dir="rtl"], .line[dir="rtl"], .exi .s[dir="rtl"], .sentence[dir="rtl"] { direction: rtl; }
+
+/* زر الوضع الليلي */
+.theme-btn { flex: none; width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); display: grid; place-items: center; cursor: pointer; padding: 0; }
+.theme-btn svg { width: 19px; height: 19px; }
+.theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+.top-row .home { margin-inline-start: auto; }
+.top-row .theme-btn { margin-inline-start: 4px; }
+.hero { position: relative; }
+#theme-slot { position: absolute; top: 16px; left: 16px; }

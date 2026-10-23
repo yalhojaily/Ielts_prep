@@ -91,6 +91,29 @@
       '<text x="75" y="75" text-anchor="middle" dominant-baseline="central" direction="ltr" font-family="Cairo, sans-serif" font-weight="800" font-size="' + (label && label.length > 4 ? 26 : 32) + '" fill="var(--ink)">' + esc(label != null ? label : pct + "%") + "</text></svg>";
   }
 
+
+  // ================= الوضع الليلي =================
+  var THEME_KEY = "grammar-theme";
+  function isDark() {
+    var t = document.documentElement.getAttribute("data-theme");
+    if (t) return t === "dark";
+    return window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  var SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  var MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+  function themeBtn() {
+    var b = el("button", "theme-btn"); b.type = "button";
+    function paint() { var d = isDark(); b.innerHTML = d ? SUN : MOON; b.title = d ? "الوضع النهاري" : "الوضع الليلي"; b.setAttribute("aria-label", b.title); }
+    b.addEventListener("click", function () {
+      var next = isDark() ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+      document.querySelectorAll(".theme-btn").forEach(function (x) { x._paint && x._paint(); });
+    });
+    b._paint = paint; paint();
+    return b;
+  }
+
   // ================= الأسئلة =================
   function qtextHTML(q) {
     var t = q.q || "";
@@ -630,6 +653,7 @@
     var app = el("div", "app");
     var top = el("header", "top"), topIn = el("div", "top-in");
     topIn.appendChild(el("div", "top-row", '<div class="badge">' + pad(id) + '</div><div class="ttl"><b>' + esc(u.ar) + '</b><span class="en">' + esc(u.title) + '</span></div><a class="home" href="index.html">الفهرس ←</a>'));
+    topIn.firstChild.appendChild(themeBtn());
     var stepsNav = el("nav", "steps"); stepsNav.setAttribute("aria-label", "خطوات الدرس");
     topIn.appendChild(stepsNav); top.appendChild(topIn);
     var stage = el("main", "stage");
@@ -760,6 +784,7 @@
       var first = ids[0], last = ids[ids.length - 1];
       var app = el("div", "app"); app.style.gridTemplateRows = "auto 1fr auto";
       app.appendChild(el("header", "top", '<div class="top-in"><div class="top-row"><div class="badge">' + pad(first) + "–" + pad(last) + '</div><div class="ttl"><b>اختبار: ' + esc(g.ar) + '</b><span class="en">' + esc(g.en) + '</span></div><a class="home" href="index.html">الفهرس ←</a></div></div>'));
+      app.querySelector(".top-row").appendChild(themeBtn());
       var stage = el("main", "stage"), sc = el("section", "screen on");
       sc.appendChild(el("div", "head", '<span class="kicker">اختبار القسم</span><h1>' + Math.min(REVIEW_SIZE, pool.length) + " سؤالًا من كل قواعد القسم</h1>" + '<p class="lead">أسئلة مختلطة تتغير كل مرة. بجانب كل سؤال رقم قاعدته لتراجعها إن أخطأت.</p>'));
       var qb = el("div", "quiz"); sc.appendChild(qb); stage.appendChild(sc); app.appendChild(stage);
@@ -812,6 +837,7 @@
   window.GrammarSite = { normalize: normalize, isCorrect: isCorrect, blocks: B };
   document.addEventListener("DOMContentLoaded", function () {
     var h = document.getElementById("home-root"); if (h) renderHome(h);
+    var slot = document.getElementById("theme-slot"); if (slot) slot.appendChild(themeBtn());
     var r = document.getElementById("review-root");
     if (r) { renderReview(r); window.addEventListener("hashchange", function () { renderReview(r); }); }
     var u = document.getElementById("unit-root");
