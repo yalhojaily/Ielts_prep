@@ -70,3 +70,45 @@ window.LESSONS[11] = {
     { h: "for / since", en: ["{k:for} ten years · {k:since} 2014"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[11].steps.push(
+  { k: "قصة كاملة", h: "التام يفتح الحديث · البسيط يكمل التفاصيل",
+    why: [
+      "في الكلام الحقيقي يأتي الزمنان معًا بترتيب ثابت تقريبًا: نبدأ بالمضارع التام لنذكر التجربة أو الخبر **بلا وقت**، ثم بمجرد أن نذكر **متى أو كيف** ننتقل إلى الماضي البسيط.",
+      "السبب: السؤال عن التفاصيل (متى؟ أين؟ مع من؟) يربط الحدث بوقت منتهٍ في الماضي، فيصبح ماضيًا بسيطًا.",
+      "هذا النمط يتكرر كثيرًا في IELTS Speaking: `Have you ever…?` ثم `When did you…?`"
+    ],
+    show: [{ t: "chain", items: [
+      { h: "خبر بلا وقت", en: "I{a:'ve} {v:been} to Japan.", ar: "مضارع تام" },
+      { h: "سؤال عن التفاصيل", en: "{q:When} {a:did} you {v:go}?", ar: "ماضٍ بسيط" },
+      { h: "التفاصيل", en: "I {v:went} in 2019. It {v:was} amazing.", ar: "ماضٍ بسيط" }
+    ] },
+      { t: "ex", items: [
+        ["“{a:Have} you ever {v:eaten} sushi?” “Yes, I {v:tried} it last year in Dubai.”", "السؤال بالتام، والتفاصيل بالبسيط"],
+        ["“I{a:'ve} {v:lost} my wallet!” “Oh no! Where {a:did} you {v:lose} it?”", "الخبر بالتام، والسؤال عن المكان بالبسيط"]
+      ] }],
+    check: { q: "\"I've visited Cairo.\" \"Really? When ___ there?\"", o: ["have you been", "did you go"], a: 1, why: "`When` تسأل عن وقت منتهٍ ← ماضٍ بسيط." } },
+
+  { k: "since أم ago", h: "ثلاث طرق للتعبير عن نفس المدة",
+    why: [
+      "العرب يخلطون كثيرًا بين `since` و`for` و`ago` لأن العربية تستعمل «منذ» لها كلها.",
+      "`for` + مدة، و`since` + بداية، وكلاهما مع **المضارع التام** (الوضع مستمر الآن). أما `ago` فتعني «قبل» وتأتي مع **الماضي البسيط** (حدث انتهى)."
+    ],
+    show: [{ t: "build", lab: "نفس المعلومة بثلاث صيغ (بدأت العمل قبل 5 سنوات)",
+      opts: [
+        ["for", "I{a:'ve} {v:worked} here {k:for} five years.", "مدة + مضارع تام", 0],
+        ["since", "I{a:'ve} {v:worked} here {k:since} 2021.", "نقطة البداية + مضارع تام", 0],
+        ["ago", "I {v:started} working here five years {k:ago}.", "حدث البداية انتهى + ماضٍ بسيط", 1]
+      ],
+      groups: [{ h: "for / since ← مضارع تام", sub: "الوضع مستمر حتى الآن" }, { h: "ago ← ماضٍ بسيط", sub: "لحظة البداية فقط" }] }],
+    check: { q: "I moved to Riyadh three years ___.", o: ["for", "since", "ago"], a: 2, why: "`moved` حدث انتهى في الماضي ← `ago`." } },
+
+  { k: "في سياق", h: "اقرأ: إجابة كاملة بالزمنين",
+    why: ["هذه إجابة على سؤال IELTS: `How long have you lived in your city?` لاحظ أين جاء المضارع التام وأين تحوّل الكلام إلى الماضي البسيط."],
+    show: [{ t: "passage", h: "إجابة في Speaking Part 1",
+      en: "I{a:'ve} {v:lived} in Riyadh {k:for} about ten years. My family {v:moved} here when I {v:was} at university. The city {a:has} {v:changed} a lot {k:since} then: they{a:'ve} {v:built} a metro, and many new parks {a:have} {v:opened}. Last year I {v:visited} my hometown, and it {v:felt} very small.",
+      ar: "أسكن في الرياض منذ نحو عشر سنوات. انتقلت عائلتي إلى هنا عندما كنت في الجامعة. تغيّرت المدينة كثيرًا منذ ذلك الحين: بنوا قطارًا، وافتُتحت حدائق جديدة كثيرة. في السنة الماضية زرت مدينتي الأصلية، وبدت صغيرة جدًا.",
+      note: "التام = الوضع المستمر حتى الآن والتغيرات التي نرى نتيجتها. البسيط = أحداث في وقت منتهٍ (`when I was`، `last year`)." }],
+    check: { q: "Why is \"moved\" in the past simple?", o: ["It has a result now.", "It happened at a finished time (when I was at university)."], a: 1, why: "الانتقال مرتبط بوقت منتهٍ ← ماضٍ بسيط." } }
+);

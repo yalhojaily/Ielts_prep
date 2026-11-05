@@ -57,3 +57,42 @@ window.LESSONS[63] = {
     { h: "قاعدة ذهبية", txt: "الاسم المعدود المفرد لا يقف وحده" }
   ]
 };
+
+// تعمّق
+window.LESSONS[63].steps.push(
+  { k: "أول مرة ثم the", h: "a عند *أول* ذكر · the بعدها",
+    why: [
+      "عندما تذكر شيئًا لأول مرة لا يعرفه السامع، تستخدم `a / an`. بعد أن ذكرته صار معروفًا لكما معًا، فتستخدم `the`.",
+      "الفكرة: `the` تعني «الذي تعرفه أنت أيضًا». لذلك نقول `the sun` (واحدة يعرفها الجميع) و`Close the door` (الباب الذي نراه كلانا)."
+    ],
+    show: [{ t: "ex", items: [
+      ["I bought {k:a} laptop and {k:a} phone. {k:The} laptop was cheap, but {k:the} phone was expensive.", "أول ذكر ← a · ثم ← the"],
+      ["Can you close {k:the} window, please?", "النافذة التي نراها كلانا"],
+      ["{k:The} moon is very bright tonight.", "قمر واحد يعرفه الجميع"]
+    ] }],
+    check: { q: "We stayed in a hotel near the beach. ___ hotel had a big pool.", o: ["A", "The"], a: 1, why: "الفندق ذُكر من قبل ← معروف ← `The`." } },
+
+  { k: "اختبر الفرق", h: "عام أم محدد؟ اختر الجملة",
+    why: [
+      "أكثر خطأ عند العرب: وضع `the` في الكلام العام لأننا نقول «ال» في العربية.",
+      "اختبار سريع: هل تتحدث عن **كل** الأشياء من هذا النوع (عام) أم عن مجموعة **محددة** تعرفها؟ العام بلا أداة."
+    ],
+    show: [{ t: "build", lab: "اختر",
+      opts: [
+        ["عام", "Money can't buy happiness.", "كل المال، كمفهوم ← بلا the", 0],
+        ["محدد", "{k:The} money in my wallet is not enough.", "مال محدد ← the", 1],
+        ["عام", "Children need love.", "كل الأطفال ← بلا the", 0],
+        ["محدد", "{k:The} children in my class are clever.", "أطفال محددون ← the", 1],
+        ["عام", "Technology has changed education.", "مفاهيم عامة ← بلا the", 0]
+      ],
+      groups: [{ h: "عام ← بلا أداة" }, { h: "محدد ← the" }] }],
+    check: { q: "___ technology is changing our lives.", o: ["The", "(nothing)"], a: 1, why: "التكنولوجيا كمفهوم عام ← بلا أداة." } },
+
+  { k: "في سياق", h: "اقرأ: الأدوات في فقرة مقال",
+    why: ["في مقالات IELTS يكثر الكلام العام، لذلك تكثر الأسماء بلا أداة. لاحظ كل `the` في الفقرة: لماذا جاءت؟"],
+    show: [{ t: "passage", h: "فقرة من مقال",
+      en: "Education is the key to success in modern society. Students who have access to technology often perform better, and {k:the} internet has made information available to everyone. However, {k:the} cost of {k:a} good university is rising, and {k:the} government should help families with {k:the} lowest incomes.",
+      ar: "التعليم مفتاح النجاح في المجتمع الحديث. الطلاب الذين يملكون وصولًا إلى التكنولوجيا يؤدون غالبًا بشكل أفضل، وجعل الإنترنت المعلومات متاحة للجميع. لكن تكلفة الجامعة الجيدة ترتفع، وعلى الحكومة أن تساعد الأسر ذات الدخل الأدنى.",
+      note: "`Education, Students, technology, information` = عام بلا أداة. `the internet / the government` = واحد معروف. `the cost of` = محدد بـ of. `the lowest` = تفضيل." }],
+    check: { q: "Why is there no article before \"Education\" at the start?", o: ["It is used in a general sense.", "It is a proper name."], a: 0, why: "التعليم كمفهوم عام ← بلا أداة." } }
+);

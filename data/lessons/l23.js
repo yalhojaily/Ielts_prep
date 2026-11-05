@@ -50,3 +50,31 @@ window.LESSONS[23] = {
     { h: "جارٍ / مكتمل", en: ["{a:will be} {v:working} · {a:will have} {v:finished}"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[23].steps.push(
+  { k: "موقف واحد", h: "جملة واحدة، ست صيغ، ستة معانٍ",
+    why: [
+      "أفضل طريقة لترى الفرق: ثبّت الموقف وغيّر الصيغة. كلها عن الغد، لكن كل صيغة تقول شيئًا مختلفًا عن طبيعة الحدث.",
+      "اضغط على كل صيغة واقرأ المعنى تحتها."
+    ],
+    show: [{ t: "build", lab: "اختر الصيغة",
+      opts: [
+        ["will", "I{a:'ll} {v:call} Ahmed tomorrow.", "قرار الآن أو وعد", 0],
+        ["going to", "I{a:'m going to} {v:call} Ahmed tomorrow.", "نية قررتها من قبل", 0],
+        ["مستمر", "I{a:'m} {v:meeting} Ahmed tomorrow at 10.", "موعد متفق عليه معه", 1],
+        ["مضارع بسيط", "The meeting with Ahmed {v:starts} at 10.", "جدول رسمي", 1],
+        ["will be -ing", "At 10 tomorrow I{a:'ll be} {v:talking} to Ahmed.", "سأكون في منتصف الحديث", 2],
+        ["will have", "By noon I{a:'ll have} {v:talked} to Ahmed.", "سيكون الحديث قد انتهى", 2]
+      ],
+      groups: [{ h: "قرار / نية" }, { h: "مرتب مسبقًا" }, { h: "لحظة أو اكتمال" }] }],
+    check: { q: "Don't call me at 3; I ___ my presentation then.", o: ["will give", "will be giving", "will have given"], a: 1, why: "عند الثالثة سأكون في منتصف العرض ← `will be giving`." } },
+
+  { k: "في سياق", h: "اقرأ: التوقعات في Writing Task 1",
+    why: ["عند وصف رسم بياني فيه توقعات مستقبلية، تحتاج صيغ المستقبل ودرجات اليقين معًا. لاحظ كيف تنوّعت الصيغ بدل تكرار `will`."],
+    show: [{ t: "passage", h: "وصف توقعات (Task 1)",
+      en: "The number of electric cars {a:is expected to} {v:rise} sharply over the next decade. By 2035, they {a:will} probably {v:make} up half of all new sales, while petrol cars {a:are likely to} {v:fall} below 30%. By the end of the period, the market {a:will have} {v:changed} completely.",
+      ar: "من المتوقع أن يرتفع عدد السيارات الكهربائية بشدة خلال العقد القادم. بحلول 2035 ستشكّل على الأرجح نصف المبيعات الجديدة، بينما يُرجّح أن تنخفض سيارات البنزين إلى أقل من 30٪. وبنهاية الفترة سيكون السوق قد تغيّر تمامًا.",
+      note: "`is expected to`, `will probably`, `are likely to` = درجات يقين. `will have changed` = اكتمال قبل نقطة مستقبلية." }],
+    check: { q: "Which form shows completion before a future point?", o: ["is expected to rise", "will have changed"], a: 1, why: "`will have changed` = مستقبل تام." } }
+);

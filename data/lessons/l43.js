@@ -43,3 +43,29 @@ window.LESSONS[43] = {
     { h: "that", txt: "اختيارية" }
   ]
 };
+
+// تعمّق
+window.LESSONS[43].steps.push(
+  { k: "الضمائر", h: "من يتكلم الآن؟ غيّر الضمائر *حسب المنطق*",
+    why: [
+      "تغيير الضمائر ليس قاعدة آلية، بل منطق: اسأل «من يقصد المتكلم الأصلي؟» ثم اختر الضمير الذي يشير إليه **من وجهة نظرك أنت**.",
+      "إذا قال لك سعد: «أحب سيارتك»، فـ «أنا» عنده = سعد ← `he`. و«سيارتك» = سيارتي أنا ← `my car`."
+    ],
+    show: [{ t: "build", lab: "اختر الجملة",
+      opts: [
+        ["Saad: “I like your car.”", "Saad said {s:he} liked {s:my} car.", "I = Saad ← he · your = أنا ← my", 0],
+        ["Mona: “We're tired.”", "Mona said {s:they} were tired.", "we ← they", 0],
+        ["Ali to Sara: “I'll call you.”", "Ali told Sara {s:he} would call {s:her}.", "I ← he · you ← her", 0],
+        ["Ali: “This is my book.”", "Ali said {k:that} was {s:his} book.", "this ← that · my ← his", 0]
+      ],
+      groups: [{ h: "الضمير يتبع الشخص الذي يُقصد" }] }],
+    check: { q: "Omar told me, \"I will help you.\" → Omar told me that ___ would help ___.", o: ["I / you", "he / me", "he / you"], a: 1, why: "`I` = عمر ← `he`، و`you` = أنا ← `me`." } },
+
+  { k: "في سياق", h: "اقرأ: نقل محادثة",
+    why: ["في الحياة وفي Speaking نحكي كثيرًا ما قاله الآخرون. لاحظ فعل النقل وتغيّر الضمائر والزمن والوقت في هذه الفقرة."],
+    show: [{ t: "passage", h: "حكاية مكالمة",
+      en: "Yesterday my manager called me. He {v:told} me that the company {v:was} opening a new office in Dammam, and he {v:said} that they {v:needed} someone with my experience. He {v:asked} me {k:if} I {a:would} {v:consider} moving there. I {v:said} I {v:needed} time to think, and he {v:told} me to give him an answer {k:the following week}.",
+      ar: "أمس اتصل بي مديري. أخبرني أن الشركة ستفتح مكتبًا جديدًا في الدمام، وقال إنهم يحتاجون شخصًا بخبرتي. سألني إن كنت سأفكر في الانتقال إلى هناك. قلت إنني أحتاج وقتًا للتفكير، فطلب مني أن أعطيه جوابًا في الأسبوع التالي.",
+      note: "`told me` (بعده شخص) و`said` (بلا شخص). الأزمنة رجعت خطوة، و`next week` صارت `the following week`." }],
+    check: { q: "His actual words were probably: \"Give me an answer ___.\"", o: ["the following week", "next week"], a: 1, why: "في الكلام المباشر قال `next week`، وفي النقل صارت `the following week`." } }
+);

@@ -79,3 +79,32 @@ window.LESSONS[4] = {
     { h: "انتبه", txt: "أفعال الحالة تبقى بسيطة", en: ["I {v:know} · I {v:want} · I {v:like}"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[4].steps.push(
+  { k: "بسيط أم مستمر", h: "نفس الفعل… *معنيان* مختلفان",
+    why: [
+      "أصعب ما في هذا الدرس ليس البناء، بل الاختيار. السؤال الذي يحسم: هل أتحدث عن شيء **ثابت في حياتي**، أم عن شيء **يجري الآن أو مؤقت**؟",
+      "لاحظ أن الفعل نفسه يتغير معناه: `I work in a bank` = هذه وظيفتي. `I'm working in a bank` = أعمل هناك هذه الفترة فقط (مثلًا تدريب صيفي).",
+      "ولذلك المستمر يوحي دائمًا بأن الشيء **سينتهي** قريبًا، والبسيط يوحي بأنه **مستقر**."
+    ],
+    show: [{ t: "build", lab: "اختر الموقف",
+      opts: [
+        ["وظيفتي الدائمة", "I {v:work} in a bank.", "ثابت ← بسيط", 0],
+        ["تدريب هذا الصيف", "I{a:'m} {v:working} in a bank this summer.", "مؤقت ← مستمر", 1],
+        ["أسكن هنا", "She {v:lives} in Jeddah.", "سكنها الدائم", 0],
+        ["إقامة مؤقتة", "She{a:'s} {v:living} with her aunt until she finds a flat.", "حتى تجد شقة ← مؤقت", 1],
+        ["هوايتي", "He {v:plays} tennis.", "عادة ← بسيط", 0],
+        ["الآن في الملعب", "He{a:'s} {v:playing} tennis right now.", "يجري الآن ← مستمر", 1]
+      ],
+      groups: [{ h: "ثابت / عادة ← بسيط" }, { h: "الآن / مؤقت ← مستمر" }] }],
+    check: { q: "I ___ at my uncle's house until my flat is ready.", o: ["stay", "am staying"], a: 1, why: "`until my flat is ready` تعني أن الإقامة مؤقتة ← المستمر." } },
+
+  { k: "في سياق", h: "اقرأ: المستمر داخل نص حقيقي",
+    why: ["هذا نوع الإجابة الذي يطلبه الممتحن في IELTS Speaking Part 1 عندما يسأل: `What are you doing these days?` لاحظ كيف يجتمع البسيط (للثابت) والمستمر (للمؤقت) في فقرة واحدة."],
+    show: [{ t: "passage", h: "إجابة في Speaking Part 1",
+      en: "I {v:work} as an accountant, but at the moment I{a:'m} {v:preparing} for the IELTS exam, so I{a:'m} {v:studying} every evening. I usually {v:go} to the gym after work, but these days I{a:'m} {v:spending} that time on grammar. My English {a:is} {v:getting} better, and I{a:'m} {v:enjoying} the challenge.",
+      ar: "أعمل محاسبًا، لكنني حاليًا أستعد لاختبار IELTS، لذلك أذاكر كل مساء. عادةً أذهب إلى النادي بعد العمل، لكن هذه الأيام أقضي ذلك الوقت في القواعد. لغتي الإنجليزية تتحسن، وأنا أستمتع بالتحدي.",
+      note: "`work` و`go` = ثابت وعادة. كل ما يحدث **هذه الفترة** جاء بالمستمر، ومعه كلمات مثل `at the moment` و`these days`." }],
+    check: { q: "In the text, why is \"I'm studying every evening\" continuous?", o: ["It is a permanent habit.", "It is a temporary situation (these weeks only)."], a: 1, why: "المذاكرة كل مساء مرتبطة بفترة الاستعداد للاختبار، أي وضع مؤقت." } }
+);

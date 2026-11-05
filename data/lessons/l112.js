@@ -45,3 +45,14 @@ window.LESSONS[112] = {
     { h: "مثال", en: ["For example, + جملة · such as + أسماء"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[112].steps.push(
+  { k: "في سياق", h: "اقرأ: فقرة كاملة متماسكة",
+    why: ["هذه فقرة من مقال IELTS بدرجة عالية. لاحظ أن أدوات الربط قليلة لكنها في أماكنها، وكل واحدة تبدأ جملة بعد نقطة وتتبعها فاصلة."],
+    show: [{ t: "passage", h: "فقرة من مقال",
+      en: "One major advantage of public transport is that it reduces traffic. {k:For example}, a single bus can replace up to forty cars. {k:In addition}, it is usually cheaper than driving. {k:As a result}, many cities are investing heavily in metro systems. {k:However}, these projects are expensive, and {k:therefore} governments must plan them carefully.",
+      ar: "من أكبر مزايا النقل العام أنه يقلل الزحام. فمثلًا يمكن لحافلة واحدة أن تحل محل أربعين سيارة. إضافة إلى ذلك، هو عادة أرخص من القيادة. ونتيجة لذلك تستثمر مدن كثيرة بقوة في أنظمة المترو. لكن هذه المشاريع مكلفة، ولذلك يجب على الحكومات تخطيطها بعناية.",
+      note: "الترتيب: فكرة ← مثال (`For example`) ← إضافة (`In addition`) ← نتيجة (`As a result`) ← رأي مخالف (`However`)." }],
+    check: { q: "Which word introduces a consequence?", o: ["For example", "As a result", "In addition"], a: 1, why: "`As a result` = نتيجة لذلك." } }
+);

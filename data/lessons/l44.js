@@ -51,3 +51,14 @@ window.LESSONS[44] = {
     { h: "اختياري", txt: "إذا كان الكلام ما زال صحيحًا" }
   ]
 };
+
+// تعمّق
+window.LESSONS[44].steps.push(
+  { k: "في سياق", h: "اقرأ: خبر منقول بأسلوب الصحافة",
+    why: ["الصحف ونشرات الأخبار (ومقاطع Listening وReading) مليئة بالكلام المنقول. لاحظ كيف رجع كل زمن خطوة، وأي الأفعال الناقصة لم تتغير."],
+    show: [{ t: "passage", h: "خبر صحفي",
+      en: "The minister {v:said} that the new airport {a:would} {v:open} in 2028. He {v:explained} that the first phase {a:had} already {v:been} completed and that work on the second phase {a:was} {v:progressing} well. He {v:added} that the project {a:could} {v:create} 20,000 jobs, but {v:warned} that costs {a:might} {v:rise}.",
+      ar: "قال الوزير إن المطار الجديد سيُفتتح في 2028. وأوضح أن المرحلة الأولى اكتملت بالفعل وأن العمل في المرحلة الثانية يتقدم جيدًا. وأضاف أن المشروع قد يخلق 20 ألف وظيفة، لكنه حذّر من أن التكاليف قد ترتفع.",
+      note: "كلامه الأصلي: `will open` ← `would open`، `has been completed` ← `had been completed`، `is progressing` ← `was progressing`، `can create` ← `could create`، `may rise` ← `might rise`." }],
+    check: { q: "What were the minister's actual words?", o: ["\"The airport would open in 2028.\"", "\"The airport will open in 2028.\""], a: 1, why: "`would` في النقل أصلها `will`." } }
+);

@@ -64,3 +64,26 @@ window.LESSONS[13] = {
     { h: "'d", en: ["'d + gone = had", "'d + go = would"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[13].steps.push(
+  { k: "متى ضروري", h: "متى يجب الماضي التام ومتى *يكفي* البسيط؟",
+    why: [
+      "الماضي التام ليس إجباريًا في كل قصة. إذا ذكرت الأحداث **بترتيب حدوثها** فالماضي البسيط يكفي: `I woke up, had breakfast and left.`",
+      "نحتاجه فقط عندما **نرجع إلى الوراء**: نذكر حدثًا متأخرًا أولًا ثم نتكلم عن شيء حدث قبله. حينها الماضي التام هو الإشارة التي تقول للسامع: «هذا حدث قبل».",
+      "ولذلك يكثر مع `when`, `by the time`, `because`, `realised`, `found out`."
+    ],
+    show: [{ t: "compare", cols: [
+      { h: "بالترتيب ← ماضٍ بسيط يكفي", c: "subj", en: ["I {v:locked} the door, {v:got} in the car and {v:drove} to work."] },
+      { h: "رجوع للوراء ← ماضٍ تام", c: "accent", en: ["When I {v:got} to work, I {v:realised} I {a:had} {v:left} my laptop at home."] }
+    ] }],
+    check: { q: "I got to the airport and found out that my flight ___ cancelled.", o: ["was", "had been"], a: 1, why: "الإلغاء حدث **قبل** وصولي واكتشافي ← الماضي التام." } },
+
+  { k: "في سياق", h: "اقرأ: قصة فيها رجوع للوراء",
+    why: ["هذه قصة قصيرة من نوع IELTS Speaking Part 2 (Describe a time when…). لاحظ أن الأحداث الرئيسية بالماضي البسيط، وما سبقها بالماضي التام."],
+    show: [{ t: "passage", h: "قصة في Speaking Part 2",
+      en: "Last summer I {v:arrived} at the hotel late at night. I {v:was} very tired because I {a:had} {v:been} on the plane for twelve hours. At reception, they {v:told} me that they {a:had} {v:given} my room to someone else. I {a:had} {v:booked} it two months earlier! In the end, they {v:upgraded} me to a suite.",
+      ar: "في الصيف الماضي وصلت إلى الفندق متأخرًا في الليل. كنت متعبًا جدًا لأنني كنت في الطائرة اثنتي عشرة ساعة. في الاستقبال أخبروني أنهم أعطوا غرفتي لشخص آخر. كنت قد حجزتها قبل شهرين! وفي النهاية رقّوني إلى جناح.",
+      note: "الأحداث بالترتيب (`arrived, told, upgraded`) ماضٍ بسيط. ما حدث قبلها (`had been, had given, had booked`) ماضٍ تام." }],
+    check: { q: "Which happened first?", o: ["They told me about the room.", "They gave my room to someone else."], a: 1, why: "`had given` ماضٍ تام ← حدث قبل `told`." } }
+);

@@ -55,3 +55,31 @@ window.LESSONS[24] = {
     { h: "لا مجهول", en: ["happen · arrive · die"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[24].steps.push(
+  { k: "خطوات التحويل", h: "حوّل أي جملة إلى المجهول في 4 خطوات",
+    why: [
+      "التحويل له خطوات ثابتة، وإذا اتبعتها لن تخطئ:",
+      "**1.** خذ المفعول وضعه في أول الجملة. **2.** حدّد زمن الفعل الأصلي. **3.** ضع `be` بنفس الزمن (ومطابقًا للفاعل الجديد). **4.** أضف التصريف الثالث، ثم `by` + الفاعل إذا كان مهمًا."
+    ],
+    show: [{ t: "chain", items: [
+      { h: "الجملة", en: "The company {v:employs} 500 people." },
+      { h: "المفعول أولًا", en: "500 people …" },
+      { h: "be بنفس الزمن", en: "500 people {a:are} …", ar: "مضارع + جمع" },
+      { h: "+ التصريف الثالث", en: "500 people {a:are} {v:employed} by the company." }
+    ] },
+      { t: "trans", items: [
+        { h: "ماضٍ", from: "They {v:built} the bridge in 1990.", to: "The bridge {a:was} {v:built} in 1990." },
+        { h: "مضارع تام", from: "Someone {a:has} {v:stolen} my bike.", to: "My bike {a:has been} {v:stolen}." }
+      ] }],
+    check: { q: "\"They are repairing the road.\" → The road ___.", o: ["is repaired", "is being repaired", "has repaired"], a: 1, why: "مضارع مستمر ← `is being` + التصريف الثالث." } },
+
+  { k: "في سياق", h: "اقرأ: وصف عملية (Writing Task 1)",
+    why: ["في IELTS Task 1 قد يُطلب منك وصف عملية تصنيع. المجهول هنا هو الأسلوب الطبيعي، لأن المهم هو المنتج وما يحدث له، لا العامل."],
+    show: [{ t: "passage", h: "How chocolate is made",
+      en: "First, the cocoa beans {a:are} {v:picked} and {v:left} in the sun to dry. They {a:are} then {v:transported} to a factory, where they {a:are} {v:roasted} and {v:crushed}. Next, sugar and milk {a:are} {v:added}, and the mixture {a:is} {v:heated}. Finally, the chocolate {a:is} {v:poured} into moulds and {v:packed}.",
+      ar: "أولًا تُقطف حبوب الكاكاو وتُترك في الشمس لتجف. ثم تُنقل إلى مصنع حيث تُحمّص وتُطحن. بعد ذلك يُضاف السكر والحليب ويُسخّن الخليط. وأخيرًا تُصب الشوكولاتة في قوالب وتُعبّأ.",
+      note: "كل الأفعال مجهولة لأن الكلام عن الحبوب والشوكولاتة. ولاحظ كلمات الترتيب: `First, then, Next, Finally`." }],
+    check: { q: "Why don't we write \"Workers pick the beans\"?", o: ["Because the workers are not important here.", "Because \"pick\" is irregular."], a: 0, why: "المهم المنتج لا العامل ← مجهول." } }
+);

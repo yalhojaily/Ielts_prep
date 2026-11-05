@@ -42,3 +42,26 @@ window.LESSONS[52] = {
     { h: "المعنى يتغير", en: ["stop · remember · forget · try"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[52].steps.push(
+  { k: "طريقة الحفظ", h: "مفتاح يساعدك: to = *نحو* المستقبل · ing = *تجربة* أو نشاط",
+    why: [
+      "القوائم تُحفظ، لكن هناك ميل يسهّل التخمين: `to` أصلها «إلى»، فالأفعال التي تتجه نحو شيء **لم يحدث بعد** (أريد، أخطط، أقرر، أعد، أرفض) تأخذ `to`.",
+      "أما `ing` فتعني **نشاطًا** موجودًا أو مجرّبًا: أستمتع بالقراءة (أنا أقرأ فعلًا)، أنهيت العمل، أتجنب الأكل، أمانع الانتظار.",
+      "هذا ميل لا قاعدة، لكنه يصح مع أغلب الأفعال الشائعة."
+    ],
+    show: [{ t: "compare", cols: [
+      { h: "to: نحو شيء لم يحدث", c: "accent", en: ["I {v:want} {a:to} {v:travel}.", "She {v:decided} {a:to} {v:resign}.", "They {v:promised} {a:to} {v:help}.", "He {v:refused} {a:to} {v:pay}."] },
+      { h: "ing: نشاط موجود / مجرّب", c: "subj", en: ["I {v:enjoy} {v:travelling}.", "She {v:finished} {v:writing}.", "Do you {v:mind} {v:waiting}?", "He {v:avoids} {v:driving} at night."] }
+    ] }],
+    check: { q: "We can't afford ___ a new car this year.", o: ["buying", "to buy"], a: 1, why: "`afford` تتجه لشيء لم يحدث (الشراء) ← `to buy`." } },
+
+  { k: "في سياق", h: "اقرأ: أنماط الأفعال في إجابة واحدة",
+    why: ["هذه إجابة على سؤال `Do you like cooking?`. حدد كل فعل يتبعه فعل آخر، ولاحظ أي شكل جاء بعده."],
+    show: [{ t: "passage", h: "إجابة في Speaking Part 1",
+      en: "Yes, I really {v:enjoy} {v:cooking}, especially on weekends. I {v:started} {v:learning} when I lived abroad, because I {v:wanted} {a:to} {v:save} money. At first I {v:kept} {v:burning} everything! Now I'm {v:planning} {a:to} {v:take} a course, and I {v:hope} {a:to} {v:cook} for my whole family one day.",
+      ar: "نعم، أستمتع كثيرًا بالطبخ، خاصة في عطلة نهاية الأسبوع. بدأت التعلم عندما كنت أعيش في الخارج لأنني أردت توفير المال. في البداية ظللت أحرق كل شيء! والآن أخطط للالتحاق بدورة، وآمل أن أطبخ لعائلتي كلها يومًا ما.",
+      note: "`enjoy, keep` + ing. `want, plan, hope` + to. `start` تقبل الاثنين." }],
+    check: { q: "In the text, which verb could ALSO be followed by \"to learn\" with the same meaning?", o: ["started", "kept"], a: 0, why: "`start` تقبل `to` و`ing` بنفس المعنى، أما `keep` فـ ing فقط." } }
+);

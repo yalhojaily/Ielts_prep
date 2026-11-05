@@ -46,3 +46,14 @@ window.LESSONS[111] = {
     { h: "despite", en: ["despite + اسم · although + جملة"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[111].steps.push(
+  { k: "في سياق", h: "اقرأ: أدوات الربط في فقرة مقال",
+    why: ["فقرة Task 2 الجيدة تستعمل أدوات ربط متنوعة لا `and` و`because` فقط. لاحظ أنواع العلاقات: سبب، تناقض، زمن، غرض."],
+    show: [{ t: "passage", h: "فقرة من مقال",
+      en: "{k:Although} working from home has many benefits, it also has drawbacks. Many employees prefer it {k:because} they save time on commuting. {k:However}, {k:while} some people work better alone, others feel isolated. {k:As soon as} companies recognise this, they can offer flexible options {k:so that} workers can choose what suits them best.",
+      ar: "رغم أن العمل من المنزل له فوائد كثيرة، فإن له عيوبًا أيضًا. يفضله كثير من الموظفين لأنهم يوفرون وقت التنقل. لكن بينما يعمل بعض الناس بشكل أفضل وحدهم، يشعر آخرون بالعزلة. وبمجرد أن تدرك الشركات ذلك، يمكنها تقديم خيارات مرنة لكي يختار العمال ما يناسبهم.",
+      note: "`Although` تناقض · `because` سبب · `while` مقارنة · `As soon as` زمن · `so that` غرض." }],
+    check: { q: "Which linking word expresses purpose in the text?", o: ["because", "so that", "while"], a: 1, why: "`so that` = لكي (غرض)." } }
+);

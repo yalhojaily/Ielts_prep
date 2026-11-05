@@ -70,3 +70,31 @@ window.LESSONS[29] = {
     { h: "قاعدة ذهبية", txt: "لا will ولا would بعد if" }
   ]
 };
+
+// تعمّق
+window.LESSONS[29].steps.push(
+  { k: "1 أم 2", h: "الفرق الحقيقي بين النوع الأول والثاني",
+    why: [
+      "الطلاب يحفظون الصيغ لكنهم يخلطون في الاختيار. الفرق ليس في الزمن (كلاهما عن الحاضر أو المستقبل)، بل في **رأيك**: هل الشرط **واقعي ممكن** أم **خيالي أو بعيد**؟",
+      "لو قلت `If I win the lottery` فأنت تتوقع الفوز فعلًا (غريب!). الأطبع `If I won the lottery` لأنه بعيد الاحتمال.",
+      "وإذا كان الشرط **مستحيلًا الآن** (لست طيرًا، لست أنت) فالنوع الثاني هو الوحيد الممكن."
+    ],
+    show: [{ t: "build", lab: "اختر الموقف",
+      opts: [
+        ["ممكن", "If it {v:rains} tomorrow, we{a:'ll} {v:stay} home.", "المطر محتمل فعلًا ← النوع 1", 0],
+        ["ممكن", "If I {v:pass} IELTS, I{a:'ll} {v:apply} to the university.", "أنا أستعد، والنجاح ممكن ← النوع 1", 0],
+        ["بعيد", "If I {v:won} the lottery, I{a:'d} {v:buy} a farm.", "بعيد جدًا ← النوع 2", 1],
+        ["مستحيل الآن", "If I {v:were} a bird, I{a:'d} {v:fly} to Abha.", "مستحيل ← النوع 2", 1],
+        ["مستحيل الآن", "If I {v:had} his phone number, I{a:'d} {v:call} him.", "ليس عندي رقمه الآن ← النوع 2", 1]
+      ],
+      groups: [{ h: "واقعي ممكن", sub: "النوع 1" }, { h: "خيالي / بعيد / مستحيل الآن", sub: "النوع 2" }] }],
+    check: { q: "I don't know her address. If I ___ it, I would visit her.", o: ["know", "knew"], a: 1, why: "لا أعرفه الآن (غير حقيقي) ← النوع 2: `knew`." } },
+
+  { k: "في سياق", h: "اقرأ: الشرط في مقال IELTS",
+    why: ["جمل الشرط ممتازة في Writing Task 2 لعرض النتائج المحتملة لحل ما. لاحظ أن الكاتب يستخدم النوع الأول لما يراه واقعيًا، والثاني لما يراه بعيدًا."],
+    show: [{ t: "passage", h: "فقرة من مقال",
+      en: "If governments {v:invest} more in public transport, fewer people {a:will} {v:drive} to work, and traffic {a:will} {v:decrease}. However, if public transport {v:were} completely free, the cost {a:would} {v:be} enormous. Unless cities {v:improve} their bus networks, the problem {a:will} {v:continue}.",
+      ar: "إذا استثمرت الحكومات أكثر في النقل العام، فسيقل عدد من يقودون إلى العمل وستنخفض الزحمة. لكن لو كان النقل العام مجانيًا تمامًا لكانت التكلفة هائلة. وما لم تحسّن المدن شبكات الحافلات، ستستمر المشكلة.",
+      note: "النوع 1 = حل واقعي. النوع 2 (`were free`) = اقتراح بعيد. `Unless` = إذا لم." }],
+    check: { q: "Why \"if public transport were completely free\"?", o: ["The writer sees it as unlikely.", "It is a scientific fact."], a: 0, why: "النوع 2 يعني أن الكاتب يراه بعيد الاحتمال." } }
+);

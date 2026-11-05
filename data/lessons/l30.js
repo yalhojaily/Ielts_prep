@@ -51,3 +51,14 @@ window.LESSONS[30] = {
     { h: "رسمي", en: ["{a:Should} you {v:need} help…"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[30].steps.push(
+  { k: "في سياق", h: "اقرأ: الشرط المختلط في حديث عن الحياة",
+    why: ["الشرط المختلط شائع جدًا عندما نتحدث عن قرارات الماضي وأثرها اليوم، وهو موضوع متكرر في IELTS Speaking Part 3. لاحظ كيف يربط المتكلم الماضي بالحاضر."],
+    show: [{ t: "passage", h: "حديث عن قرار",
+      en: "When I was eighteen, I chose to study accounting instead of medicine. If I {a:had} {v:studied} medicine, I {a:would} {v:be} a doctor now, and I probably {a:wouldn't} {v:have} so much free time. But I don't regret it. If I {v:were} a doctor, I {a:wouldn't} {v:be} able to invest as much as I do. As long as I {v:enjoy} my work, I'm happy.",
+      ar: "عندما كنت في الثامنة عشرة اخترت دراسة المحاسبة بدل الطب. لو كنت درست الطب لكنت طبيبًا الآن، وعلى الأرجح لما كان عندي كل هذا الوقت الحر. لكنني لست نادمًا. لو كنت طبيبًا لما استطعت الاستثمار بالقدر الذي أستثمره الآن. وما دمت أستمتع بعملي فأنا سعيد.",
+      note: "`had studied` (ماضٍ) ← `would be … now` (حاضر) = مختلط. `If I were` = النوع 2. `As long as` = بشرط أن." }],
+    check: { q: "\"If I had studied medicine, I would be a doctor now\" — which part is about the present?", o: ["If I had studied medicine", "I would be a doctor now"], a: 1, why: "`would be … now` نتيجة في الحاضر." } }
+);

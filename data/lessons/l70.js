@@ -49,3 +49,30 @@ window.LESSONS[70] = {
     { h: "للعدّ", en: ["{k:a piece of} advice"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[70].steps.push(
+  { k: "التأثير على الجملة", h: "غير المعدود يغيّر الجملة *كلها*",
+    why: [
+      "معرفة أن الكلمة غير معدودة لا تكفي، لأنها تؤثر على كل ما حولها:",
+      "**الفعل** يكون مفردًا (`advice is`)، و**الإشارة** مفردة (`this information`)، و**الكمية** بـ `much / a little` (`much luggage`)، والضمير `it` لا `they`."
+    ],
+    show: [{ t: "build", lab: "اختر الكلمة",
+      opts: [
+        ["advice", "{k:This} advice {v:is} useful. Thank you for {k:it}.", "مفرد في كل شيء", 0],
+        ["information", "{k:How much} information {v:do} we have? Not {k:much}.", "much لا many", 0],
+        ["news", "The news {v:is} good. I can't believe {k:it}!", "news مفرد", 0],
+        ["tips (معدود)", "{k:These} tips {v:are} useful. Thank you for {k:them}.", "البديل المعدود: tips", 1],
+        ["suitcases (معدود)", "{k:How many} suitcases {v:do} you have?", "البديل المعدود لـ luggage", 1]
+      ],
+      groups: [{ h: "غير معدود ← مفرد" }, { h: "بديل معدود ← جمع" }] }],
+    check: { q: "The information you gave me ___ very helpful.", o: ["were", "was"], a: 1, why: "`information` غير معدود ← فعل مفرد." } },
+
+  { k: "في سياق", h: "اقرأ: إيميل بكلمات غير معدودة",
+    why: ["هذا إيميل قصير من نوع IELTS General Writing Task 1. كل كلمة ملونة غير معدودة، فلاحظ ما جاء معها."],
+    show: [{ t: "passage", h: "إيميل",
+      en: "Dear Mr Hassan, thank you for your {k:advice} about the trip. I need some more {k:information} about the hotel. How much {k:luggage} can we take on the bus? Also, is there any {k:equipment} for children? I'd appreciate {k:a piece of} {k:advice} on the best restaurants too.",
+      ar: "عزيزي السيد حسن، شكرًا على نصيحتك بخصوص الرحلة. أحتاج مزيدًا من المعلومات عن الفندق. كم من الأمتعة يمكننا أخذه في الحافلة؟ وهل توجد أي معدات للأطفال؟ وسأكون ممتنًا لنصيحة بخصوص أفضل المطاعم أيضًا.",
+      note: "لا `s` ولا `a` معها. `some / any / much` للكمية، و`a piece of` لعدّها." }],
+    check: { q: "Which is correct?", o: ["How many luggages can I take?", "How much luggage can I take?"], a: 1, why: "`luggage` غير معدود ← `How much`، بلا s." } }
+);

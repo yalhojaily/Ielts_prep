@@ -54,3 +54,27 @@ window.LESSONS[81] = {
     { h: "الحذف", en: ["the man (who) I met"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[81].steps.push(
+  { k: "دمج جملتين", h: "اصنع جملة صلة من جملتين",
+    why: [
+      "جملة الصلة في الحقيقة جملتان دمجناهما. الطريقة: ابحث عن الاسم المشترك في الجملتين، واستبدل الضمير في الجملة الثانية بـ `who / which / that`، ثم ضعها **مباشرة بعد** الاسم.",
+      "انتبه: الضمير الأصلي (`he, it, them`) **يختفي**، لأن `who / which` أخذت مكانه. لهذا `that I read it` خطأ."
+    ],
+    show: [{ t: "trans", items: [
+      { h: "فاعل", from: "I met a man. {s:He} speaks six languages.", to: "I met a man {k:who} speaks six languages.", chg: ["He ← who"] },
+      { h: "مفعول", from: "This is the phone. I bought {o:it} yesterday.", to: "This is the phone ({k:that}) I bought yesterday.", chg: ["it ← that (يمكن حذفها)"] },
+      { h: "ملكية", from: "I know a woman. {s:Her} son is a pilot.", to: "I know a woman {k:whose} son is a pilot.", chg: ["Her ← whose"] },
+      { h: "مكان", from: "This is the café. We met {o:there}.", to: "This is the café {k:where} we met.", chg: ["there ← where"] }
+    ] }],
+    check: { q: "\"I have a friend. His father is a judge.\" →", o: ["I have a friend who his father is a judge.", "I have a friend whose father is a judge."], a: 1, why: "`His` (ملكية) ← `whose`، ولا نكرر `his`." } },
+
+  { k: "في سياق", h: "اقرأ: جمل الصلة في وصف شخص",
+    why: ["جمل الصلة تجعل الوصف دقيقًا ومترابطًا، وهي مثالية في IELTS Speaking Part 2 (Describe a person who…). لاحظ أداة الربط في كل مرة."],
+    show: [{ t: "passage", h: "Describe a person who inspired you",
+      en: "I'd like to talk about my uncle, a man {k:who} taught me a lot. He's an engineer {k:who} built his own company from nothing. He lives in a small town {k:where} everyone knows him. The advice ({k:that}) he gave me when I was young is something ({k:that}) I still follow. He's a person {k:whose} patience I really admire.",
+      ar: "أود أن أتحدث عن عمي، الرجل الذي علمني الكثير. هو مهندس بنى شركته من لا شيء. يسكن في بلدة صغيرة يعرفه فيها الجميع. والنصيحة التي أعطاني إياها وأنا صغير شيء ما زلت أتبعه. إنه شخص أعجب حقًا بصبره.",
+      note: "`who` = شخص فاعل. `where` = مكان. `(that)` بين قوسين = يمكن حذفها لأن بعدها فاعل (`he`, `I`). `whose` = ملكية." }],
+    check: { q: "Why can \"that\" be removed in \"The advice (that) he gave me\"?", o: ["Because a new subject (he) follows it.", "Because advice is uncountable."], a: 0, why: "بعدها فاعل جديد ← هي مفعول ← يمكن حذفها." } }
+);

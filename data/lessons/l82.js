@@ -43,3 +43,14 @@ window.LESSONS[82] = {
     { h: "للجملة", en: ["…, {k:which} was a surprise."] }
   ]
 };
+
+// تعمّق
+window.LESSONS[82].steps.push(
+  { k: "في سياق", h: "اقرأ: معلومات إضافية في فقرة",
+    why: ["في Writing Task 1 وفي وصف الأماكن، جمل الصلة غير المحددة تضيف معلومات دون أن تبدأ جملة جديدة. لاحظ الفاصلتين، وأن `which` الأخيرة تعلّق على الجملة كلها."],
+    show: [{ t: "passage", h: "وصف مدينة",
+      en: "AlUla, {k:which} is in the north-west of Saudi Arabia, has become a major tourist destination. Hegra, {k:where} you can see ancient Nabataean tombs, was the country's first UNESCO World Heritage Site. The project's director, {k:who} studied archaeology in France, expects visitor numbers to triple, {k:which} would create thousands of jobs.",
+      ar: "أصبحت العُلا، التي تقع في شمال غرب السعودية، وجهة سياحية كبرى. والحِجر، حيث يمكنك رؤية مقابر نبطية قديمة، كانت أول موقع سعودي في قائمة التراث العالمي لليونسكو. ويتوقع مدير المشروع، الذي درس الآثار في فرنسا، أن يتضاعف عدد الزوار ثلاث مرات، وهذا سيخلق آلاف الوظائف.",
+      note: "كل جملة بين فاصلتين يمكن حذفها والمعنى الأساسي يبقى. `, which would create…` تشير إلى تضاعف الزوار كله." }],
+    check: { q: "In the last sentence, what does \"which\" refer to?", o: ["France", "The tripling of visitor numbers"], a: 1, why: "`, which` بعد فاصلة هنا تعلّق على الفكرة السابقة كلها." } }
+);

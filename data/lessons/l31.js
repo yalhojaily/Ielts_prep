@@ -47,3 +47,27 @@ window.LESSONS[31] = {
     { h: "3", en: ["If you {a:had} {v:pressed} it, it {a:would have} opened."] }
   ]
 };
+
+// تعمّق
+window.LESSONS[31].steps.push(
+  { k: "أخطاء شائعة", h: "أربعة أخطاء تتكرر في كل أنواع الشرط",
+    why: [
+      "معظم أخطاء الشرط تعود إلى أربع قواعد. إذا أتقنتها تجنبت 90٪ من الأخطاء:",
+      "**1.** لا `will / would` بعد `if`. **2.** النوع 2 = ماضٍ بسيط + `would`، لا تخلطه مع `will`. **3.** النوع 3 = `would have` + تصريف ثالث، لا `would had`. **4.** `unless` معناها منفي، فالفعل بعدها مثبت."
+    ],
+    show: [{ t: "fix", items: [
+      ["If I would know, I would tell you.", "If I {v:knew}, I {a:would} tell you.", "قاعدة 1"],
+      ["If I had more money, I will buy a car.", "…, I {a:would} buy a car.", "قاعدة 2: لا تخلط الأنواع"],
+      ["If they had come, we would had fun.", "…, we {a:would have} {v:had} fun.", "قاعدة 3"],
+      ["Unless you don't hurry, you'll be late.", "{k:Unless} you {v:hurry}, you'll be late.", "قاعدة 4"]
+    ] }],
+    check: { q: "If you ___ any questions, call me.", o: ["will have", "have", "would have"], a: 1, why: "النوع 1: مضارع بعد `if`." } },
+
+  { k: "في سياق", h: "اقرأ: كل الأنواع في نص واحد",
+    why: ["هذه إجابة على سؤال IELTS Speaking Part 3 عن التكنولوجيا. حاول أن تحدد نوع كل جملة شرط قبل قراءة الملاحظة."],
+    show: [{ t: "passage", h: "إجابة في Speaking Part 3",
+      en: "If you {v:use} your phone before bed, you {v:sleep} badly; that's a well-known fact. If young people {v:spend} less time online, they{a:'ll} {v:have} more time for sport. Personally, if I {v:didn't} {v:have} a smartphone, I{a:'d} {v:read} more books. And if smartphones {a:hadn't} {v:been} invented, our lives {a:would have} {v:been} very different.",
+      ar: "إذا استخدمت هاتفك قبل النوم تنام بشكل سيئ، وهذه حقيقة معروفة. إذا قضى الشباب وقتًا أقل على الإنترنت فسيكون لديهم وقت أكثر للرياضة. أما أنا فلو لم يكن عندي هاتف ذكي لقرأت كتبًا أكثر. ولو لم تُخترع الهواتف الذكية لكانت حياتنا مختلفة جدًا.",
+      note: "الأولى نوع 0 (حقيقة)، الثانية نوع 1 (ممكن)، الثالثة نوع 2 (خيال الآن)، الرابعة نوع 3 (ماضٍ لم يحدث)." }],
+    check: { q: "\"If smartphones hadn't been invented, our lives would have been different\" is…", o: ["Type 1", "Type 2", "Type 3"], a: 2, why: "`had` + v3 و`would have` + v3 ← النوع 3." } }
+);

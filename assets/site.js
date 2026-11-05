@@ -588,6 +588,22 @@
   };
 
   // جملة كبيرة واحدة بقطع ملونة
+  // فقرة متصلة تظهر فيها القاعدة في سياق، مع ترجمة تظهر عند الطلب
+  B.passage = function (s) {
+    var card = el("div", "card passage");
+    card.appendChild(el("div", "pg-lab", rich(s.h || "القاعدة في نص")));
+    card.appendChild(el("p", "pg-en", tk(s.en)));
+    if (s.ar || s.fixes) {
+      var tr = s.fixes ? B.fix({ items: s.fixes }) : el("p", "pg-ar", rich(s.ar)); tr.hidden = true;
+      if (s.fixes) { tr.style.border = "0"; tr.style.padding = "0"; }
+      var L1 = s.btn || "اعرض الترجمة", L2 = s.btn2 || "أخفِ الترجمة";
+      var b = btn("tr-btn", L1, function () { tr.hidden = !tr.hidden; b.textContent = tr.hidden ? L1 : L2; });
+      card.appendChild(b); card.appendChild(tr);
+    }
+    if (s.note) card.insertAdjacentHTML("beforeend", '<div class="cap">' + rich(s.note) + "</div>");
+    return card;
+  };
+
   B.big = function (s) {
     var card = el("div", "card");
     if (s.h) card.appendChild(el("h2", "", rich(s.h)));
@@ -682,6 +698,29 @@
         mcq(box, st.check); s.appendChild(box);
       }
     });
+
+    // أمثلة من الحياة (من ملف القاعدة، مع الترجمة)
+    if (u.examples && u.examples.length && !L.noExamples) {
+      var es = addScreen("أمثلة", "أمثلة من الحياة", "القاعدة في جمل حقيقية", "اقرأ كل جملة، ولاحظ الأجزاء الملونة، ثم اضغط «الترجمة» إن احتجت.");
+      var ec = el("div", "card exs");
+      u.examples.forEach(function (e) {
+        var row = el("div", "exi", '<div class="s"' + dirA(e[0]) + ">" + tk(e[0]) + "</div>");
+        if (e[1]) {
+          var tr = el("div", "ar2", rich(e[1])); tr.hidden = true;
+          var tb = btn("tr-btn", "الترجمة", function () { tr.hidden = !tr.hidden; tb.textContent = tr.hidden ? "الترجمة" : "إخفاء"; });
+          row.appendChild(tb); row.appendChild(tr);
+        }
+        ec.appendChild(row);
+      });
+      var allb = btn("btn ghost", "اعرض كل الترجمات", function () {
+        var show = allb.textContent === "اعرض كل الترجمات";
+        ec.querySelectorAll(".ar2").forEach(function (x) { x.hidden = !show; });
+        ec.querySelectorAll(".tr-btn").forEach(function (x) { x.textContent = show ? "إخفاء" : "الترجمة"; });
+        allb.textContent = show ? "أخفِ كل الترجمات" : "اعرض كل الترجمات";
+      });
+      allb.style.justifySelf = "start";
+      es.appendChild(ec); es.appendChild(allb);
+    }
 
     // الأخطاء الشائعة
     if (u.mistakes && u.mistakes.length) {

@@ -64,3 +64,28 @@ window.LESSONS[16] = {
     { h: "مضارع تام", en: ["She {a:has} {v:called} 3 times today."] }
   ]
 };
+
+// تعمّق
+window.LESSONS[16].steps.push(
+  { k: "زمن واحد يغيّر القصة", h: "اختر الزمن وراقب كيف يتغير *المعنى*",
+    why: [
+      "الجملة نفسها (`When I arrived, …`) تحكي قصة مختلفة حسب الزمن الذي تختاره للجزء الثاني. هذا أفضل تمرين لفهم الفرق بين أزمنة الماضي.",
+      "اسأل: هل الحدث الثاني جاء **بعد** وصولي، أم كان **جاريًا** عند وصولي، أم **انتهى قبل** وصولي؟"
+    ],
+    show: [{ t: "build", lab: "اختر زمن الجزء الثاني",
+      opts: [
+        ["ماضٍ بسيط", "When I arrived, they {v:started} the meeting.", "وصلت ← ثم بدأوا (بعد وصولي)", 0],
+        ["ماضٍ مستمر", "When I arrived, they {a:were} {v:discussing} the budget.", "كانوا في منتصف النقاش عند وصولي", 1],
+        ["ماضٍ تام", "When I arrived, the meeting {a:had} {v:finished}.", "انتهى قبل وصولي (فاتني)", 2]
+      ],
+      groups: [{ h: "بعد", sub: "ماضٍ بسيط" }, { h: "أثناء", sub: "ماضٍ مستمر" }, { h: "قبل", sub: "ماضٍ تام" }] }],
+    check: { q: "When we got to the cinema, the film ___. We missed the beginning.", o: ["started", "was starting", "had started"], a: 2, why: "فاتتنا البداية ← الفيلم بدأ **قبل** وصولنا ← ماضٍ تام." } },
+
+  { k: "في سياق", h: "اقرأ: أربعة أزمنة في قصة واحدة",
+    why: ["هذه قصة من نوع IELTS Speaking Part 2. حاول قبل قراءة الملاحظة أن تحدد سبب كل زمن ملون."],
+    show: [{ t: "passage", h: "Describe a memorable journey",
+      en: "I{a:'ve} {v:travelled} to many countries, but my trip to Turkey {v:was} the most memorable. It {a:was} {v:snowing} when we {v:landed} in Istanbul. We {v:took} a taxi to the hotel, but when we {v:got} there, we {v:discovered} that the hotel {a:had} {v:lost} our booking. Luckily, the manager {v:found} us another room.",
+      ar: "سافرت إلى بلدان كثيرة، لكن رحلتي إلى تركيا كانت الأكثر رسوخًا في الذاكرة. كان الثلج يتساقط عندما هبطنا في إسطنبول. أخذنا سيارة أجرة إلى الفندق، لكن عندما وصلنا اكتشفنا أن الفندق أضاع حجزنا. ولحسن الحظ وجد لنا المدير غرفة أخرى.",
+      note: "`'ve travelled` = تجربة حتى الآن. `was snowing` = خلفية المشهد. `landed, took, got, discovered, found` = الأحداث بالترتيب. `had lost` = حدث قبلها." }],
+    check: { q: "Why \"It was snowing\"?", o: ["It describes the background scene.", "It happened before landing."], a: 0, why: "الماضي المستمر يرسم خلفية المشهد عند حدث رئيسي (الهبوط)." } }
+);

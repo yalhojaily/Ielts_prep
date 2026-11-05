@@ -430,3 +430,13 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .top-row .theme-btn { margin-inline-start: 4px; }
 .hero { position: relative; }
 #theme-slot { position: absolute; top: 16px; left: 16px; }
+
+/* الأمثلة والفقرة */
+.tr-btn { justify-self: start; border: 0; background: var(--soft); color: var(--muted); border-radius: 99px; padding: 1px 12px; font: 700 .8rem var(--f); cursor: pointer; margin-top: 2px; }
+.tr-btn:hover { color: var(--accent); }
+.passage { display: grid; gap: 10px; border-inline-start: 5px solid var(--accent); }
+.pg-lab { font-size: .85rem; font-weight: 800; color: var(--accent); }
+.pg-en { direction: ltr; text-align: left; margin: 0; font-size: 1.12rem; line-height: 1.95; }
+.pg-en .t-s, .pg-en .t-v, .pg-en .t-a, .pg-en .t-k, .pg-en .t-n, .pg-en .t-q, .pg-en .t-o { padding: 0 2px; border-radius: 4px; background: color-mix(in srgb, currentColor 10%, transparent); }
+.pg-ar { margin: 0; color: var(--muted); }
+.pg-en .t-k { background: none; text-decoration: underline 2px; text-underline-offset: 5px; }

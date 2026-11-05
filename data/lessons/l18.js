@@ -58,3 +58,27 @@ window.LESSONS[18] = {
     { h: "بعد when / if", en: ["I'll call you when I {v:arrive}."] }
   ]
 };
+
+// تعمّق
+window.LESSONS[18].steps.push(
+  { k: "وعود ورفض", h: "will للوعد والعرض · won't للرفض",
+    why: [
+      "`will` ليست للمستقبل فقط، بل تعبّر عن **الإرادة** في لحظة الكلام. لذلك نستخدمها للوعد (أعدك)، وللعرض (سأساعدك)، وللطلب (`Will you…?`).",
+      "و`won't` يمكن أن تعني **الرفض**: `He won't listen` = يرفض أن يستمع. وحتى الأشياء: `The car won't start` = السيارة لا تريد أن تعمل."
+    ],
+    show: [{ t: "cards", items: [
+      { i: "heart", h: "وعد", en: "I{a:'ll} always {v:remember} this.", ar: "سأتذكر هذا دائمًا." },
+      { i: "hand", h: "عرض", en: "That bag looks heavy. I{a:'ll} {v:carry} it.", ar: "سأحمل الحقيبة عنك." },
+      { i: "x", h: "رفض", en: "My son {a:won't} {v:eat} vegetables.", ar: "ابني يرفض أكل الخضار." },
+      { i: "tool", h: "شيء لا يعمل", en: "The door {a:won't} {v:open}.", ar: "الباب لا يُفتح." }
+    ] }],
+    check: { q: "\"The printer won't work\" means…", o: ["It will work later.", "It refuses to work / it isn't working."], a: 1, why: "`won't` هنا = يرفض، لا يعمل." } },
+
+  { k: "في سياق", h: "اقرأ: will و going to في حوار",
+    why: ["لاحظ في هذا الحوار متى يستخدم المتكلم `going to` (خطة قررها من قبل) ومتى `will` (قرار أو عرض في لحظة الكلام)."],
+    show: [{ t: "passage", h: "حوار",
+      en: "A: What are your plans for the weekend? B: I{a:'m going to} {v:visit} my parents in Taif. I{a:'ve} already {v:booked} the train. A: Oh, nice. It{a:'ll} probably {v:be} cooler there. B: I hope so! Do you need anything from Taif? A: Actually, yes. Could you buy some honey? B: Sure, I{a:'ll} {v:get} you some.",
+      ar: "أ: ما خططك لعطلة نهاية الأسبوع؟ ب: سأزور والديّ في الطائف، وقد حجزت القطار. أ: جميل. على الأرجح سيكون الجو أبرد هناك. ب: أتمنى ذلك! هل تحتاج شيئًا من الطائف؟ أ: في الحقيقة نعم، هل يمكنك شراء بعض العسل؟ ب: بالتأكيد، سأحضر لك.",
+      note: "`going to visit` = خطة محجوزة مسبقًا. `'ll probably be` = توقع برأي. `'ll get` = قرار ووعد في لحظة الكلام." }],
+    check: { q: "Why \"I'll get you some\" and not \"I'm going to get\"?", o: ["It was planned before.", "B decides at the moment of speaking."], a: 1, why: "القرار وُلد لحظة الطلب ← `will`." } }
+);

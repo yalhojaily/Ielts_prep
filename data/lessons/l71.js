@@ -51,3 +51,14 @@ window.LESSONS[71] = {
     { h: "There", en: ["There {v:is} a… · There {v:are} two…"] }
   ]
 };
+
+// تعمّق
+window.LESSONS[71].steps.push(
+  { k: "في سياق", h: "اقرأ: المطابقة في وصف رسم بياني",
+    why: ["في Writing Task 1 تكثر الفواعل الطويلة (`The number of…`, `The percentage of…`) ويكثر معها خطأ المطابقة. لاحظ أن الفعل يطابق الكلمة الأولى في كل فاعل."],
+    show: [{ t: "passage", h: "وصف رسم بياني",
+      en: "{s:The number of} international students {v:has} risen steadily since 2015. {s:The percentage of} women among them {v:is} now higher than men. {s:One of} the main reasons {v:is} the growth of online courses. However, {s:a number of} universities {v:have} reported a fall in applications.",
+      ar: "ارتفع عدد الطلاب الدوليين بثبات منذ 2015. ونسبة النساء بينهم الآن أعلى من الرجال. وأحد الأسباب الرئيسية نمو الدورات عبر الإنترنت. لكن عددًا من الجامعات أبلغ عن انخفاض في الطلبات.",
+      note: "`The number / The percentage / One` مفرد. `a number of universities` = جامعات كثيرة ← جمع." }],
+    check: { q: "The percentage of young people who smoke ___ fallen.", o: ["have", "has"], a: 1, why: "الفاعل الحقيقي `The percentage` مفرد ← `has`." } }
+);

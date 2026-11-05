@@ -69,3 +69,30 @@ window.LESSONS[5] = {
     { h: "معنيان", en: ["I {v:think} so. / I'm {v:thinking} about it."] }
   ]
 };
+
+// تعمّق
+window.LESSONS[5].steps.push(
+  { k: "أسئلة محيّرة", h: "What do you do? ≠ What are you doing?",
+    why: [
+      "سؤالان يبدوان متشابهين، لكن معناهما مختلف تمامًا، والخلط بينهما شائع جدًا:",
+      "`What do you do?` (بسيط) = ما **وظيفتك**؟ سؤال عن الشيء الثابت في حياتك.",
+      "`What are you doing?` (مستمر) = ماذا **تفعل الآن**؟ سؤال عن هذه اللحظة."
+    ],
+    show: [{ t: "compare", cols: [
+      { h: "What do you do?", c: "subj", txt: "ما وظيفتك؟ (ثابت)", en: ["— I'm an engineer.", "— I work in a hospital."] },
+      { h: "What are you doing?", c: "accent", txt: "ماذا تفعل الآن؟", en: ["— I'm cooking dinner.", "— I'm reading a book."] }
+    ] },
+      { t: "compare", cols: [
+        { h: "Where do you live?", c: "subj", txt: "أين تسكن؟ (عنوانك الدائم)", en: ["— I live in Riyadh."] },
+        { h: "Where are you staying?", c: "accent", txt: "أين تقيم؟ (في سفر أو مؤقتًا)", en: ["— I'm staying at a hotel near the beach."] }
+      ] }],
+    check: { q: "At a party, someone asks about your job. Which question did they ask?", o: ["What are you doing?", "What do you do?"], a: 1, why: "السؤال عن الوظيفة (شيء ثابت) يكون بالبسيط: `What do you do?`" } },
+
+  { k: "في سياق", h: "اقرأ: البسيط والمستمر معًا",
+    why: ["في وصف الاتجاهات (Writing Task 1 والمقالات) نستخدم البسيط للحقائق العامة، والمستمر للتغيرات الجارية الآن. لاحظ كيف يتناوبان في الفقرة."],
+    show: [{ t: "passage", h: "فقرة بأسلوب المقال",
+      en: "Most people {v:use} smartphones every day, and many {v:depend} on them for work. However, the way we {v:use} them {a:is} {v:changing}. More people {a:are} now {v:paying} with their phones, and fewer {a:are} {v:carrying} cash. Experts {v:believe} that this trend {a:is} {v:growing} quickly.",
+      ar: "يستخدم معظم الناس الهواتف الذكية كل يوم، ويعتمد عليها كثيرون في العمل. لكن طريقة استخدامنا لها تتغير. صار عدد أكبر من الناس يدفعون بهواتفهم، وعدد أقل يحملون النقود. ويعتقد الخبراء أن هذا الاتجاه ينمو بسرعة.",
+      note: "`use, depend` = حقائق عامة. `is changing, are paying, is growing` = تغيّر يجري الآن. و`believe` بسيط دائمًا لأنه فعل حالة." }],
+    check: { q: "Why is \"believe\" in the simple form in the text?", o: ["Because it's a habit.", "Because it's a state verb."], a: 1, why: "`believe` فعل حالة ذهنية، فلا يأتي بـ ing." } }
+);

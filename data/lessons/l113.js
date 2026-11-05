@@ -45,3 +45,20 @@ window.LESSONS[113] = {
     { h: "ذهبية", txt: "أداة واحدة لكل علاقة" }
   ]
 };
+
+// تعمّق
+window.LESSONS[113].steps.push(
+  { k: "في سياق", h: "اقرأ: صحّح أدوات الربط بنفسك",
+    why: ["هذه فقرة كتبها طالب، وفيها أخطاء أدوات الربط الشائعة عند العرب. فيها خمسة أخطاء: حاول أن تجدها ثم اعرض التصحيح."],
+    show: [{ t: "passage", h: "فقرة فيها أخطاء",
+      btn: "اعرض التصحيح", btn2: "أخفِ التصحيح",
+      en: "Although the city is expensive, but many people move there. Because of the jobs are better, so young people prefer it. Despite of the traffic, life is comfortable. In addition of this, there are many parks.",
+      fixes: [
+        ["Although the city is expensive, but many people move there.", "Although the city is expensive, many people move there.", "لا `but` مع `although`"],
+        ["Because of the jobs are better, so young people prefer it.", "{k:Because} the jobs are better, young people prefer it.", "بعدها جملة ← `because` لا `because of`، ولا `so` معها (خطآن)"],
+        ["Despite of the traffic", "{k:Despite} the traffic", "لا `of` بعد `despite`"],
+        ["In addition of this", "In addition {k:to} this", "`in addition to`"]
+      ],
+      note: "القاعدة الذهبية: أداة واحدة لكل علاقة، وانتبه لما يأتي بعدها." }],
+    check: { q: "___ the jobs are better, young people prefer the city.", o: ["Because of", "Because"], a: 1, why: "بعدها جملة كاملة ← `Because`." } }
+);

@@ -59,3 +59,14 @@ window.LESSONS[12] = {
     { h: "انتبه", txt: "أفعال الحالة في التام البسيط", en: ["I've {v:known} her for years."] }
   ]
 };
+
+// تعمّق
+window.LESSONS[12].steps.push(
+  { k: "في سياق", h: "اقرأ: البسيط للعدد · المستمر للمدة",
+    why: ["هذه رسالة قصيرة يشرح فيها شخص ما كان يفعله. لاحظ كيف يستخدم التام المستمر عندما يتحدث عن **طول الوقت**، والتام البسيط عندما يذكر **النتيجة أو العدد**."],
+    show: [{ t: "passage", h: "رسالة لصديق",
+      en: "Sorry I haven't replied. I{a:'ve been} {v:working} on a big report all week, and I{a:'ve} only {v:finished} half of it. I{a:'ve been} {v:sleeping} badly too, because I{a:'ve been} {v:drinking} too much coffee! Good news, though: I{a:'ve} {v:passed} my driving test.",
+      ar: "آسف لأنني لم أرد. أعمل على تقرير كبير طوال الأسبوع، ولم أنهِ إلا نصفه. وأنام بشكل سيئ أيضًا لأنني أشرب قهوة كثيرة! لكن هناك خبر جيد: نجحت في اختبار القيادة.",
+      note: "`all week` (مدة) ← مستمر. `half of it` و`passed` (نتيجة) ← تام بسيط." }],
+    check: { q: "Why \"I've passed\" and not \"I've been passing\"?", o: ["It is a completed result.", "It is an activity over time."], a: 0, why: "النجاح نتيجة مكتملة، لا نشاط يستمر ← التام البسيط." } }
+);
