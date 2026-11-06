@@ -6,6 +6,26 @@
   var KEY = "grammar-progress-v1";
   function loadProgress() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
   function saveProgress(p) { try { localStorage.setItem(KEY, JSON.stringify(p)); } catch (e) {} }
+  // المراجعة المتباعدة: صناديق لايتنر، الفاصل بالأيام لكل صندوق
+  var SRS_KEY = "grammar-srs-v1", SRS_DAYS = [0, 1, 3, 7, 14, 30], DAY = 864e5;
+  function loadSrs() { try { return JSON.parse(localStorage.getItem(SRS_KEY)) || {}; } catch (e) { return {}; } }
+  function saveSrs(d) { try { localStorage.setItem(SRS_KEY, JSON.stringify(d)); } catch (e) {} }
+  function dayStart(t) { var d = new Date(t); d.setHours(0, 0, 0, 0); return d.getTime(); }
+  function srsDue(it) { return it.d <= Date.now(); }
+  function srsAnswer(k, ok, session) {
+    var d = loadSrs(), it = d[k], today = dayStart(Date.now());
+    if (!ok) { d[k] = { b: 1, d: today + DAY, n: (it ? it.n : 0) + 1 }; }
+    else if (it && (session || srsDue(it))) {
+      if (it.b >= 5) delete d[k];
+      else { it.b++; it.d = today + SRS_DAYS[it.b] * DAY; }
+    } else return;
+    saveSrs(d);
+  }
+  function srsStats() {
+    var d = loadSrs(), due = 0, total = 0, next = null;
+    for (var k in d) { total++; if (srsDue(d[k])) due++; else if (next === null || d[k].d < next) next = d[k].d; }
+    return { due: due, total: total, next: next };
+  }
   function record(key, pct) {
     var p = loadProgress(), old = p[key] || { best: 0, attempts: 0 };
     p[key] = { best: Math.max(old.best || 0, pct), last: pct, attempts: (old.attempts || 0) + 1, date: new Date().toISOString().slice(0, 10) };
@@ -176,7 +196,7 @@
       card.insertAdjacentHTML("beforeend", top + "</div>");
       var nextB = btn("btn", qi === qs.length - 1 ? "النتيجة ←" : "السؤال التالي ←", function () { qi++; show(); });
       nextB.hidden = true;
-      function done(ok) { if (ok) right++; else wrong.push(q); nextB.hidden = false; try { nextB.focus({ preventScroll: true }); } catch (e) {} }
+      function done(ok) { if (q._k) srsAnswer(q._k, ok, o.srs); if (ok) right++; else wrong.push(q); nextB.hidden = false; try { nextB.focus({ preventScroll: true }); } catch (e) {} }
       if (q.t === "mcq") mcq(card, q, done); else written(card, q, done);
       card.appendChild(nextB);
       root.appendChild(card);
@@ -193,7 +213,7 @@
         box.insertAdjacentHTML("beforeend", '<p class="note" style="margin:0">راجع هذه القواعد:</p><div class="wrong-list">' + ids.map(function (id) { return '<a href="unit.html#u' + id + '">' + pad(id) + "</a>"; }).join("") + "</div>");
       }
       var acts = el("div", "actions"); acts.style.justifyContent = "center";
-      if (wrong.length) acts.appendChild(btn("btn ghost", "أعد الأسئلة الخاطئة فقط", function () { var w = wrong.slice(); qs = w; qi = 0; right = 0; wrong = []; o.key = null; show(); }));
+      if (wrong.length) acts.appendChild(btn("btn ghost", "أعد الأسئلة الخاطئة فقط", function () { var w = wrong.slice(); qs = w; qi = 0; right = 0; wrong = []; o.key = null; o.srs = false; show(); }));
       acts.appendChild(btn("btn ghost", o.againLabel || "أعد التمارين كلها", function () { qs = o.restart ? o.restart() : o.all; o.key = o.origKey; qi = 0; right = 0; wrong = []; show(); }));
       if (o.after) acts.appendChild(btn("btn", o.after[0], o.after[1]));
       box.appendChild(acts);
@@ -818,7 +838,8 @@
     ss.appendChild(un);
 
     // الاختبار
-    runQuiz(quizBox, u.questions, { key: id, goodMsg: "ممتاز، أتقنت القاعدة. انتقل إلى الخلاصة.", badMsg: "راجع شاشات الشرح ثم أعد المحاولة. الهدف 80٪.", after: applyIndex >= 0 ? ["طبّق على نفسك ←", function () { go(applyIndex); }] : ["الخلاصة ←", function () { go(screens.length - 1); }] });
+    var lessonQs = u.questions.map(function (q, i) { var c = {}; for (var k in q) c[k] = q[k]; c._k = id + ":" + i; return c; });
+    runQuiz(quizBox, lessonQs, { key: id, goodMsg: "ممتاز، أتقنت القاعدة. انتقل إلى الخلاصة.", badMsg: "راجع شاشات الشرح ثم أعد المحاولة. الهدف 80٪.", after: applyIndex >= 0 ? ["طبّق على نفسك ←", function () { go(applyIndex); }] : ["الخلاصة ←", function () { go(screens.length - 1); }] });
 
     // التنقل
     var cur = 0, seen = {};
@@ -872,7 +893,7 @@
     ids.forEach(function (id) {
       var done = function () {
         var u = window.UNITS[id];
-        if (u) u.questions.forEach(function (q) { var c = {}; for (var k in q) c[k] = q[k]; c.src = id; pool.push(c); });
+        if (u) u.questions.forEach(function (q, i) { var c = {}; for (var k in q) c[k] = q[k]; c.src = id; c._k = id + ":" + i; pool.push(c); });
         if (--left === 0) build();
       };
       if (window.UNITS[id]) done(); else loadScript("data/units/u" + pad(id) + ".js", done);
@@ -895,6 +916,58 @@
     }
   }
 
+  // ================= مراجعة اليوم =================
+  var SRS_SIZE = 20;
+  function qn(n) { return n === 1 ? "سؤال واحد" : n === 2 ? "سؤالان" : n <= 10 ? n + " أسئلة" : n + " سؤالًا"; }
+  function renderSrs(root) {
+    document.body.className = "c-blue";
+    var d = loadSrs(), keys = Object.keys(d).filter(function (k) { return srsDue(d[k]); });
+    keys.sort(function (a, b) { return d[a].b - d[b].b || d[a].d - d[b].d; });
+    keys = keys.slice(0, SRS_SIZE);
+    root.innerHTML = "";
+    var app = el("div", "app"); app.style.gridTemplateRows = "auto 1fr auto";
+    app.appendChild(el("header", "top", '<div class="top-in"><div class="top-row"><div class="badge">' + icon("repeat") + '</div><div class="ttl"><b>مراجعة اليوم</b><span class="en">Spaced review</span></div><a class="home" href="index.html">الفهرس ←</a></div></div>'));
+    app.querySelector(".top-row").appendChild(themeBtn());
+    var stage = el("main", "stage"), sc = el("section", "screen on");
+    stage.appendChild(sc); app.appendChild(stage);
+    app.appendChild(el("footer", "bot", '<div class="bot-in"><span></span><span class="count">' + qn(Object.keys(d).length) + " في المراجعة</span><span></span></div>"));
+    root.appendChild(app);
+    var boxes = [0, 0, 0, 0, 0, 0]; for (var k in d) boxes[Math.min(5, d[k].b)]++;
+    var lad = '<p class="srs-cap">' + rich("مستويات أسئلتك: كل إجابة صحيحة ترفع السؤال مستوى ويتباعد موعده") + '</p><div class="srs-boxes">' + [1, 2, 3, 4, 5].map(function (b) {
+      return '<div class="srs-box"><b>' + boxes[b] + '</b><span>' + "المستوى " + b + "<br>" + (b === 1 ? "كل يوم" : "كل " + SRS_DAYS[b] + (SRS_DAYS[b] <= 10 ? " أيام" : " يومًا")) + "</span></div>";
+    }).join("") + "</div>";
+    var how = '<details class="card srs-how"><summary>كيف تعمل المراجعة؟</summary><p>' + rich("كل سؤال تخطئ فيه في أي درس أو اختبار يدخل هنا تلقائيًا، ويظهر لك في اليوم التالي. كلما أجبته صحيحًا تباعد موعده: بعد 3 أيام، ثم أسبوع، ثم أسبوعين، ثم شهر. بعدها يخرج من المراجعة لأنك أتقنته. وإذا أخطأت فيه يعود إلى البداية.") + "</p><p>" + rich("هذه الطريقة تراجع ما نسيته فقط، في اللحظة التي تكاد تنساه فيها. 10 دقائق يوميًا تكفي.") + "</p></details>";
+    if (!keys.length) {
+      var st = srsStats(), msg;
+      if (!st.total) msg = "لا توجد أسئلة للمراجعة بعد. أي سؤال تخطئ فيه في الدروس سيظهر هنا في اليوم التالي.";
+      else { var days = Math.max(1, Math.round((st.next - dayStart(Date.now())) / DAY)); msg = "أنهيت مراجعة اليوم. المراجعة التالية " + (days === 1 ? "غدًا" : "بعد " + days + " أيام") + "."; }
+      sc.appendChild(el("div", "head", '<span class="kicker">المراجعة المتباعدة</span><h1>لا شيء مستحق اليوم ✓</h1><p class="lead">' + rich(msg) + "</p>"));
+      if (st.total) sc.appendChild(el("div", "", lad));
+      sc.appendChild(el("div", "", how));
+      var a = el("a", "btn", "العودة للفهرس"); a.href = "index.html"; a.style.justifySelf = "start"; sc.appendChild(a);
+      return;
+    }
+    sc.appendChild(el("div", "head", '<span class="kicker">المراجعة المتباعدة</span><h1>' + (keys.length === 1 ? "سؤال واحد ينتظرك" : qn(keys.length) + " تنتظرك") + ' اليوم</h1><p class="lead">أسئلة أخطأت فيها سابقًا وحان موعد مراجعتها. بجانب كل سؤال رقم قاعدته.</p>'));
+    var qb = el("div", "quiz"); sc.appendChild(qb);
+    var ids = [], left;
+    keys.forEach(function (k) { var id = +k.split(":")[0]; if (ids.indexOf(id) < 0) ids.push(id); });
+    left = ids.length; window.UNITS = window.UNITS || {};
+    ids.forEach(function (id) { if (window.UNITS[id]) go(); else loadScript("data/units/u" + pad(id) + ".js", go); });
+    function go() {
+      if (--left > 0) return;
+      var qs = [], dd = loadSrs(), changed = false;
+      keys.forEach(function (k) {
+        var p = k.split(":"), u = window.UNITS[+p[0]], q = u && u.questions[+p[1]];
+        if (!q) { delete dd[k]; changed = true; return; }
+        var c = {}; for (var x in q) c[x] = q[x]; c.src = +p[0]; c._k = k; qs.push(c);
+      });
+      if (changed) saveSrs(dd);
+      qs = shuffle(qs);
+      runQuiz(qb, qs, { srs: true, showWrongUnits: true, goodMsg: "ممتاز. الأسئلة التي أصبت فيها تباعد موعدها.", badMsg: "لا بأس، الأسئلة التي أخطأت فيها ستعود غدًا.", againLabel: "تحديث المراجعة", restart: function () { renderSrs(root); return []; } });
+      sc.appendChild(el("div", "", how));
+    }
+  }
+
   // ================= الفهرس =================
   function renderHome(root) {
     var prog = loadProgress(), total = 0, done = 0, started = 0, nextId = null;
@@ -911,6 +984,12 @@
     var go = document.getElementById("continue-btn"), target = nextId || 1;
     go.href = "unit.html#u" + target;
     go.textContent = (started ? "تابع من القاعدة " : "ابدأ بالقاعدة ") + pad(target) + " ←";
+    var st = srsStats(), sl = document.getElementById("srs-link");
+    if (sl && st.total) {
+      sl.hidden = false;
+      sl.innerHTML = icon("repeat") + "<span><b>مراجعة اليوم</b>" + (st.due ? st.due + " " + (st.due > 10 ? "سؤالًا مستحقًا" : st.due > 2 ? "أسئلة مستحقة" : st.due == 2 ? "سؤالان مستحقان" : "سؤال مستحق") : "أنهيتها ✓") + "</span>";
+      if (st.due) sl.classList.add("due");
+    }
     var AR_NAMES = window.UNIT_AR || {};
     CATALOG.forEach(function (g, gi) {
       var mastered = 0;
@@ -936,6 +1015,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     var h = document.getElementById("home-root"); if (h) renderHome(h);
     var slot = document.getElementById("theme-slot"); if (slot) slot.appendChild(themeBtn());
+    var sr = document.getElementById("srs-root"); if (sr) renderSrs(sr);
     var r = document.getElementById("review-root");
     if (r) { renderReview(r); window.addEventListener("hashchange", function () { renderReview(r); }); }
     var u = document.getElementById("unit-root");

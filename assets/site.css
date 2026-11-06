@@ -461,3 +461,28 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .ap-model { display: grid; gap: 4px; border-inline-start: 4px solid var(--accent); padding: 6px 12px; }
 .ap-note { margin: 0; font-size: .8rem; color: var(--muted); }
 .ap-warn { color: var(--bad); font-weight: 600; }
+
+/* المراجعة المتباعدة */
+.srs-link { display: inline-flex; align-items: center; gap: 10px; margin-inline-start: 10px; padding: 10px 16px; border-radius: 999px; border: 2px solid var(--line); background: var(--soft); color: var(--ink); text-decoration: none; font-size: .95rem; vertical-align: middle; }
+.srs-link svg { width: 20px; height: 20px; color: var(--muted); flex: none; }
+.srs-link span { display: grid; line-height: 1.3; }
+.srs-link span b { font-size: .95rem; }
+.srs-link span { font-size: .82rem; color: var(--muted); }
+.srs-link.due { border-color: #0369a1; background: #e0f2fe; }
+.srs-link.due svg, .srs-link.due span { color: #0369a1; }
+:root[data-theme="dark"] .srs-link.due { border-color: #4cc3f5; background: #132d3d; }
+:root[data-theme="dark"] .srs-link.due svg, :root[data-theme="dark"] .srs-link.due span { color: #4cc3f5; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .srs-link.due { border-color: #4cc3f5; background: #132d3d; }
+  :root:not([data-theme="light"]) .srs-link.due svg, :root:not([data-theme="light"]) .srs-link.due span { color: #4cc3f5; }
+}
+.srs-link span b { color: var(--ink); }
+@media (max-width: 480px) { .srs-link { margin: 10px 0 0; } }
+.badge svg { width: 22px; height: 22px; }
+.srs-boxes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.srs-box { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 10px 6px; display: grid; justify-items: center; gap: 2px; text-align: center; }
+.srs-box b { font-size: 1.4rem; color: var(--accent); }
+.srs-box span { font-size: .75rem; color: var(--muted); }
+.srs-how summary { cursor: pointer; font-weight: 700; }
+.srs-how p { margin: 8px 0 0; line-height: 1.8; }
+.srs-cap { margin: 4px 0 0; font-size: .85rem; color: var(--muted); }
