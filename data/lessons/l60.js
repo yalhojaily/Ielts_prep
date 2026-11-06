@@ -10,7 +10,7 @@ window.LESSONS[60] = {
         { h: "must: أنا أرى ذلك", c: "accent", en: ["I {a:must} {v:call} my mother tonight.", "All visitors {a:must} {v:sign} in."] },
         { h: "have to: مفروض عليّ", c: "subj", en: ["I {a:have to} {v:wear} a uniform at work.", "She {a:has to} {v:work} late."] }
       ] }],
-      check: { q: "I ___ wear a uniform. It's the company rule.", o: ["must", "have to"], a: 1, why: "إلزام من الخارج (قاعدة الشركة) ← `have to`." } },
+      check: { q: "I ___ wear a uniform at work. I hate it, but it's not my choice.", o: ["must", "have to"], a: 1, why: "الإلزام مفروض عليّ من الخارج وليس رأيي ← `have to`." } },
 
     { k: "النفي", h: "mustn't = ممنوع · don't have to = *لا داعي*",
       why: [

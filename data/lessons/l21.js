@@ -34,7 +34,7 @@ window.LESSONS[21] = {
         "في يونيو ستكون قد أكملت 20 سنة في التدريس."
       ],
       show: [{ t: "big", items: ["In June, {s:she} {a:will have been} {v:teaching} for 20 years."], cap: "المدة حتى نقطة في المستقبل" }],
-      check: { q: "Next month we ___ married for ten years.", o: ["will be", "will have been"], a: 1, why: "المدة حتى نقطة مستقبلية ← `will have been`." } }
+      check: { q: "Next month we ___ in this house for ten years.", o: ["will live", "will have been living"], a: 1, why: "المدة حتى نقطة مستقبلية ← `will have been living`." } }
   ],
   sum: [
     { h: "البناء", en: ["{a:will have} + {v:done}"] },

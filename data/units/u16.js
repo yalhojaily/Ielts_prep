@@ -45,7 +45,7 @@ window.UNITS[16] = {
     en: "Between 1990 and 2000 the figure rose sharply, and by 2010 it had doubled."
   },
   questions: [
-    { t: "mcq", q: "I ___ my wallet. Can you lend me some money?", o: ["lost", "have lost", "had lost", "was losing"], a: 1,
+    { t: "mcq", q: "I ___ my wallet. Can you lend me some money?", o: ["lose", "have lost", "had lost", "was losing"], a: 1,
       why: "حدث له نتيجة الآن: المضارع التام." },
     { t: "mcq", q: "While I ___ to work, I saw an accident.", o: ["drove", "was driving", "had driven", "have driven"], a: 1,
       why: "حدث طويل جارٍ: ماضٍ مستمر." },
@@ -57,7 +57,7 @@ window.UNITS[16] = {
       why: "`so far today` فترة لم تنتهِ: المضارع التام." },
     { t: "mcq", q: "When I was a child, I ___ afraid of dogs.", o: ["used to be", "have been", "had been", "was being"], a: 0,
       why: "حالة ماضية انتهت: `used to be` (و`was` صحيحة أيضًا لكنها ليست من الخيارات)." },
-    { t: "fill", q: "She ___ (live) in Paris for five years before she moved to Riyadh.", a: ["had lived", "had been living"],
+    { t: "fill", q: "She ___ (live) in Paris for five years before she moved to Riyadh.", a: ["had lived", "had been living", "lived"],
       why: "مدة قبل حدث ماضٍ: ماضٍ تام." },
     { t: "fill", q: "I ___ (see) him at the mosque last Friday.", a: ["saw"],
       why: "وقت منتهٍ: `saw`." },
@@ -65,12 +65,12 @@ window.UNITS[16] = {
       why: "سؤال عن حدث جارٍ: `were doing`." },
     { t: "fix", q: "I have bought this car in 2020.", a: ["I bought this car in 2020."],
       why: "`in 2020` وقت منتهٍ." },
-    { t: "fix", q: "When I came home, my mother cooked, so dinner was ready.", a: ["When I came home, my mother had cooked, so dinner was ready."],
+    { t: "fix", q: "When I came home, my mother cooked, so dinner was ready.", a: ["When I came home, my mother had cooked, so dinner was ready.", "When I came home, my mother had already cooked, so dinner was ready."],
       why: "الطبخ قبل الوصول (العشاء جاهز): ماضٍ تام." },
     { t: "fix", q: "I was knowing her for many years.", a: ["I had known her for many years.", "I knew her for many years.", "I have known her for many years."],
       why: "`know` فعل حالة لا يأتي بـ -ing." },
     { t: "rewrite", q: "I was reading. Then the lights went out. (Join with: when)", ask: "اربط الجملتين بالكلمة المعطاة.",
-      a: ["I was reading when the lights went out."],
+      a: ["I was reading when the lights went out.", "When the lights went out, I was reading."],
       why: "الحدث الجاري + `when` + الحدث القصير." }
   ]
 };

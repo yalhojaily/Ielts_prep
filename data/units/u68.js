@@ -44,9 +44,9 @@ window.UNITS[68] = {
     en: "Both governments and individuals have a role to play, but neither can solve the problem alone."
   },
   questions: [
-    { t: "mcq", q: "___ my sisters live in Riyadh.", o: ["Both", "Either", "Neither", "Both of"], a: 0, why: "الاثنتان: `Both`." },
+    { t: "mcq", q: "___ my sisters live in Riyadh.", o: ["Both", "Either", "Neither", "Each"], a: 0, why: "الاثنتان: `Both`." },
     { t: "mcq", q: "You can choose ___ the red one or the blue one.", o: ["both", "either", "neither", "nor"], a: 1, why: "`either ... or`." },
-    { t: "mcq", q: "___ of the hotels had a pool, so we were disappointed.", o: ["Both", "Either", "Neither", "None"], a: 2, why: "لا هذا ولا ذاك: `Neither` (لاثنين)." },
+    { t: "mcq", q: "___ of the hotels had a pool, so we were disappointed.", o: ["Both", "Either", "Neither", "Each"], a: 2, why: "لا هذا ولا ذاك: `Neither` (لاثنين)." },
     { t: "mcq", q: "I haven't seen that film, and my wife hasn't ___.", o: ["too", "either", "neither", "also"], a: 1, why: "في النفي: `either`." },
     { t: "mcq", q: "Neither my father ___ my mother speaks English.", o: ["or", "nor", "and", "but"], a: 1, why: "`neither ... nor`." },
     { t: "fill", q: "___ of my parents are retired. (= the two)", a: ["Both"], why: "`Both of`." },

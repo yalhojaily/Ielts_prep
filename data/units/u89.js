@@ -45,14 +45,14 @@ window.UNITS[89] = {
   },
   questions: [
     { t: "mcq", q: "I can't speak Chinese, but my sister ___.", o: ["can speak", "can", "does", "speaks"], a: 1, why: "نكتفي بالمساعد: `can`." },
-    { t: "mcq", q: "She runs faster than I ___.", o: ["run", "do", "am", "does"], a: 1, why: "`than I do`." },
+    { t: "mcq", q: "She runs faster than I ___.", o: ["runs", "do", "am", "does"], a: 1, why: "`than I do`." },
     { t: "mcq", q: "“Would you like to join us?” “I'd love ___.”", o: ["it", "to", "that", "-"], a: 1, why: "`I'd love to`." },
     { t: "mcq", q: "I haven't seen the film, but my friends ___.", o: ["have", "has", "did", "saw"], a: 0, why: "`have`." },
     { t: "mcq", q: "He said he would help, but he ___.", o: ["didn't help it", "didn't", "doesn't", "wasn't"], a: 1, why: "`didn't`." },
     { t: "fill", q: "I don't eat meat, but my brother ___.", a: ["does"], why: "`does`." },
     { t: "fill", q: "“Are you tired?” “Yes, I ___.”", a: ["am"], why: "`I am`." },
     { t: "fill", q: "I wanted to stay, but I wasn't allowed ___.", a: ["to"], why: "نحتفظ بـ to." },
-    { t: "fill", q: "My father earns more than my mother ___.", a: ["does"], why: "`does`." },
+    { t: "fill", q: "My father earns more than my mother ___.", a: ["does", "earns"], why: "`does`." },
     { t: "fix", q: "I like football and my brother likes too.", a: ["I like football and my brother does too.", "I like football and so does my brother.", "I like football and my brother likes it too."], why: "`does too`." },
     { t: "fix", q: "I tried to call, but I couldn't call.", a: ["I tried to call, but I couldn't."], why: "نحذف المكرر." },
     { t: "rewrite", q: "Ali has finished his homework, but Omar hasn't finished his homework.", ask: "احذف المكرر.", a: ["Ali has finished his homework, but Omar hasn't."], why: "نكتفي بـ `hasn't`." }

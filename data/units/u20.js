@@ -61,7 +61,7 @@ window.UNITS[20] = {
     { t: "fix", q: "Will you be come to the party?", a: ["Will you be coming to the party?"],
       why: "بعد `be` نحتاج `coming`." },
     { t: "rewrite", q: "I will start the meeting at 10 and finish at 12. What will I be doing at 11?", ask: "أجب بجملة كاملة تبدأ بـ At 11, I ...",
-      a: ["At 11, I will be having a meeting.", "At 11, I'll be having a meeting.", "At 11, I will be in a meeting.", "At 11, I'll be in a meeting.", "At 11, I will be attending a meeting.", "At 11, I'll be attending a meeting."],
+      a: ["At 11, I will be having a meeting.", "At 11, I'll be having a meeting.", "At 11, I will be in a meeting.", "At 11, I'll be in a meeting.", "At 11, I will be attending a meeting.", "At 11, I'll be attending a meeting.", "At 11, I will be in the meeting.", "At 11, I'll be in the meeting.", "At 11, I will be having the meeting.", "At 11, I'll be having the meeting."],
       why: "الاجتماع سيكون جاريًا الساعة 11: `I'll be having a meeting`." }
   ]
 };

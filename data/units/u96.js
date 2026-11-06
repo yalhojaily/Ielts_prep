@@ -46,7 +46,7 @@ window.UNITS[96] = {
   },
   questions: [
     { t: "mcq", q: "My sister is as ___ as my mother.", o: ["taller", "tall", "tallest", "more tall"], a: 1, why: "الصفة الأصلية." },
-    { t: "mcq", q: "This film isn't ___ good as the book.", o: ["so", "as", "more", "than"], a: 1, why: "`not as ... as`." },
+    { t: "mcq", q: "This film isn't ___ good as the book.", o: ["like", "as", "more", "than"], a: 1, why: "`not as ... as`." },
     { t: "mcq", q: "London is ___ expensive as Paris.", o: ["as", "more", "so as", "same"], a: 0, why: "`as expensive as`." },
     { t: "mcq", q: "Her bag is the same ___ mine.", o: ["like", "as", "than", "that"], a: 1, why: "`the same as`." },
     { t: "mcq", q: "This house is three times as ___ as ours.", o: ["bigger", "big", "biggest", "more big"], a: 1, why: "`three times as big as`." },

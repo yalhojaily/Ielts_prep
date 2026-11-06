@@ -49,7 +49,7 @@ window.UNITS[67] = {
     { t: "mcq", q: "She had a ring on ___ hand. (two hands)", o: ["every", "each", "all", "both of"], a: 1, why: "لاثنين: `each`." },
     { t: "mcq", q: "The tickets were 20 riyals ___.", o: ["every", "each", "all", "every one"], a: 1, why: "`each` في النهاية." },
     { t: "mcq", q: "I check my emails ___.", o: ["everyday", "every day", "each days", "every days"], a: 1, why: "الظرف: `every day`." },
-    { t: "fill", q: "___ of the children received a gift.", a: ["Each"], why: "`Each of`." },
+    { t: "fill", q: "___ of the children received a gift. (= كل واحد على حدة)", a: ["Each", "Every one"], why: "`Each of`." },
     { t: "fill", q: "The Olympics take place ___ four years.", a: ["every"], why: "تكرار: `every four years`." },
     { t: "fill", q: "Every employee ___ (have) a parking space.", a: ["has"], why: "فعل مفرد." },
     { t: "fix", q: "Every people likes holidays.", a: ["Everybody likes holidays.", "Everyone likes holidays.", "Every person likes holidays."], why: "`every` + مفرد." },

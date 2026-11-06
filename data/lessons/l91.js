@@ -17,8 +17,8 @@ window.LESSONS[91] = {
         "لا نقول `I think it` ولا `I hope no`. ومع `think` النفي الأطبع `I don't think so`."
       ],
       show: [{ t: "map", cols: [
-        { h: "إثبات ← so", c: "verb", k: "o", rows: [["Will it rain?", "I think so."], ["Is the shop open?", "I hope so."]] },
-        { h: "نفي ← not / don't…so", c: "neg", k: "o", rows: [["Will we be late?", "I hope not."], ["Is it expensive?", "I don't think so."], ["Is there a problem?", "I'm afraid so."]] }
+        { h: "إثبات ← so", c: "verb", k: "o", rows: [["Will it rain?", "I think so."], ["Is the shop open?", "I hope so."], ["Is there a problem?", "I'm afraid so."]] },
+        { h: "نفي ← not / don't…so", c: "neg", k: "o", rows: [["Will we be late?", "I hope not."], ["Is it expensive?", "I don't think so."], ["Can you come?", "I'm afraid not."]] }
       ] },
         { t: "fix", items: [["I think it.", "I think {k:so}.", ""], ["I hope no.", "I hope {k:not}.", ""]] }],
       check: { q: "\"Is he coming?\" \"I'm afraid ___.\" (he isn't)", o: ["no", "not"], a: 1, why: "نفي ← `I'm afraid not`." } },

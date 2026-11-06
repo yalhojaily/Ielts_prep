@@ -50,7 +50,7 @@ window.UNITS[106] = {
     { t: "mcq", q: "My brother is ___ work right now.", o: ["in", "at", "on", "to"], a: 1, why: "`at work`." },
     { t: "mcq", q: "There's a fly ___ the ceiling.", o: ["in", "at", "on", "above"], a: 2, why: "سطح: `on`." },
     { t: "mcq", q: "She lives ___ Dammam.", o: ["at", "on", "in", "to"], a: 2, why: "مدينة: `in`." },
-    { t: "mcq", q: "I met him ___ the airport.", o: ["at", "on", "in", "to"], a: 0, why: "موقع: `at`." },
+    { t: "mcq", q: "I'll meet you ___ the airport, at Gate 3.", o: ["at", "on", "into", "to"], a: 0, why: "موقع: `at`." },
     { t: "mcq", q: "We were ___ the train for six hours.", o: ["in", "at", "on", "by"], a: 2, why: "`on the train`." },
     { t: "mcq", q: "The bank is ___ the left.", o: ["in", "at", "on", "to"], a: 2, why: "`on the left`." },
     { t: "fill", q: "Put the milk ___ the fridge.", a: ["in"], why: "داخل: `in`." },

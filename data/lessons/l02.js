@@ -21,7 +21,7 @@ window.LESSONS[2] = {
           ["I", "{s:I} {a:don't} {v:work} on Fridays.", "", 0], ["You", "{s:You} {a:don't} {v:work} on Fridays.", "", 0],
           ["We", "{s:We} {a:don't} {v:work} on Fridays.", "", 0], ["They", "{s:They} {a:don't} {v:work} on Fridays.", "", 0],
           ["He", "{s:He} {a:doesn't} {v:work} on Fridays.", "", 1], ["She", "{s:She} {a:doesn't} {v:work} on Fridays.", "", 1],
-          ["My brother", "{s:My brother} {a:doesn't} {v:work} on Fridays.", "`My brother` = he", 1], ["The shops", "{s:The shops} {a:don't} {v:work} on Fridays.", "`The shops` = they", 0]
+          ["My brother", "{s:My brother} {a:doesn't} {v:work} on Fridays.", "`My brother` = he", 1], ["The shops", "{s:The shops} {a:don't} {v:open} on Fridays.", "`The shops` = they", 0]
         ], start: 4,
         groups: [{ h: "I · you · we · they", sub: "وأي جمع", res: "{a:don't} {v:work}" }, { h: "he · she · it", sub: "وأي مفرد", res: "{a:doesn't} {v:work}" }] }],
       check: { q: "My father ___ coffee.", o: ["don't drink", "doesn't drink", "doesn't drinks"], a: 1, why: "`My father` مفرد غائب، فالمساعد `doesn't`، والفعل بعده أصلي: `drink`." } },

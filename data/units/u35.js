@@ -52,7 +52,7 @@ window.UNITS[35] = {
     { t: "mcq", q: "___ sugar do you want in your tea?", o: ["How many", "How much", "How often", "How long"], a: 1, why: "`sugar` غير معدود: `How much`." },
     { t: "mcq", q: "___ do you go to the gym? — Three times a week.", o: ["How long", "How often", "When", "How much"], a: 1, why: "التكرار: `How often`." },
     { t: "mcq", q: "___ bag is this? — It's Sara's.", o: ["Who's", "Whose", "Who", "Which's"], a: 1, why: "الملكية: `Whose`." },
-    { t: "mcq", q: "___ size do you need, small or large?", o: ["What", "Which", "How", "Who"], a: 1, why: "خيارات محددة: `Which`." },
+    { t: "mcq", q: "___ one do you want, the red one or the blue one?", o: ["What", "Which", "How", "Who"], a: 1, why: "خيارات محددة: `Which`." },
     { t: "mcq", q: "“What's your new boss ___?” “She's very friendly.”", o: ["like", "likes", "is", "as"], a: 0, why: "`What's ... like?` للوصف." },
     { t: "fill", q: "___ far is the airport from here?", a: ["How"], why: "`How far`." },
     { t: "fill", q: "___ did you arrive? — Yesterday evening.", a: ["When"], why: "زمان: `When`." },
@@ -60,6 +60,6 @@ window.UNITS[35] = {
     { t: "fix", q: "Where you bought this?", a: ["Where did you buy this?"], why: "نحتاج `did` + الفعل الأصلي." },
     { t: "fix", q: "How many time do you need?", a: ["How much time do you need?"], why: "`time` هنا غير معدود." },
     { t: "fix", q: "Who's house is that?", a: ["Whose house is that?"], why: "للملكية: `Whose`." },
-    { t: "rewrite", q: "I study English because I want to work abroad. (Ask about the reason)", ask: "اكتب السؤال الذي جوابه هذه الجملة.", a: ["Why do you study English?"], why: "السبب: `Why do you...?`" }
+    { t: "rewrite", q: "I study English because I want to work abroad. (Ask about the reason)", ask: "اكتب السؤال الذي جوابه هذه الجملة.", a: ["Why do you study English?", "Why are you studying English?"], why: "السبب: `Why do you...?`" }
   ]
 };

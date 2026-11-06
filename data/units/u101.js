@@ -45,7 +45,7 @@ window.UNITS[101] = {
     en: "Many people still prefer printed books, although e-books have already become very popular."
   },
   questions: [
-    { t: "mcq", q: "Have you sent the email ___?", o: ["already", "yet", "still", "just"], a: 1, why: "سؤال: `yet`." },
+    { t: "mcq", q: "Have you sent the email ___? I haven't received it.", o: ["already", "yet", "still", "just"], a: 1, why: "سؤال: `yet`." },
     { t: "mcq", q: "I've ___ finished. You're late!", o: ["yet", "still", "already", "any more"], a: 2, why: "`already`." },
     { t: "mcq", q: "She ___ lives in the same house.", o: ["yet", "still", "already", "ago"], a: 1, why: "ما زالت: `still`." },
     { t: "mcq", q: "“Where's Ali?” “He's ___ left. You missed him by a minute.”", o: ["just", "yet", "still", "ago"], a: 0, why: "للتو: `just`." },

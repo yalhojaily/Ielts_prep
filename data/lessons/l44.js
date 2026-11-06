@@ -42,7 +42,7 @@ window.LESSONS[44] = {
     { k: "مع الزمان", h: "الزمن وكلمات الوقت *معًا*",
       why: ["لا تنسَ أن تغيّر الزمن وكلمات الوقت معًا، وإلا تناقضت الجملة: `He said he is going yesterday` جملة متناقضة."],
       show: [{ t: "fix", items: [["He said that he is going yesterday.", "He said that he {a:was} going {k:the day before}.", ""], ["They said they will come tomorrow.", "They said they {a:would} come {k:the next day}.", ""]] }],
-      check: { q: "\"I can't swim.\" → She said she ___.", o: ["can't swim", "couldn't swim"], a: 1, why: "`can't` ترجع إلى `couldn't`." } }
+      check: { q: "\"I can't come to the party.\" (said last week; the party is over) → She said she ___.", o: ["can't come", "couldn't come"], a: 1, why: "الموقف انتهى، فـ `can't` ترجع إلى `couldn't`." } }
   ],
   sum: [
     { h: "خطوة للوراء", en: ["work → worked → had worked"] },

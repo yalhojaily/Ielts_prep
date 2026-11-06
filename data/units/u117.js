@@ -17,7 +17,7 @@ window.UNITS[117] = {
   ],
   notes: [
     { title: "finally أم in the end أم at last؟",
-      body: "`Finally` = آخر نقطة في قائمة. `In the end` = النتيجة بعد فترة. `At last` = أخيرًا بعد انتظار طويل (ارتياح).",
+      body: "`Finally` = آخر نقطة في قائمة (وتأتي أيضًا بمعنى «أخيرًا» بعد انتظار). `In the end` = النتيجة بعد فترة. `At last` = أخيرًا بعد انتظار طويل (ارتياح).",
       en: "{x:Finally}, add salt. · {x:In the end}, we stayed home. · {x:At last}, you're here!" },
     { title: "after that لا after",
       body: "`After` حرف جر يحتاج اسمًا. لبدء جملة نستخدم `After that,` أو `Afterwards,`.",
@@ -46,7 +46,7 @@ window.UNITS[117] = {
   questions: [
     { t: "mcq", q: "___, wash your hands. Then, prepare the vegetables.", o: ["Finally", "First", "In conclusion", "After"], a: 1, why: "البداية: `First`." },
     { t: "mcq", q: "We had lunch. ___, we went shopping.", o: ["After", "After that", "Finally of all", "At last"], a: 1, why: "`After that`." },
-    { t: "mcq", q: "We waited three hours. ___, the bus arrived!", o: ["Finally", "At last", "In conclusion", "Firstly"], a: 1, why: "بعد انتظار: `At last`." },
+    { t: "mcq", q: "We waited three hours. ___, the bus arrived!", o: ["Lastly", "At last", "In conclusion", "Firstly"], a: 1, why: "بعد انتظار: `At last`." },
     { t: "mcq", q: "___, I believe that education should be free. (end of essay)", o: ["At the end", "In conclusion", "Lastly of all", "After that"], a: 1, why: "`In conclusion`." },
     { t: "mcq", q: "___, the number of tourists rose over the period. (Task 1 summary)", o: ["Overall", "First", "At last", "Then"], a: 0, why: "`Overall`." },
     { t: "fill", q: "To ___ with, I want to explain the background.", a: ["begin", "start"], why: "`To begin with`." },

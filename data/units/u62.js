@@ -42,10 +42,10 @@ window.UNITS[62] = {
   },
   questions: [
     { t: "mcq", q: "Take a jacket. It ___ get cold later.", o: ["might", "must", "can't", "should have"], a: 0, why: "احتمال: `might`." },
-    { t: "mcq", q: "Winters in Tabuk ___ be very cold.", o: ["can", "must", "might have", "should"], a: 0, why: "إمكان عام: `can`." },
+    { t: "mcq", q: "Winters in Tabuk ___ be very cold.", o: ["can", "has", "might have", "is"], a: 0, why: "إمكان عام: `can`." },
     { t: "mcq", q: "You ___ been hurt! Be more careful.", o: ["could have", "could", "can have", "must"], a: 0, why: "خطر نجونا منه: `could have`." },
     { t: "mcq", q: "___ he's stuck in traffic.", o: ["May be", "Maybe", "Might", "Could"], a: 1, why: "الظرف: `Maybe`." },
-    { t: "mcq", q: "She ___ not know about the meeting.", o: ["may", "can", "must", "should"], a: 0, why: "`may not` = ربما لا." },
+    { t: "mcq", q: "She ___ not know about the meeting.", o: ["may", "can", "mustn't", "should"], a: 0, why: "`may not` = ربما لا." },
     { t: "fill", q: "He isn't here. He ___ (might / go) home already.", a: ["might have gone", "may have gone"], why: "ماضٍ محتمل." },
     { t: "fill", q: "We ___ (could / win) if we had trained more.", a: ["could have won"], why: "فرصة ضائعة." },
     { t: "fill", q: "Too much sugar ___ (can / cause) health problems.", a: ["can cause"], why: "`can cause`." },

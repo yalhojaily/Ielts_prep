@@ -57,7 +57,7 @@ window.UNITS[52] = {
     { t: "fill", q: "He avoided ___ (answer) my question.", a: ["answering"], why: "`avoid + -ing`." },
     { t: "fill", q: "We're planning ___ (open) a café.", a: ["to open"], why: "`plan + to`." },
     { t: "fill", q: "Would you mind ___ (help) me?", a: ["helping"], why: "`mind + -ing`." },
-    { t: "fix", q: "I suggest to take the train.", a: ["I suggest taking the train.", "I suggest that we take the train."], why: "`suggest + -ing`." },
+    { t: "fix", q: "I suggest to take the train.", a: ["I suggest taking the train.", "I suggest that we take the train.", "I suggest we take the train.", "I suggest that we should take the train."], why: "`suggest + -ing`." },
     { t: "fix", q: "She refused answering the phone.", a: ["She refused to answer the phone."], why: "`refuse + to`." },
     { t: "rewrite", q: "I tried. I wanted to lift the box, but it was too heavy. (Use: tried + to)", ask: "اكتب جملة واحدة.", a: ["I tried to lift the box, but it was too heavy."], why: "محاولة صعبة: `tried to`." }
   ]

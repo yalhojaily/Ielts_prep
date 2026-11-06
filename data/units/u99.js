@@ -51,7 +51,7 @@ window.UNITS[99] = {
     { t: "fill", q: "Of all the runners, she finished the ___ (fast).", a: ["fastest"], why: "`the fastest`." },
     { t: "fix", q: "He speaks more fluent than me.", a: ["He speaks more fluently than me.", "He speaks more fluently than I do."], why: "ظرف: `fluently`." },
     { t: "fix", q: "She cooks gooder than her mother.", a: ["She cooks better than her mother.", "She cooks better than her mother does."], why: "`better`." },
-    { t: "fix", q: "Prices increased quicklier this year.", a: ["Prices increased more quickly this year."], why: "`more quickly`." },
+    { t: "fix", q: "Prices increased quicklier this year.", a: ["Prices increased more quickly this year.", "Prices increased faster this year.", "Prices increased more rapidly this year."], why: "`more quickly`." },
     { t: "rewrite", q: "Sara sings well. Nora sings better. Huda sings best. (Who sings the best?)", ask: "أجب بجملة كاملة.", a: ["Huda sings the best.", "Huda sings best."], why: "`the best`." }
   ]
 };

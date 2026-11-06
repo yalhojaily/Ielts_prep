@@ -22,15 +22,15 @@ window.LESSONS[56] = {
 
     { k: "شبه الناقصة", h: "have to · be able to · ought to",
       why: [
-        "هذه تقوم بعمل مشابه للناقصة، لكنها **تتغير** مع الفاعل والزمن وتأخذ `to`.",
+        "هذه تقوم بعمل مشابه للناقصة وتأخذ `to`. و`have to` و`be able to` **تتغير** مع الفاعل والزمن، أما `ought to` فثابتة لا تتغير.",
         "فائدتها: الناقصة لا تجتمع مع بعضها (`will can` خطأ)، فنستخدم الشبيهة: `will be able to`."
       ],
-      show: [{ t: "ex", items: [["She {a:has to} {v:work}.", "تتغير مع she"], ["I {a:was able to} {v:finish}.", "لها ماضٍ"], ["You {a:ought to} {v:apologise}.", "= should"], ["I {a:will be able to} {v:help} tomorrow.", "بدل will can"]] }],
+      show: [{ t: "ex", items: [["She {a:has to} {v:work}.", "تتغير مع she"], ["I {a:was able to} {v:finish}.", "لها ماضٍ"], ["You {a:ought to} {v:apologise}.", "= should، وثابتة مع كل الفاعلين"], ["I {a:will be able to} {v:help} tomorrow.", "بدل will can"]] }],
       check: { q: "I ___ come tomorrow.", o: ["will can", "will be able to"], a: 1, why: "لا يجتمع فعلان ناقصان ← `will be able to`." } },
 
     { k: "الماضي", h: "modal + have + v3 للماضي",
       why: [
-        "الأفعال الناقصة ليس لها شكل ماضٍ عادي. للتعبير عن الماضي نضيف `have` + التصريف الثالث.",
+        "معظم الأفعال الناقصة ليس لها ماضٍ عادي (باستثناء `could` للقدرة العامة، الدرس 57). للوم والاستنتاج والاحتمال في الماضي نضيف `have` + التصريف الثالث.",
         "`should have called` = كان يجب أن تتصل (ولم تفعل). `might have forgotten` = ربما نسيت."
       ],
       show: [{ t: "formula", rows: [["كان يجب (ولم يحدث)", "You {a:should have} {v:told} me."], ["ربما حدث", "She {a:might have} {v:forgotten}."], ["متأكد أنه حدث", "He {a:must have} {v:left}."]] }],

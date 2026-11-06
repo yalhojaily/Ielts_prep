@@ -36,7 +36,7 @@ window.LESSONS[24] = {
       ],
       show: [{ t: "compare", cols: [
         { h: "معلومة مهمة ← نذكرها", c: "verb", en: ["This house {a:was} {v:designed} {k:by} a famous architect."] },
-        { h: "غير مهمة ← نحذفها", c: "neg", en: ["Rice {a:is} {v:grown} in Asia {d:by people}."] }
+        { h: "غير مهمة ← نحذفها", c: "neg", en: ["Rice {a:is} {v:grown} in Asia. (لا: … {d:by people})"] }
       ] }],
       check: { q: "Which sentence is most natural?", o: ["The letter was delivered by someone.", "The letter was delivered this morning."], a: 1, why: "`by someone` لا تضيف معلومة، فنحذفها." } },
 

@@ -47,7 +47,7 @@ window.UNITS[93] = {
     { t: "mcq", q: "I'm ___ tired. I need a short rest.", o: ["absolutely", "a bit", "totally", "completely"], a: 1, why: "متدرجة: `a bit`." },
     { t: "mcq", q: "This answer is ___ wrong.", o: ["very", "completely", "a bit very", "fairly"], a: 1, why: "مطلقة: `completely`." },
     { t: "fill", q: "Small → tiny. Big → ___.", a: ["huge", "enormous", "massive", "gigantic"], why: "`huge / enormous`." },
-    { t: "fill", q: "Tired → ___.", a: ["exhausted"], why: "`exhausted`." },
+    { t: "fill", q: "Tired → ___.", a: ["exhausted", "shattered", "worn out"], why: "`exhausted`." },
     { t: "fill", q: "Bad → ___.", a: ["terrible", "awful", "horrible", "dreadful"], why: "`terrible`." },
     { t: "fix", q: "The meal was very delicious.", a: ["The meal was absolutely delicious.", "The meal was really delicious.", "The meal was delicious."], why: "لا very مع delicious." },
     { t: "fix", q: "The room was absolutely small.", a: ["The room was very small.", "The room was absolutely tiny.", "The room was really small."], why: "`small` متدرجة." },

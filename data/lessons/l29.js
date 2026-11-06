@@ -26,7 +26,7 @@ window.LESSONS[29] = {
 
     { k: "لا will بعد if", h: "أشهر خطأ: will أو would بعد if",
       why: [
-        "جزء `if` لا يأخذ `will` ولا `would` أبدًا (في كل الأنواع). مكانهما في جزء النتيجة فقط.",
+        "في جمل الشرط العادية لا يأخذ جزء `if` الفعلَ `will` ولا `would` (في كل الأنواع). مكانهما في جزء النتيجة فقط.",
         "السبب: `if` نفسها توضح أن الكلام عن احتمال، فالنتيجة هي التي تحمل `will / would`."
       ],
       show: [{ t: "fix", items: [["If I will have time, I will call you.", "If I {v:have} time, I {a:will} call you.", ""], ["If I would be rich, I would travel.", "If I {v:were} rich, I {a:would} travel.", ""]] }],

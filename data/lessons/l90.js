@@ -24,7 +24,7 @@ window.LESSONS[90] = {
         "والنفي: `not` قبل `to`: `I tried not to.`"
       ],
       show: [{ t: "ex", items: [["“Are you a manager?” “No, but I'd like {a:to be}.”", ""], ["I tried {n:not} {a:to}.", ""], ["You can leave whenever you {v:want}.", "بعد if / whenever يمكن حذف to أيضًا"]] }],
-      check: { q: "\"Are you ready?\" \"Not yet, but I will soon ___.\"", o: ["be", "to"], a: 0, why: "بعد `will` فعل أصلي، والفعل المحذوف `ready` يحتاج `be`." } }
+      check: { q: "\"Are you ready?\" \"Not yet, but I will ___ soon.\"", o: ["be", "to"], a: 0, why: "نحتفظ بـ `be` ونحذف `ready` فقط: I will be (ready) soon." } }
   ],
   sum: [
     { h: "القاعدة", en: ["I'd love {a:to}. (لا I'd love)"] },

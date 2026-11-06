@@ -16,7 +16,7 @@ window.LESSONS[107] = {
       show: [{ t: "build", lab: "اختر",
         opts: [["10 a.m.", "The meeting starts {k:at} 10 a.m.", "", 0], ["night", "I sleep late {k:at} night.", "استثناء", 0], ["Friday", "See you {k:on} Friday.", "", 1], ["Monday morning", "{k:on} Monday morning", "يوم محدد ← on", 1], ["July", "{k:in} July", "", 2], ["the morning", "{k:in} the morning", "", 2], ["summer", "We travel {k:in} summer.", "", 2]],
         groups: [{ h: "at" }, { h: "on" }, { h: "in" }] },
-        { t: "fix", items: [["in Monday", "{k:on} Monday", ""], ["at 2020", "{k:in} 2020", ""], ["on the night", "{k:at} night", ""]] }],
+        { t: "fix", items: [["in Monday", "{k:on} Monday", ""], ["at 2020", "{k:in} 2020", ""], ["I can't sleep on night.", "I can't sleep {k:at} night.", ""]] }],
       check: { q: "The shop opens ___ Saturday morning.", o: ["in", "on", "at"], a: 1, why: "يوم محدد ← `on`." } },
 
     { k: "بلا حرف", h: "next week · last year: *بلا* حرف جر",

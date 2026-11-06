@@ -35,7 +35,7 @@ window.UNITS[44] = {
   ],
   mistakes: [
     ["He said he will come.", "He said he would come.", "`will → would`."],
-    ["She said she can't swim.", "She said she couldn't swim.", "`can't → couldn't`."],
+    ["She said she can't come to yesterday's meeting.", "She said she couldn't come to the meeting the day before.", "الموقف انتهى، فنرجع الزمن: `can't → couldn't`، و`yesterday → the day before`."],
     ["They said they have finished.", "They said they had finished.", "`have finished → had finished`."],
     ["He said that he is going yesterday.", "He said that he was going the day before.", "نرجع الزمن ونغير كلمة الزمان."]
   ],
@@ -50,7 +50,7 @@ window.UNITS[44] = {
     { t: "mcq", q: "“I can't come.” → He told me he ___ come.", o: ["can't", "couldn't", "won't", "didn't"], a: 1, why: "`can't → couldn't`." },
     { t: "mcq", q: "“You should rest.” → The doctor said I ___ rest.", o: ["should", "should have", "shall", "would"], a: 0, why: "`should` لا تتغير." },
     { t: "fill", q: "“I'm working.” → She said she ___ working.", a: ["was"], why: "`am working → was working`." },
-    { t: "fill", q: "“I bought a car.” → He said he ___ a car.", a: ["had bought"], why: "`bought → had bought`." },
+    { t: "fill", q: "“I bought a car.” → He said he ___ a car.", a: ["had bought", "bought"], why: "`bought → had bought` (ويُقبل إبقاء الماضي البسيط `bought`)." },
     { t: "fill", q: "“It may rain.” → They said it ___ rain.", a: ["might"], why: "`may → might`." },
     { t: "fill", q: "“I live in Taif.” → He says he ___ in Taif.", a: ["lives"], why: "فعل النقل مضارع (`says`): لا نرجع الزمن." },
     { t: "fix", q: "She said she will call me later.", a: ["She said she would call me later."], why: "`would`." },

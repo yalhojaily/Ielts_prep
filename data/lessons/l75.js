@@ -21,7 +21,7 @@ window.LESSONS[75] = {
         { h: "a few / a little: يكفي ☺", c: "verb", en: ["I have {k:a few} friends here.", "We have {k:a little} time. Let's have coffee."] },
         { h: "few / little: مشكلة ☹", c: "neg", en: ["He has {k:few} friends. He's lonely.", "There's {k:little} hope."] }
       ] }],
-      check: { q: "Hurry! We have ___ time left.", o: ["a little", "little"], a: 1, why: "المعنى سلبي (مشكلة) ← `little`." } },
+      check: { q: "Hurry! We have very ___ time left.", o: ["a little", "little"], a: 1, why: "المعنى سلبي (مشكلة) ← `little`." } },
 
     { k: "much في الإثبات", h: "a lot of أطبع في الإثبات",
       why: [

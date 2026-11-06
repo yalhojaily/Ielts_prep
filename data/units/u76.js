@@ -35,7 +35,7 @@ window.UNITS[76] = {
   ],
   mistakes: [
     ["Almost of the students passed.", "Almost all of the students passed.", "`almost all`."],
-    ["Around about 50 people.", "About 50 people. / Around 50 people.", "كلمة تقريب واحدة."],
+    ["Around about 50 people.", "About 50 people. / Around 50 people.", "`around about` عامية؛ في الكتابة الرسمية كلمة تقريب واحدة."],
     ["Dozen of people.", "Dozens of people.", "`dozens of`."]
   ],
   ielts: {
@@ -50,7 +50,7 @@ window.UNITS[76] = {
     { t: "mcq", q: "___ of people were waiting outside.", o: ["Dozen", "Dozens", "Dozens of", "A dozens"], a: 1, why: "`Dozens of`." },
     { t: "fill", q: "There were 20 people ___ so at the meeting.", a: ["or"], why: "`20 or so`." },
     { t: "fill", q: "52% is just ___ half.", a: ["over"], why: "`just over`." },
-    { t: "fill", q: "It's ___ midnight. We should go to bed.", a: ["nearly", "almost"], why: "`nearly midnight`." },
+    { t: "fill", q: "It's ___ midnight. We should go to bed.", a: ["nearly", "almost", "about", "around"], why: "`nearly midnight`." },
     { t: "fix", q: "Almost of my friends are married.", a: ["Almost all of my friends are married.", "Almost all my friends are married.", "Most of my friends are married."], why: "`Almost all`." },
     { t: "fix", q: "Dozen of cars were damaged.", a: ["Dozens of cars were damaged."], why: "`Dozens of`." },
     { t: "rewrite", q: "The figure was 32%. (Describe it using: just under a third)", ask: "اكتب جملة تبدأ بـ The figure was ...", a: ["The figure was just under a third."], why: "32% أقل بقليل من الثلث (33%)." },

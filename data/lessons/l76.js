@@ -17,7 +17,7 @@ window.LESSONS[76] = {
         "و`or so` تأتي **بعد** الرقم: `50 or so`. ولا تجمع كلمتين بنفس المعنى: `around about 50` خطأ."
       ],
       show: [{ t: "formula", rows: [["قبل الرقم", "{k:about / around / approximately / roughly} 50"], ["بعد الرقم", "50 {k:or so} · 50 {k:or more}"]] },
-        { t: "fix", items: [["Around about 50 people.", "{k:About} 50 people. / {k:Around} 50 people.", ""]] }],
+        { t: "fix", items: [["Around about 50 people.", "{k:About} 50 people. / {k:Around} 50 people.", "around about عامية؛ في الكتابة كلمة تقريب واحدة"]] }],
       check: { q: "The trip takes ___ three hours.", o: ["roughly", "or so"], a: 0, why: "`roughly` قبل الرقم. (`or so` بعده)" } },
 
     { k: "almost all", h: "almost all of… لا almost of",

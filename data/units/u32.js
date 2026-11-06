@@ -19,7 +19,7 @@ window.UNITS[32] = {
   notes: [
     { title: "could not ليست احتمالًا",
       body: "`might not` = ربما لا. `could not` = مستحيل. انتبه للفرق.",
-      en: "He {a:might not} {v:come}. (maybe not) · He {a:couldn't} {v:come}. (impossible)" },
+      en: "He {a:might not} {v:come}. (maybe not) · That {a:couldn't} {v:be} true. (impossible)" },
     { title: "سلّم اليقين",
       body: "`will definitely` > `will probably` > `is likely to` > `may / might / could` > `is unlikely to` > `probably won't` > `definitely won't`.",
       en: "It {a:will} {x:definitely} {v:happen}. · It {x:probably} {a:won't} {v:happen}." }

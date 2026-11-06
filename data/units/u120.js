@@ -51,7 +51,7 @@ window.UNITS[120] = {
     { t: "mcq", q: "“I think we should leave early.” “___. The traffic will be terrible.”", o: ["I know what you mean", "I know what do you mean", "I'm knowing", "You mean what"], a: 0, why: "`I know what you mean`." },
     { t: "mcq", q: "___ is, I don't have enough money to travel.", o: ["The thing", "A thing", "Thing", "The thing what"], a: 0, why: "`The thing is`." },
     { t: "fill", q: "“What's your favourite book?” “Hmm, let me ___...”", a: ["think", "see"], why: "`let me think`." },
-    { t: "fill", q: "That ___ like a great idea!", a: ["sounds"], why: "`That sounds like` + اسم." },
+    { t: "fill", q: "That ___ like a great idea!", a: ["sounds", "seems", "looks"], why: "`That sounds like` + اسم (و`seems / looks like` صحيحتان أيضًا)." },
     { t: "fill", q: "Sorry, what do you ___ by “sustainable”?", a: ["mean"], why: "`What do you mean by...?`" },
     { t: "fix", q: "That sounds like wonderful.", a: ["That sounds wonderful.", "That sounds like a wonderful idea."], why: "بلا like." },
     { t: "fix", q: "To be honestly, I don't like it.", a: ["To be honest, I don't like it.", "Honestly, I don't like it."], why: "`To be honest`." },

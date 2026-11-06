@@ -55,8 +55,8 @@ window.UNITS[45] = {
     { t: "fill", q: "She reminded me ___ (lock) the door.", a: ["to lock"], why: "`remind someone to`." },
     { t: "fill", q: "He admitted ___ (cheat) in the exam.", a: ["cheating"], why: "`admit + -ing`." },
     { t: "fill", q: "They accused him ___ stealing the money.", a: ["of"], why: "`accuse someone of`." },
-    { t: "fix", q: "He suggested me to take a break.", a: ["He suggested that I take a break.", "He suggested that I should take a break.", "He suggested taking a break."], why: "`suggest` لا يأخذ `me to`." },
+    { t: "fix", q: "He suggested me to take a break.", a: ["He suggested that I take a break.", "He suggested that I should take a break.", "He suggested taking a break.", "He suggested I take a break.", "He suggested I should take a break."], why: "`suggest` لا يأخذ `me to`." },
     { t: "fix", q: "The teacher explained us the rule.", a: ["The teacher explained the rule to us."], why: "`explain something to someone`." },
-    { t: "rewrite", q: "“I'll pay you back tomorrow,” he said. (Use: promised)", ask: "انقل الكلام بالفعل المعطى.", a: ["He promised to pay me back the next day.", "He promised to pay me back the following day.", "He promised that he would pay me back the next day."], why: "`promise to` + فعل." }
+    { t: "rewrite", q: "“I'll pay you back tomorrow,” he said. (Use: promised)", ask: "انقل الكلام بالفعل المعطى.", a: ["He promised to pay me back the next day.", "He promised to pay me back the following day.", "He promised he would pay me back the next day.", "He promised he would pay me back the following day.", "He promised that he would pay me back the following day.", "He promised that he would pay me back the next day."], why: "`promise to` + فعل." }
   ]
 };

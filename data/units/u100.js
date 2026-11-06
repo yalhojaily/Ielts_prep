@@ -52,7 +52,7 @@ window.UNITS[100] = {
     { t: "mcq", q: "The film was ___ boring. I almost fell asleep.", o: ["rather", "much", "far", "slight"], a: 0, why: "`rather` مع السلبي." },
     { t: "fill", q: "London is ___ more expensive than Madinah. (a big difference)", a: ["much", "far", "a lot", "considerably", "significantly"], why: "فرق كبير: `much / far`." },
     { t: "fill", q: "I'm a ___ hungry. Let's eat something small.", a: ["bit", "little"], why: "`a bit`." },
-    { t: "fill", q: "The weather was ___ good, so we went to the beach.", a: ["very", "quite", "really", "pretty", "fairly", "extremely"], why: "تقوية أو متوسط." },
+    { t: "fill", q: "The weather was ___ good, so we went to the beach.", a: ["very", "quite", "really", "pretty", "fairly", "extremely", "so"], why: "تقوية أو متوسط." },
     { t: "fix", q: "This laptop is very cheaper than that one.", a: ["This laptop is much cheaper than that one.", "This laptop is a lot cheaper than that one.", "This laptop is far cheaper than that one."], why: "`much cheaper`." },
     { t: "fix", q: "I am very much tired today.", a: ["I am very tired today.", "I'm very tired today."], why: "`very tired`." },
     { t: "fix", q: "The weather was very perfect for the picnic.", a: ["The weather was absolutely perfect for the picnic.", "The weather was perfect for the picnic."],

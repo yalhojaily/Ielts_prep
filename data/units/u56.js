@@ -18,13 +18,13 @@ window.UNITS[56] = {
   ],
   notes: [
     { title: "أفعال شبه ناقصة",
-      body: "`have to, need to, be able to, ought to` تقوم بعمل مشابه لكنها تتغير مع الفاعل والزمن وتأخذ `to`.",
+      body: "`have to, need to, be able to` تقوم بعمل مشابه لكنها تتغير مع الفاعل والزمن وتأخذ `to`. أما `ought to` فلا تتغير مع الفاعل (مثل الناقصة) لكنها تأخذ `to`.",
       en: "She {a:has to} {v:work}. · I {a:was able to} {v:finish}. · You {a:ought to} {v:apologise}." },
     { title: "لا يجتمع فعلان ناقصان",
       body: "لا نقول `will can`. نستخدم `will be able to`.",
       en: "I {a:will be able to} {v:help} you tomorrow." },
     { title: "الماضي بـ have + v3",
-      body: "الأفعال الناقصة ليس لها ماضٍ عادي، فنعبّر عن الماضي بـ `have + v3`.",
+      body: "معظم الأفعال الناقصة ليس لها ماضٍ عادي (باستثناء `could` للقدرة العامة في الماضي)، فنعبّر عن الماضي، كاللوم والاستنتاج والاحتمال، بـ `have + v3`.",
       en: "You {a:should have} {v:told} me. · She {a:might have} {v:forgotten}." }
   ],
   examples: [

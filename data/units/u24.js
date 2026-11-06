@@ -59,7 +59,7 @@ window.UNITS[24] = {
       why: "مضارع بسيط مجهول: `are made`." },
     { t: "fill", q: "The office ___ (clean) right now.", a: ["is being cleaned"],
       why: "مستمر مجهول: `is being cleaned`." },
-    { t: "fill", q: "My laptop ___ (steal). I can't find it anywhere!", a: ["has been stolen"],
+    { t: "fill", q: "My laptop ___ (steal). I can't find it anywhere!", a: ["has been stolen", "was stolen"],
       why: "نتيجة حاضرة: `has been stolen`." },
     { t: "fill", q: "This medicine must ___ (keep) in a cool place.", a: ["be kept"],
       why: "بعد `must`: `be` + التصريف الثالث." },

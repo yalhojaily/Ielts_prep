@@ -37,7 +37,7 @@ window.UNITS[65] = {
     ["This people are friendly.", "These people are friendly.", "`people` جمع: `these`."],
     ["I like this shoes.", "I like these shoes.", "`shoes` جمع."],
     ["Those car is expensive.", "That car is expensive.", "`car` مفرد: `that`."],
-    ["In these days, everyone has a phone. (in the past?)", "These days, everyone has a phone.", "`these days` = هذه الأيام، بلا in."]
+    ["In these days, everyone has a phone.", "These days, everyone has a phone.", "`these days` = هذه الأيام، بلا in."]
   ],
   ielts: {
     text: "في **Writing Task 2** استخدم `This` و`These` لربط الأفكار: `This trend...`, `These problems...`, `This means that...`. الربط بها يرفع **Coherence and Cohesion**. لكن تأكد أن الإشارة واضحة.",
@@ -55,6 +55,6 @@ window.UNITS[65] = {
     { t: "fix", q: "This students are very clever.", a: ["These students are very clever."], why: "جمع: `These`." },
     { t: "fix", q: "Those house is very old.", a: ["That house is very old."], why: "مفرد: `That`." },
     { t: "fix", q: "I want these one.", a: ["I want this one."], why: "`one` مفرد: `this one`." },
-    { t: "rewrite", q: "Prices increased. The increase affected poor families. (Use: This)", ask: "اربط الجملتين بـ This.", a: ["Prices increased. This affected poor families.", "Prices increased, and this affected poor families."], why: "`This` تشير إلى الفكرة السابقة." }
+    { t: "rewrite", q: "Prices increased. The increase affected poor families. (Use: This)", ask: "اربط الجملتين بـ This.", a: ["Prices increased. This affected poor families.", "Prices increased. This increase affected poor families.", "Prices increased, and this affected poor families."], why: "`This` تشير إلى الفكرة السابقة." }
   ]
 };

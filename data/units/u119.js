@@ -56,6 +56,6 @@ window.UNITS[119] = {
     { t: "fix", q: "All people want to live in big cities.", a: ["Many people want to live in big cities.", "Most people want to live in big cities.", "A lot of people want to live in big cities."], why: "تجنب التعميم." },
     { t: "fix", q: "Teenagers tend to spending a lot of time online.", a: ["Teenagers tend to spend a lot of time online."], why: "`tend to spend`." },
     { t: "fix", q: "I didn't make my mind about the job.", a: ["I haven't made up my mind about the job.", "I haven't made my mind up about the job.", "I didn't make up my mind about the job."], why: "`make up my mind`." },
-    { t: "rewrite", q: "Technology is bad for children. (Make it more cautious with: can)", ask: "أعد الصياغة بتحفظ.", a: ["Technology can be bad for children.", "Technology can be harmful for children."], why: "`can be` تخفف الحكم." }
+    { t: "rewrite", q: "Technology is bad for children. (Make it more cautious with: can)", ask: "أعد الصياغة بتحفظ.", a: ["Technology can be bad for children.", "Technology can be harmful for children.", "Technology can be harmful to children."], why: "`can be` تخفف الحكم." }
   ]
 };

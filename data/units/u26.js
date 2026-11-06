@@ -43,7 +43,7 @@ window.UNITS[26] = {
       why: "المباراة تُعرض: `will be shown`." },
     { t: "mcq", q: "The new airport ___ in 2028.", o: ["is going to be opened", "is going to open it", "will opened", "is opening by"], a: 0,
       why: "`is going to be` + التصريف الثالث." },
-    { t: "mcq", q: "By next month, all the work ___.", o: ["will be done", "will have been done", "will do", "has been done"], a: 1,
+    { t: "mcq", q: "By next month, all the work ___.", o: ["will be doing", "will have been done", "will do", "has been done"], a: 1,
       why: "اكتمال قبل موعد: `will have been done`." },
     { t: "mcq", q: "Don't worry, you ___ alone.", o: ["won't leave", "won't be left", "will not left", "aren't leaving"], a: 1,
       why: "مجهول منفي: `won't be left`." },

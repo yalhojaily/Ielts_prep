@@ -59,7 +59,7 @@ window.UNITS[12] = {
       why: "نشاط مستمر مع `for`." },
     { t: "fill", q: "How long ___ you ___ (learn) to drive?", ask: "اكتب الكلمات بالترتيب، مثل: have been learning", a: ["have been learning"],
       why: "`How long have you been learning...?`" },
-    { t: "fix", q: "I am working here since 2019.", a: ["I have been working here since 2019.", "I've been working here since 2019."],
+    { t: "fix", q: "I am working here since 2019.", a: ["I have been working here since 2019.", "I've been working here since 2019.", "I have worked here since 2019.", "I've worked here since 2019."],
       why: "مع `since` لنشاط مستمر حتى الآن." },
     { t: "fix", q: "She has been finished the project.", a: ["She has finished the project."],
       why: "للنتيجة نستخدم التام البسيط: `has finished`." },

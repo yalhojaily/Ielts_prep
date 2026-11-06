@@ -48,7 +48,7 @@ window.UNITS[47] = {
     { t: "fill", q: "“When will you arrive?” → They asked when I ___ arrive.", a: ["would"], why: "`will → would`." },
     { t: "fix", q: "She asked me where did I buy it.", a: ["She asked me where I had bought it.", "She asked me where I bought it."], why: "لا `did`." },
     { t: "fix", q: "He asked me was I hungry.", a: ["He asked me if I was hungry.", "He asked me whether I was hungry."], why: "نضيف `if`." },
-    { t: "fix", q: "They asked what is the time.", a: ["They asked what the time was."], why: "ترتيب خبري وإرجاع الزمن." },
+    { t: "fix", q: "They asked what is the time.", a: ["They asked what the time was.", "They asked what time it was."], why: "ترتيب خبري وإرجاع الزمن." },
     { t: "rewrite", q: "“Why are you late?” the teacher asked me.", ask: "انقل السؤال بدءًا بـ The teacher asked me ...", a: ["The teacher asked me why I was late."], why: "`why I was late`." },
     { t: "rewrite", q: "“Do you work here?” she asked him.", ask: "انقل السؤال بدءًا بـ She asked him ...", a: ["She asked him if he worked there.", "She asked him whether he worked there."], why: "`if he worked there` مع `here → there`." }
   ]

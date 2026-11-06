@@ -46,7 +46,7 @@ window.UNITS[95] = {
     { t: "mcq", q: "It's getting ___.", o: ["dark and dark", "darker and darker", "more and more dark", "more darker"], a: 1, why: "قصيرة: `darker and darker`." },
     { t: "mcq", q: "Electric cars are becoming ___ popular.", o: ["more and more", "most and most", "more popular and", "popularer and"], a: 0, why: "طويلة: `more and more`." },
     { t: "mcq", q: "___ you exercise, the healthier you'll be.", o: ["More", "The more", "Most", "The most"], a: 1, why: "`The more`." },
-    { t: "mcq", q: "The older he gets, ___ he becomes.", o: ["the calmer", "calmer", "the more calm", "more calmer"], a: 0, why: "`the calmer`." },
+    { t: "mcq", q: "The older he gets, ___ he becomes.", o: ["the calmer", "calmer", "the most calm", "more calmer"], a: 0, why: "`the calmer`." },
     { t: "mcq", q: "People are reading ___ books these days.", o: ["less and less", "fewer and fewer", "few and few", "little and little"], a: 1, why: "معدود: `fewer and fewer`." },
     { t: "fill", q: "Prices are going up. Food is getting ___ and ___ expensive.", ask: "اكتب الكلمة الناقصة مرة واحدة.", a: ["more"], why: "`more and more expensive`." },
     { t: "fill", q: "The ___ (soon) we leave, the earlier we'll arrive.", a: ["sooner"], why: "`The sooner`." },

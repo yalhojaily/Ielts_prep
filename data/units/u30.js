@@ -57,7 +57,7 @@ window.UNITS[30] = {
       why: "وإلا: `otherwise`." },
     { t: "mcq", q: "If you feel sick, you ___ see a doctor.", o: ["should", "would have", "had", "will have"], a: 0,
       why: "نصيحة: `should`." },
-    { t: "fill", q: "If I ___ (be) more confident, I would have asked her.", a: ["were", "was"],
+    { t: "fill", q: "If I ___ (be) more confident, I would have asked her.", a: ["were", "was", "had been"],
       why: "صفة دائمة (حاضر) ونتيجة ماضية." },
     { t: "fill", q: "If she hadn't missed the bus, she ___ (be) here now.", a: ["would be", "'d be"],
       why: "نتيجة حاضرة: `would be`." },

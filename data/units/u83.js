@@ -26,7 +26,7 @@ window.UNITS[83] = {
       en: "This is {x:what} I wanted. · This is the thing {x:that} I wanted." },
     { title: "الاختصار",
       body: "نحذف `who / which` + `be`.",
-      en: "Students {x:(who are)} {v:interested} in the course should apply. · The road {x:(which is)} {v:leading} to the city is closed." }
+      en: "Students {x:(who are)} {v:interested} in the course should apply. · The road {x:(which leads)} → {v:leading} to the city is closed. (مع المضارع البسيط نحوّل الفعل إلى ing)" }
   ],
   examples: [
     ["{x:What} surprised me was the price.", "ما فاجأني هو السعر."],

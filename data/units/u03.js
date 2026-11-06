@@ -11,7 +11,7 @@ window.UNITS[3] = {
   ],
   formula: [
     ["نعم / لا", "{a:Do} {s:I / you / we / they} {v:work}? · {a:Does} {s:he / she / it} {v:work}?"],
-    ["أداة استفهام", "{q:Where / When / What} {a:do} {s:you} {v:live}? · {q:What} {a:does} {s:she} {v:do}?"],
+    ["أداة استفهام", "{q:Where} {a:do} {s:you} {v:live}? · {q:What} {a:does} {s:she} {v:do}?"],
     ["فعل be", "{v:Are} {s:you} tired? · {q:Where} {v:is} {s:the station}?"],
     ["الإجابة القصيرة", "Yes, {s:I} {a:do}. / No, {s:she} {a:doesn't}."]
   ],

@@ -64,13 +64,13 @@ window.UNITS[10] = {
       why: "مع `They` نستخدم `were`." },
     { t: "fix", q: "I was read a book when he called.", a: ["I was reading a book when he called."],
       why: "بعد `was` نحتاج `reading`." },
-    { t: "fix", q: "While I walked home, I was seeing an accident.", a: ["While I was walking home, I saw an accident."],
+    { t: "fix", q: "While I walked home, I was seeing an accident.", a: ["While I was walking home, I saw an accident.", "I saw an accident while I was walking home."],
       why: "المشي حدث طويل (مستمر)، ورؤية الحادث حدث قصير (بسيط)." },
     { t: "rewrite", q: "She was working. (Make a question beginning with: What ...)", ask: "اكتب سؤالًا عن الجزء الناقص.",
       a: ["What was she doing?"],
       why: "السؤال عن الفعل نفسه: `What was she doing?`" },
     { t: "rewrite", q: "I was having a shower. The doorbell rang. (Join with: when)", ask: "اربط الجملتين بالكلمة المعطاة.",
-      a: ["I was having a shower when the doorbell rang."],
+      a: ["I was having a shower when the doorbell rang.", "When the doorbell rang, I was having a shower."],
       why: "الحدث الطويل أولًا، ثم `when` + الحدث القصير." }
   ]
 };

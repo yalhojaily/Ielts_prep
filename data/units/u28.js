@@ -36,7 +36,7 @@ window.UNITS[28] = {
   ],
   mistakes: [
     ["I cut my hair yesterday. (at the barber)", "I had my hair cut yesterday.", "إذا قام غيرك بالعمل: `have something done`."],
-    ["It is said he is very rich. (formal)", "It is said that he is very rich. / He is said to be very rich.", "`that` اختيارية لكن الأفضل كتابتها في الأسلوب الرسمي."],
+    ["He is said that he is very rich.", "It is said that he is very rich. / He is said to be very rich.", "مع `It` نستخدم `that`، ومع الشخص نستخدم `to` + فعل."],
     ["She is believed being the best.", "She is believed to be the best.", "بعد `is believed` نستخدم `to be`."],
     ["I had repaired my car. (by a mechanic)", "I had my car repaired.", "الترتيب: `have` + الشيء + التصريف الثالث."]
   ],
@@ -49,7 +49,7 @@ window.UNITS[28] = {
       why: "`It is expected that...`." },
     { t: "mcq", q: "The castle is thought ___ in the 12th century.", o: ["to build", "to have been built", "being built", "that built"], a: 1,
       why: "حدث ماضٍ مجهول: `to have been built`." },
-    { t: "mcq", q: "I'm going to ___ next week.", o: ["cut my hair", "have my hair cut", "have cut my hair", "my hair cut"], a: 1,
+    { t: "mcq", q: "I'm going to ___ at the barber's next week.", o: ["cut my hair", "have my hair cut", "have cut my hair", "my hair cut"], a: 1,
       why: "شخص آخر سيقصّه: `have my hair cut`." },
     { t: "mcq", q: "He is said ___ the richest man in the city.", o: ["be", "to be", "being", "that he is"], a: 1,
       why: "`is said to be`." },

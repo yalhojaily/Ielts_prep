@@ -12,7 +12,7 @@ window.UNITS[40] = {
   formula: [
     ["مثبت", "“I {v:love} cooking.” “{a:Do} {s:you}?”"],
     ["منفي", "“He {a:isn't} coming.” “{a:Isn't} {s:he}?”"],
-    ["wh-", "“I met someone famous.” “{q:Who}?” · “{q:Who with}?”"]
+    ["wh-", "“I met someone famous.” “{q:Who}?” · “I'm going out.” “{q:Who with}?”"]
   ],
   notes: [
     { title: "طابق الزمن والفاعل",

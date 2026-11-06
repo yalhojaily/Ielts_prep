@@ -44,7 +44,7 @@ window.LESSONS[7] = {
       ],
       show: [{ t: "map", cols: [
         { h: "تغيّر حرف العلة", c: "accent", k: "v", rows: [["go", "went"], ["see", "saw"], ["come", "came"], ["take", "took"], ["get", "got"], ["make", "made"]] },
-        { h: "تنتهي بـ ought / aught · ولا تتغير", c: "subj", k: "v", rows: [["buy", "bought"], ["think", "thought"], ["teach", "taught"], ["have", "had"], ["put", "put"], ["cut", "cut"]] }
+        { h: "ought / aught · أخرى · ولا تتغير", c: "subj", k: "v", rows: [["buy", "bought"], ["think", "thought"], ["teach", "taught"], ["have", "had"], ["put", "put"], ["cut", "cut"]] }
       ] }],
       check: { q: "Yesterday I ___ a new phone.", o: ["buyed", "bought", "buy"], a: 1, why: "`buy` شاذ، وماضيه `bought`." } },
 

@@ -53,13 +53,13 @@ window.UNITS[51] = {
     { t: "mcq", q: "She went to the pharmacy ___ some medicine.", o: ["for buying", "to buy", "for buy", "buy"], a: 1, why: "الغرض: `to buy`." },
     { t: "mcq", q: "___ too much sugar is bad for you.", o: ["Eat", "Eating", "To eating", "Eaten"], a: 1, why: "فاعل الجملة: `Eating`." },
     { t: "mcq", q: "He's good at ___ problems.", o: ["solve", "to solve", "solving", "solved"], a: 2, why: "بعد `at`: `-ing`." },
-    { t: "mcq", q: "It's difficult ___ a job these days.", o: ["finding", "to find", "find", "found"], a: 1, why: "`It's difficult to`." },
+    { t: "mcq", q: "It is important ___ enough sleep.", o: ["getting", "to get", "get", "got"], a: 1, why: "`It is important to` + فعل." },
     { t: "fill", q: "We were ___ (shock) by the news.", a: ["shocked"], why: "الشعور: `shocked`." },
     { t: "fill", q: "The match was really ___ (excite).", a: ["exciting"], why: "الشيء: `exciting`." },
     { t: "fill", q: "He left without ___ (say) goodbye.", a: ["saying"], why: "بعد `without`: `-ing`." },
     { t: "fix", q: "I was very interesting in the lecture.", a: ["I was very interested in the lecture."], why: "شعورك: `interested`." },
     { t: "fix", q: "I study English for get a better job.", a: ["I study English to get a better job.", "I study English in order to get a better job."], why: "الغرض: `to get`." },
     { t: "fix", q: "Smoke is not allowed here.", a: ["Smoking is not allowed here."], why: "اسم النشاط: `Smoking`." },
-    { t: "rewrite", q: "I went to Jeddah because I wanted to visit my aunt. (Use: to)", ask: "أعد الصياغة بالمصدر للغرض.", a: ["I went to Jeddah to visit my aunt."], why: "`to visit`." }
+    { t: "rewrite", q: "I went to Jeddah because I wanted to visit my aunt. (Use: to)", ask: "أعد الصياغة بالمصدر للغرض.", a: ["I went to Jeddah to visit my aunt.", "I went to Jeddah in order to visit my aunt."], why: "`to visit`." }
   ]
 };

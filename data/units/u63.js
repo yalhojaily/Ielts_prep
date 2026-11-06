@@ -24,7 +24,7 @@ window.UNITS[63] = {
       body: "عند ذكر مهنة شخص نستخدم `a / an`.",
       en: "She's {x:a} doctor. \u00b7 He's {x:an} engineer." },
     { title: "the مع",
-      body: "المحيطات والأنهار والجبال كسلاسل (`the Red Sea, the Nile, the Alps`)، الدول بصيغة جمع أو اتحاد (`the USA, the UK, the UAE`)، صيغ التفضيل (`the best`)، والآلات الموسيقية (`play the piano`).",
+      body: "المحيطات والبحار والأنهار والسلاسل الجبلية (`the Red Sea, the Nile, the Alps`)، الدول بصيغة جمع أو اتحاد (`the USA, the UK, the UAE`)، صيغ التفضيل (`the best`)، والآلات الموسيقية (`play the piano`).",
       en: "{x:the} Red Sea \u00b7 {x:the} UAE \u00b7 {x:the} best \u00b7 {x:the} first" },
     { title: "بلا أداة مع",
       body: "معظم الدول والمدن (`Saudi Arabia, Riyadh`)، الوجبات (`have breakfast`)، الرياضات (`play football`)، اللغات، و`go to work / school / bed`.",

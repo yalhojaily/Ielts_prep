@@ -51,7 +51,7 @@ window.UNITS[14] = {
       why: "مدة نشاط قبل حدث ماضٍ." },
     { t: "fill", q: "How long ___ you ___ (study) English before you took the test?", ask: "اكتب الكلمات بالترتيب، مثل: had been studying", a: ["had been studying"],
       why: "`How long had you been studying...?`" },
-    { t: "fill", q: "She ___ (not / sleep) well, so she felt terrible.", a: ["hadn't been sleeping", "had not been sleeping"],
+    { t: "fill", q: "She ___ (not / sleep) well, so she felt terrible.", a: ["hadn't been sleeping", "had not been sleeping", "hadn't slept", "had not slept"],
       why: "نفي: `hadn't been sleeping`." },
     { t: "fix", q: "I had been study for three hours when you called.", a: ["I had been studying for three hours when you called."],
       why: "بعد `had been` نحتاج `studying`." },

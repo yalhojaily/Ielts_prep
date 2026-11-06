@@ -53,7 +53,7 @@ window.UNITS[25] = {
       why: "جمع: `were cut`." },
     { t: "fill", q: "The suspect ___ (question) when the lawyer arrived.", a: ["was being questioned"],
       why: "جارٍ: `was being questioned`." },
-    { t: "fill", q: "I ___ (not / tell) about the change.", a: ["wasn't told", "was not told"],
+    { t: "fill", q: "I ___ (not / tell) about the change.", a: ["wasn't told", "was not told", "hadn't been told", "had not been told"],
       why: "نفي ماضٍ مجهول: `wasn't told`." },
     { t: "fix", q: "My father born in Taif.", a: ["My father was born in Taif."],
       why: "`was born`." },

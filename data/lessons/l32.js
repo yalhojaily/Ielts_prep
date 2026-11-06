@@ -27,7 +27,7 @@ window.LESSONS[32] = {
       ],
       show: [{ t: "compare", cols: [
         { h: "might not = ربما لا", c: "subj", en: ["He {a:might not} {v:come}."], ar: "ربما لا يأتي" },
-        { h: "couldn't = مستحيل", c: "neg", en: ["He {a:couldn't} {v:come}."], ar: "لم يستطع / مستحيل" }
+        { h: "couldn't = مستحيل", c: "neg", en: ["That {a:couldn't} {v:be} true."], ar: "مستحيل أن يكون صحيحًا" }
       ] }],
       check: { q: "\"It might not be true\" means:", o: ["It's impossible.", "Maybe it isn't true."], a: 1, why: "`might not` = ربما لا." } },
 

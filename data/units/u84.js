@@ -29,7 +29,7 @@ window.UNITS[84] = {
   ],
   examples: [
     ["Take {x:whatever} you need.", "خذ ما تحتاجه."],
-    ["{x:Whoever} called, I'm not available.", "أيًا كان المتصل، لست متاحًا."],
+    ["{x:Whoever} calls, tell them I'm not available.", "أيًا كان المتصل، قل له إنني لست متاحًا."],
     ["She follows him {x:wherever} he goes.", "تتبعه أينما ذهب."],
     ["{x:Whenever} I hear this song, I think of my childhood.", "كلما سمعت هذه الأغنية تذكرت طفولتي."],
     ["{x:No matter how} busy I am, I always read.", "مهما كنت مشغولًا، أقرأ دائمًا."]

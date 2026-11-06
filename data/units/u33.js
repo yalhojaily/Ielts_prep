@@ -56,7 +56,7 @@ window.UNITS[33] = {
     { t: "fill", q: "I wish I ___ (be) taller.", a: ["were", "was"], why: "حاضر: `were` (أو was في الكلام)." },
     { t: "fill", q: "If only I ___ (not / lose) my passport!", a: ["hadn't lost", "had not lost"], why: "ندم: `hadn't lost`." },
     { t: "fill", q: "She wishes she ___ (live) in a bigger city.", a: ["lived"], why: "حاضر: `lived`." },
-    { t: "fill", q: "I regret ___ (not / study) harder at school.", a: ["not studying"], why: "`regret` + `-ing`، والنفي `not` قبله." },
+    { t: "fill", q: "I regret ___ (not / study) harder at school.", a: ["not studying", "not having studied"], why: "`regret` + `-ing`، والنفي `not` قبله." },
     { t: "fix", q: "I wish I know her phone number.", a: ["I wish I knew her phone number."], why: "حاضر: `knew`." },
     { t: "fix", q: "I wish I didn't go to that party last night.", a: ["I wish I hadn't gone to that party last night.", "I wish I had not gone to that party last night."], why: "ماضٍ: `hadn't gone`." },
     { t: "fix", q: "I wish I would be rich.", a: ["I wish I were rich.", "I wish I was rich."], why: "حاضر: `were`." },

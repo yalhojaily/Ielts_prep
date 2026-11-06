@@ -54,9 +54,9 @@ window.LESSONS[64].steps.push(
     why: ["هذه الفقرة كتبها طالب عربي، وفيها أخطاء الأدوات الشائعة. فيها ستة أخطاء. حاول أن تجدها، ثم اضغط «اعرض التصحيح»."],
     show: [{ t: "passage", h: "فقرة فيها أخطاء",
       btn: "اعرض التصحيح", btn2: "أخفِ التصحيح",
-      en: "The people in my country love the football. My brother is engineer and he works in big company in the Riyadh. History of Saudi Arabia is very interesting.",
+      en: "The young people love the football. My brother is engineer and he works in big company in the Riyadh. History of Saudi Arabia is very interesting.",
       fixes: [
-        ["The people in my country love the football.", "People in my country love football.", "كلام عام عن الناس وكرة القدم ← بلا `the` (خطآن)"],
+        ["The young people love the football.", "Young people love football.", "كلام عام عن الشباب وكرة القدم ← بلا `the` (خطآن)"],
         ["My brother is engineer", "My brother is {k:an} engineer", "المهنة اسم معدود مفرد ← `an`"],
         ["he works in big company", "he works in {k:a} big company", "معدود مفرد ← `a`"],
         ["in the Riyadh", "in Riyadh", "المدن بلا `the`"],

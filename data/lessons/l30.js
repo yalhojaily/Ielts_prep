@@ -14,7 +14,7 @@ window.LESSONS[30] = {
     { k: "مختلط معكوس", h: "صفة دائمة ← نتيجة في الماضي",
       why: ["والعكس أيضًا: الشرط صفة غير حقيقية الآن (النوع 2)، ونتيجتها في الماضي (النوع 3). لو كنت شجاعًا (بطبعي)، لتكلمت (في ذلك الاجتماع)."],
       show: [{ t: "big", items: ["If I {v:were} braver, I {a:would have} {v:spoken}."], cap: "لست شجاعًا (دائمًا) ← لذلك لم أتكلم (أمس)" }],
-      check: { q: "If he ___ so shy, he would have asked her.", o: ["weren't", "hadn't been"], a: 0, why: "الخجل صفة دائمة فيه الآن ← النوع 2 في الشرط." } },
+      check: { q: "If he ___ so shy, he would have asked her.", o: ["weren't", "wouldn't be"], a: 0, why: "الخجل صفة دائمة فيه ← النوع 2 في الشرط (`hadn't been` تصح أيضًا، لكن `would` لا تأتي في جزء if)." } },
 
     { k: "أفعال ناقصة", h: "can · might · should بدل will",
       why: [

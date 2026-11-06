@@ -29,7 +29,7 @@ window.UNITS[60] = {
   ],
   examples: [
     ["{s:All visitors} {a:must} {v:sign} in at reception.", "يجب على جميع الزوار التسجيل عند الاستقبال."],
-    ["{s:I} {a:have to} {v:submit} the report by Thursday.", "عليّ تسليم التقرير قبل الخميس."],
+    ["{s:I} {a:have to} {v:submit} the report by Thursday.", "عليّ تسليم التقرير بحلول الخميس."],
     ["{s:You} {a:don't have to} {v:wear} a tie.", "لست مضطرًا لارتداء ربطة عنق."],
     ["{s:Passengers} {a:mustn't} {v:leave} bags unattended.", "يُمنع على الركاب ترك الحقائب دون مراقبة."],
     ["{a:Did} {s:you} {a:have to} {v:pay} for parking?", "هل اضطررت لدفع رسوم الوقوف؟"]

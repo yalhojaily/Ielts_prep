@@ -18,7 +18,7 @@ window.LESSONS[13] = {
       ],
       show: [{ t: "formula", rows: [["إثبات", "{s:I / she / they} {a:had} {v:finished}."], ["نفي", "{s:She} {a:hadn't} {v:eaten} anything."], ["سؤال", "{a:Had} {s:you} {v:met} him before?"]] },
         { t: "fix", items: [["I had went there before.", "I {a:had} {v:gone} there before.", "بعد `had` التصريف الثالث."], ["She didn't had eaten.", "She {a:hadn't} {v:eaten}.", ""]] }],
-      check: { q: "He failed because he ___.", o: ["didn't study", "hadn't studied", "hasn't studied"], a: 1, why: "عدم الدراسة كان **قبل** الرسوب، فنستخدم الماضي التام." } },
+      check: { q: "He failed because he ___.", o: ["hasn't studied", "hadn't studied", "doesn't study"], a: 1, why: "عدم الدراسة كان **قبل** الرسوب، فنستخدم الماضي التام. (`didn't study` مقبولة أيضًا في الكلام، لكن الماضي التام يوضح الترتيب.)" } },
 
     { k: "المعنى يتغير", h: "اختر الزمن وراقب ترتيب الأحداث",
       why: [
@@ -77,7 +77,7 @@ window.LESSONS[13].steps.push(
       { h: "بالترتيب ← ماضٍ بسيط يكفي", c: "subj", en: ["I {v:locked} the door, {v:got} in the car and {v:drove} to work."] },
       { h: "رجوع للوراء ← ماضٍ تام", c: "accent", en: ["When I {v:got} to work, I {v:realised} I {a:had} {v:left} my laptop at home."] }
     ] }],
-    check: { q: "I got to the airport and found out that my flight ___ cancelled.", o: ["was", "had been"], a: 1, why: "الإلغاء حدث **قبل** وصولي واكتشافي ← الماضي التام." } },
+    check: { q: "I got to the airport and found out that my flight ___ cancelled.", o: ["has been", "had been"], a: 1, why: "الإلغاء حدث **قبل** وصولي واكتشافي ← الماضي التام." } },
 
   { k: "في سياق", h: "اقرأ: قصة فيها رجوع للوراء",
     why: ["هذه قصة قصيرة من نوع IELTS Speaking Part 2 (Describe a time when…). لاحظ أن الأحداث الرئيسية بالماضي البسيط، وما سبقها بالماضي التام."],

@@ -11,7 +11,7 @@ window.UNITS[9] = {
   ],
   formula: [
     ["نعم / لا", "{a:Did} {s:you / he / they} {v:go}?"],
-    ["أداة استفهام", "{q:What / Where / When / Why} {a:did} {s:she} {v:say}?"],
+    ["أداة استفهام", "{q:What} {a:did} {s:she} {v:say}? · {q:Where} {a:did} {s:she} {v:go}?"],
     ["فعل be", "{v:Was} {s:it} expensive? · {q:Where} {v:were} {s:you}?"],
     ["إجابة قصيرة", "Yes, {s:I} {a:did}. / No, {s:they} {a:didn't}."]
   ],

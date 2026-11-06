@@ -58,7 +58,7 @@ window.UNITS[11] = {
       why: "`last Friday` وقت منتهٍ: الماضي البسيط." },
     { t: "mcq", q: "I've known him ___ ten years.", o: ["since", "for", "ago", "from"], a: 1,
       why: "مدة زمنية: `for`." },
-    { t: "mcq", q: "Ahmed isn't here. He ___ to the bank.", o: ["has been", "has gone", "went", "have gone"], a: 1,
+    { t: "mcq", q: "Ahmed isn't here. He ___ to the bank.", o: ["has been", "has gone", "goes", "have gone"], a: 1,
       why: "ذهب وما زال هناك: `has gone`." },
     { t: "fill", q: "___ you ever ___ (eat) sushi?", ask: "اكتب الكلمتين بالترتيب، مثل: Have eaten", a: ["Have eaten"],
       why: "`Have you ever eaten...?` والتصريف الثالث لـ eat هو `eaten`." },

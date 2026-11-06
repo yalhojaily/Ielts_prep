@@ -44,7 +44,7 @@ window.UNITS[15] = {
     en: "People used to write letters, but nowadays almost everyone communicates through messaging apps."
   },
   questions: [
-    { t: "mcq", q: "I ___ tea, but now I prefer coffee.", o: ["use to drink", "used to drink", "used to drinking", "would drink"], a: 1,
+    { t: "mcq", q: "I ___ tea, but now I prefer coffee.", o: ["use to drink", "used to drink", "used to drinking", "was used to drink"], a: 1,
       why: "عادة ماضية انتهت: `used to` + الفعل الأصلي." },
     { t: "mcq", q: "Did you ___ in a big house?", o: ["used to live", "use to live", "use to living", "used live"], a: 1,
       why: "بعد `Did`: `use to` بدون d." },
@@ -52,11 +52,11 @@ window.UNITS[15] = {
       why: "حالة ماضية: `used to be`. لا نستخدم `would` مع الحالات." },
     { t: "mcq", q: "Every Friday, my grandfather ___ us stories.", o: ["would tell", "would told", "used tell", "use to tell"], a: 0,
       why: "فعل متكرر في الماضي: `would tell`." },
-    { t: "fill", q: "She ___ (not / like) vegetables when she was a child.", a: ["didn't use to like", "did not use to like"],
+    { t: "fill", q: "She ___ (not / like) vegetables when she was a child. (Use: used to)", a: ["didn't use to like", "did not use to like"],
       why: "النفي: `didn't use to` + `like`." },
-    { t: "fill", q: "My brother ___ (be) very shy, but now he's very confident.", a: ["used to be"],
+    { t: "fill", q: "My brother ___ (be) very shy, but now he's very confident. (Use: used to)", a: ["used to be"],
       why: "حالة ماضية تغيّرت: `used to be`." },
-    { t: "fill", q: "We ___ (live) in Abha before we moved to Madinah.", a: ["used to live"],
+    { t: "fill", q: "We ___ (live) in Abha before we moved to Madinah. (Use: used to)", a: ["used to live"],
       why: "`used to` + `live`." },
     { t: "fill", q: "___ you ___ (play) video games as a teenager?", ask: "اكتب الكلمات بالترتيب، مثل: Did use to play", a: ["Did use to play"],
       why: "`Did you use to play...?`" },

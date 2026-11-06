@@ -16,7 +16,8 @@ window.LESSONS[83] = {
     { k: "الاختصار", h: "احذف who is: *ing* أو v3",
       why: [
         "يمكن اختصار جملة الصلة بحذف `who / which` + `be`:",
-        "إذا كان الفعل مبنيًا للمعلوم يبقى بـ `ing` (`the man standing there`). إذا كان مجهولًا يبقى تصريفًا ثالثًا (`cars made in Japan`). يجعل الكتابة أقصر وأكثر احترافية."
+        "إذا كان الفعل مبنيًا للمعلوم يبقى بـ `ing` (`the man standing there`). إذا كان مجهولًا يبقى تصريفًا ثالثًا (`cars made in Japan`). يجعل الكتابة أقصر وأكثر احترافية.",
+        "وإذا كان الفعل في المضارع البسيط بلا `is` نحوّله أيضًا إلى `ing`: `people who live here` ← `people living here`."
       ],
       show: [{ t: "build", lab: "اختر",
         opts: [["كاملة", "The man {x:who is} {v:standing} there is my uncle.", "", 0], ["مختصرة ing", "The man {v:standing} there is my uncle.", "حذفنا who is", 0], ["كاملة", "Cars {x:which are} {v:made} in Japan are reliable.", "", 1], ["مختصرة v3", "Cars {v:made} in Japan are reliable.", "حذفنا which are", 1]],

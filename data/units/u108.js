@@ -45,7 +45,7 @@ window.UNITS[108] = {
     en: "Despite the high cost, many families choose private schools, as they believe the quality is better."
   },
   questions: [
-    { t: "mcq", q: "I go to work ___ bus.", o: ["with", "by", "on the", "in"], a: 1, why: "وسيلة: `by`." },
+    { t: "mcq", q: "I go to work ___ bus.", o: ["with", "by", "at", "in"], a: 1, why: "وسيلة: `by`." },
     { t: "mcq", q: "She works ___ a nurse.", o: ["like", "as", "for", "by"], a: 1, why: "وظيفة: `as`." },
     { t: "mcq", q: "___ the heat, we enjoyed the trip.", o: ["Despite of", "Despite", "Although", "In spite"], a: 1, why: "`Despite` + اسم." },
     { t: "mcq", q: "Open it ___ this key.", o: ["by", "with", "from", "of"], a: 1, why: "أداة: `with`." },

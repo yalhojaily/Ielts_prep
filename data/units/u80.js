@@ -44,7 +44,7 @@ window.UNITS[80] = {
     ["Sara visited his grandmother.", "Sara visited her grandmother.", "المالكة أنثى: `her`."]
   ],
   ielts: {
-    text: "خلط `his / her` من أكثر الأخطاء في **Speaking** عند العرب لأن العربية تربط الضمير بالشيء أحيانًا. وفي **Writing** خطأ `its / it's` يُلاحظ فورًا.",
+    text: "خلط `his / her` من أكثر الأخطاء في **Speaking** عند العرب، خاصة في الكلام السريع، مع أن القاعدة كالعربية: الضمير يتبع المالك. وفي **Writing** خطأ `its / it's` يُلاحظ فورًا.",
     en: "Every country has its own culture, and people should be proud of their traditions."
   },
   questions: [
