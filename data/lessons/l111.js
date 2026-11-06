@@ -57,3 +57,9 @@ window.LESSONS[111].steps.push(
       note: "`Although` تناقض · `because` سبب · `while` مقارنة · `As soon as` زمن · `so that` غرض." }],
     check: { q: "Which linking word expresses purpose in the text?", o: ["because", "so that", "while"], a: 1, why: "`so that` = لكي (غرض)." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[111].apply = [
+  {"p": "اكتب ثلاث جمل معقدة بأدوات ربط تابعة: سبب، تعارض، زمن.", "use": "{k:because} … · {k:although} … · {k:while} / {k:when} …", "m": ["I study at night because I work during the day. Although the exam was hard, I passed. While I was waiting, I read the news."], "c": [["`because / since / as` (سبب)", "\\b(because|since|as)\\b"], ["`although / even though` (تعارض)", "\\b(although|even though|though|whereas)\\b"], ["لم تجمع `although` مع `but`", "!\\b(although|even though)\\b[^.]*\\bbut\\b"]]},
+  {"p": "اكتب جملة بـ `despite / in spite of` + اسم أو `ing`.", "use": "{k:Despite} {o:the rain}, … · {k:despite} {v:being} …", "m": ["Despite the traffic, I arrived on time."], "c": [["`despite / in spite of` + اسم أو `ing`", "\\b(despite|in spite of)\\s+(the|\\w+ing|my|his|her|being)\\b"], ["لم تكتب `despite of`", "!\\bdespite of\\b"]]}
+];

@@ -35,3 +35,9 @@ window.LESSONS[103] = {
     { h: "كميات", en: ["so much · so many · so few"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[103].apply = [
+  {"p": "صف تجربة بـ `so` + صفة، و`such` + اسم.", "use": "{k:so} tired · {k:such a} long day", "m": ["The film was so boring. It was such a long day that I fell asleep at eight."], "c": [["`so` + صفة", "\\bso\\s+(\\w+)\\b"], ["`such` (`a`) + صفة + اسم", "\\bsuch\\s+(a|an)?\\s*\\w+\\s+\\w+"], ["لم تكتب `so a` أو `such boring`", "!\\bso (a|an)\\s|\\bsuch (boring|tired|hot|cold|good|bad|happy|beautiful|expensive)\\b(?!\\s+\\w+)"]]},
+  {"p": "اكتب جملة نتيجة بـ `so … that` أو `such … that`.", "use": "{k:so} hot {k:that} … · {k:such} a … {k:that} …", "m": ["The traffic was so bad that I missed my flight."], "c": [["`so / such … that`", "\\b(so|such)\\b[^.]*\\bthat\\b"]]}
+];

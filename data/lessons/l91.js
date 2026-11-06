@@ -38,3 +38,9 @@ window.LESSONS[91] = {
     { h: "رسمي", en: ["…, but few {k:do so}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[91].apply = [
+  {"p": "اكتب جملتين تتجنب فيهما تكرار الاسم بـ `one / ones`.", "use": "the blue {k:one} · the new {k:ones}", "m": ["My old phone was slow, so I bought a new one. I prefer the black shoes to the brown ones."], "c": [["`one / ones` بدل الاسم", "\\b(a|the|this|that)\\s+(\\w+\\s+)?(one|ones)\\b"], ["لم تستخدم `one` مع غير المعدود", "!\\b(rice|water|coffee|bread|milk) one\\b"]]},
+  {"p": "أجب على أسئلة بـ `so / not: Will it rain tomorrow? Is the exam difficult?`", "use": "{s:I} {v:think} {k:so}. · {s:I} {v:hope} {k:not}.", "m": ["I don't think so. I hope not."], "c": [["`think so / hope so / hope not / afraid not`", "\\b(think so|hope so|hope not|afraid so|afraid not|expect so|suppose so)\\b"], ["لم تكتب `I think it` أو `I hope no`", "!\\b(I think it\\.|I hope no)\\b"]]}
+];

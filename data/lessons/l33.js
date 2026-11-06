@@ -55,3 +55,9 @@ window.LESSONS[33] = {
     { h: "hope", en: ["I {v:hope} you {v:pass}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[33].apply = [
+  {"p": "اكتب ثلاث أمنيات عن حاضرك (أشياء ليست كما تريد الآن).", "use": "{s:I} {v:wish} {s:I} {v:had} … · {s:I} {v:wish} {s:I} {a:were} …", "m": ["I wish I had more free time. I wish I were better at writing. I wish my office were closer to home."], "c": [["`wish` + ماضٍ (`had / were / could…`)", "\\bwish\\s+(I|my|we|he|she|it|there)\\s+(\\w+\\s+)?(had|were|was|could|knew|lived|\\w+ed)\\b"], ["لم تكتب `wish + will / have` بالمضارع", "!\\bwish\\s+\\w+\\s+(will|have|has|am|is)\\b"]]},
+  {"p": "اكتب ندمًا واحدًا عن الماضي.", "use": "{s:I} {v:wish} {s:I} {a:had} {v:learned} … / {k:If only} …", "m": ["I wish I had learned English when I was young."], "c": [["`wish + had + v3`", "\\b(wish|if only)\\s+\\w+\\s+had\\s+\\w+"]]}
+];

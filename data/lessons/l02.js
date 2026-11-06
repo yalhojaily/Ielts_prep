@@ -69,3 +69,9 @@ window.LESSONS[2] = {
     { h: "في المقال", txt: "اكتب الصيغة كاملة", en: ["do not · does not"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[2].apply = [
+  {"p": "اكتب ثلاثة أشياء لا تفعلها أبدًا أو لا تحبها.", "use": "{s:I} {n:don't} {v:eat} … · {s:He} {n:doesn't} {v:like} …", "m": ["I don't drink tea. I don't watch horror films. My father doesn't like fast food."], "c": [["استخدمت `don't` أو `doesn't`", "\\b(don't|doesn't|do not|does not)\\b"], ["لم تضع `s` على الفعل بعد `doesn't`", "!\\b(doesn't|does not)\\s+\\w+s\\b(?<!ss)"], ["لم تكتب `I no …` أو `I not …`", "!\\bI\\s+(no|not)\\s+\\w+"]]},
+  {"p": "قارن نفسك بصديق: شيء يفعله هو ولا تفعله أنت.", "use": "{s:He} {v:plays} … , but {s:I} {n:don't}.", "m": ["My friend plays football every week, but I don't. I don't like sports."], "c": [["استخدمت `don't` أو `doesn't`", "\\b(don't|doesn't)\\b"]]}
+];

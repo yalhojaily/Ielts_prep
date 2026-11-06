@@ -30,3 +30,9 @@ window.LESSONS[99] = {
     { h: "مساواة", en: ["as carefully as"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[99].apply = [
+  {"p": "قارن طريقة أدائك لشيء بغيرك.", "use": "{k:faster} than · {k:more carefully} than · {k:better} than", "m": ["My sister drives more carefully than me. I can run faster than my brother. My son speaks English better than I do."], "c": [["`more` + ظرف `ly`", "\\bmore\\s+\\w+ly\\b"], ["ظرف قصير بـ `er` أو `better / worse`", "\\b(faster|harder|earlier|later|better|worse|longer|sooner)\\b"], ["لم تكتب `more fast` أو `gooder`", "!\\b(more fast|more hard|gooder|more well|more better)\\b"]]},
+  {"p": "اكتب جملة تفضيل بظرف.", "use": "{k:the fastest} · {k:the most clearly}", "m": ["Of all my colleagues, Ahmed works the hardest."], "c": [["`the + est / the most` + ظرف", "\\bthe\\s+(\\w+est|most\\s+\\w+ly)\\b"]]}
+];

@@ -44,3 +44,9 @@ window.LESSONS[118] = {
     { h: "عودة", en: ["Anyway, … · Going back to…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[118].apply = [
+  {"p": "صحّح معلومة قلتها خطأ، ثم غيّر الموضوع بلطف.", "use": "{k:Sorry, I mean} … · {k:Actually}, … · {k:By the way}, …", "m": ["The meeting is on Tuesday. Sorry, I mean Wednesday. By the way, have you seen the new office?"], "c": [["عبارة تصحيح (`I mean / Sorry / Actually / What I meant was`)", "\\b(I mean|sorry|actually|what I meant|let me rephrase|or rather)\\b"], ["عبارة تغيير موضوع (`By the way / Anyway / Speaking of`)", "\\b(by the way|anyway|speaking of|that reminds me|on another note)\\b"]]},
+  {"p": "ارجع إلى موضوعك بعد مقاطعة.", "use": "{k:Anyway}, {k:as I was saying}, …", "m": ["Anyway, as I was saying, the project will finish next month."], "c": [["`As I was saying / Anyway / Getting back to`", "\\b(as I was saying|anyway|getting back to|where was I)\\b"]]}
+];

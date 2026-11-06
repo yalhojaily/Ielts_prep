@@ -47,3 +47,9 @@ window.LESSONS[75] = {
     { h: "الإحساس", en: ["a few ☺ · few ☹"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[75].apply = [
+  {"p": "اكتب عن وقتك ومالك هذا الأسبوع بكلمات كمية.", "use": "{k:a lot of} work · {k:little} time · {k:a few} friends · {k:plenty of} …", "m": ["I've had a lot of work this week, so I have very little free time. I only saw a few friends."], "c": [["`a lot of / plenty of`", "\\b(a lot of|lots of|plenty of)\\b"], ["`little / a little / few / a few`", "\\b(a little|little|a few|few)\\b"]]},
+  {"p": "اكتب جملة سلبية بـ `few` أو `little` (= تقريبًا لا شيء).", "use": "{s:Very} {k:few} people … / {k:little} hope", "m": ["Very few people in my office speak French."], "c": [["`few / little` بلا `a` بمعنى سلبي", "\\b(very\\s+)?(few|little)\\s+\\w+"]]}
+];

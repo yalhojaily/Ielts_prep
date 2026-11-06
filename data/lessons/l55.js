@@ -45,3 +45,9 @@ window.LESSONS[55] = {
     { h: "في المقال", en: ["go up → increase"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[55].apply = [
+  {"p": "صف صباحك بثلاثة أفعال مركبة (`get up, turn on, put on…`).", "use": "{s:I} {v:get up} … · {s:I} {v:turn} {o:it} {v:off} …", "m": ["I get up at six. I turn on the coffee machine and put on my clothes. Then I pick up my son and drop him off at school."], "c": [["استخدمت أفعالًا مركبة", "\\b(get up|wake up|turn on|turn off|put on|pick up|drop off|look for|set off|take off|go out|switch on|switch off)\\b"], ["مع الضمير يأتي في الوسط (`turn it off`)", "!\\b(turn|switch|pick|put|drop|take)\\s+(on|off|up)\\s+(it|him|her|them)\\b"]]},
+  {"p": "اكتب جملة بفعل مركب شائع في `IELTS` (`bring up, carry out, find out, give up`).", "use": "{s:I} {v:gave up} {v:smok}{e:ing}.", "m": ["Scientists carried out a study on sleep."], "c": [["فعل مركب", "\\b(bring|brought|carry|carried|find|found|give|gave|set|take|took|point|pointed|come|came|look|looked)(s|ing)?\\s+(up|out|into)\\b|\\bdeal\\w*\\s+with\\b"]]}
+];

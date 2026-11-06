@@ -40,3 +40,9 @@ window.LESSONS[73] = {
     { h: "الجمع", en: ["credit {v:cards}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[73].apply = [
+  {"p": "صف مكتبك أو بيتك بثلاثة أسماء مركبة.", "use": "a {o:coffee cup} · the {o:bus stop} · a {o:car park}", "m": ["I keep a coffee cup and a phone charger on my desk. There's a bus stop opposite my house."], "c": [["الاسم الأول يعمل كصفة ويبقى مفردًا (`a shoe shop`، لا `shoes shop`)", null], ["لم تجمع الاسم الأول", "!\\b(shoes|books|cars|toys|phones) (shop|store|park|case)\\b"]]},
+  {"p": "اكتب عبارة بعدد + اسم كصفة (`a ten-minute walk`).", "use": "a {o:five-star} hotel · a {o:two-hour} meeting", "m": ["My office is a ten-minute drive from home."], "c": [["عدد-اسم مفرد بشرطة", "\\b\\w+-(minute|hour|day|week|year|star|page|room|storey|story|month)\\b"], ["لم تجمع الاسم (`ten-minutes` ✗)", "!\\b\\w+-(minutes|hours|days|years|stars|pages)\\b"]]}
+];

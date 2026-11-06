@@ -46,3 +46,9 @@ window.LESSONS[119] = {
     { h: "القرار", en: ["leaning towards + ing · torn between"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[119].apply = [
+  {"p": "عبّر عن رأيك في موضوع مثير للجدل بتحفظ (دون جزم).", "use": "{k:It seems} … · {k:I tend to think} … · {k:might} · {k:to some extent}", "m": ["It seems that social media has some negative effects. I tend to think that young people spend too much time online, although this might not be true for everyone."], "c": [["عبارة تحفظ", "\\b(it seems|it appears|tend to|might|may|could|to some extent|generally|probably|perhaps|arguably|likely)\\b"], ["لم تستخدم `always / never / all people` بجزم", "!\\b(all people|everyone always|never ever)\\b"]]},
+  {"p": "اكتب جملة قرار واضحة، وجملة تتردد فيها.", "use": "{s:I}{a:'ve} {v:decided} {a:to} … · {s:I}{a:'m} {k:not sure} {k:whether} …", "m": ["I've decided to take the exam in March. I'm still not sure whether to study in the UK or Australia."], "c": [["`decided to / I'll go for`", "\\b(decided to|going to go for|I'll go for|made up my mind)\\b"], ["`not sure whether / can't decide`", "\\b(not sure (whether|if)|can't decide|haven't decided|in two minds)\\b"]]}
+];

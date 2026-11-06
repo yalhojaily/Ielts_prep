@@ -49,3 +49,9 @@ window.LESSONS[115] = {
     { h: "عائلة", en: ["succeed · success · successful · successfully"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[115].apply = [
+  {"p": "حوّل كلمات إلى أشكال أخرى في جمل: فعل ← اسم، اسم ← صفة.", "use": "develop → {k:development} · success → {k:successful} · care → {k:careful}", "m": ["The development of the city is fast. My brother is a successful businessman. Please be careful when you drive."], "c": [["لاحقة اسم (`ment / tion / ness / ity`)", "\\b\\w+(ment|tion|sion|ness|ity|ance|ence)\\b"], ["لاحقة صفة (`ful / less / able / ous / ive / al`)", "\\b\\w+(ful|less|able|ible|ous|ive|al)\\b"]]},
+  {"p": "اكتب جملة فيها اسم يدل على شخص بلاحقة (`er, or, ist, ian`).", "use": "a {k:teacher} · an {k:investor} · a {k:scientist}", "m": ["My father was an engineer, and my uncle is an artist."], "c": [["`er / or / ist / ian / eer`", "\\b\\w+(er|or|ist|ian|eer)\\b"]]}
+];

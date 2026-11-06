@@ -60,3 +60,9 @@ window.LESSONS[35] = {
     { h: "like", en: ["What's it {k:like}? = صفه"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[35].apply = [
+  {"p": "اكتب خمسة أسئلة بأدوات استفهام مختلفة لشخص يسكن مدينة أخرى.", "use": "{q:Where} … · {q:How long} … · {q:Which} … · {q:Whose} …", "m": ["Where do you live? How long have you lived there? Which area do you prefer? How often do you travel? Why did you move?"], "c": [["استخدمت أداة من كلمتين (`How long / How often / What kind…`)", "\\bhow (long|often|much|many|far)\\b|\\bwhat (kind|time|sort)\\b"], ["استخدمت `Which`", "\\bwhich\\b"], ["كل سؤال ينتهي بـ ؟", "\\?"]]},
+  {"p": "اكتب سؤالًا بـ `Whose`.", "use": "{q:Whose} {s:car} {a:is} this?", "m": ["Whose idea was this?"], "c": [["`Whose` + اسم", "\\bwhose\\s+\\w+"]]}
+];

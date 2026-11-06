@@ -53,3 +53,9 @@ window.LESSONS[17] = {
     { h: "انتبه", txt: "لا تحذف am / is / are" }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[17].apply = [
+  {"p": "اكتب ثلاث خطط قررتها لهذا العام.", "use": "{s:I}{a:'m} {a:going to} {v:take} …", "m": ["I'm going to take the IELTS exam in March. I'm going to read one book a month. I'm not going to eat fast food."], "c": [["استخدمت `am / is / are going to` + فعل", "\\b(am|is|are|'m|'s|'re)\\s+(not\\s+)?going to\\s+\\w+"], ["لم تنسَ `am / is / are` (`I going to` ✗)", null]]},
+  {"p": "انظر حولك أو إلى السماء: ما الذي سيحدث بناءً على دليل تراه؟", "use": "{s:Look at the clouds!} {s:It}{a:'s} {a:going to} {v:rain}.", "m": ["Look at those dark clouds. It's going to rain."], "c": [["توقع بدليل: `going to`", "\\bgoing to\\b"]]}
+];

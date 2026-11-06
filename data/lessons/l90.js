@@ -33,3 +33,9 @@ window.LESSONS[90] = {
     { h: "النفي", en: ["I tried {n:not} {a:to}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[90].apply = [
+  {"p": "أجب بالاكتفاء بـ `to` (بلا تكرار الفعل).", "use": "{s:I} {v:want} {a:to}. · {s:I}'d {v:love} {a:to}. · {s:I} {v:tried} {a:to}.", "m": ["\"Do you want to come?\" \"I'd love to.\" I wanted to call you, but I didn't have time to.", "I didn't want to go, but I had to."], "c": [["فعل + `to` في نهاية الجملة", "\\b(want|wanted|love|like|tried|need|had|have|hope|going|plan)\\s+to[.,!]"], ["لم تكتب `I'd love to it`", "!\\bto it[.!]"]]},
+  {"p": "اكتب رفضًا مهذبًا لدعوة مع `to` وحدها.", "use": "I'd like {a:to}, but …", "m": ["I'd really like to, but I'm busy that day."], "c": [["`I'd like to, but …`", "\\bI'd (really )?(like|love) to,?\\s*but\\b"]]}
+];

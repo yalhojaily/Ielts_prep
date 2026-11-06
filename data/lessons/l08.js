@@ -49,3 +49,9 @@ window.LESSONS[8] = {
     { h: "في المقال", en: ["did not"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[8].apply = [
+  {"p": "اكتب شيئين لم تفعلهما في عطلة نهاية الأسبوع الماضية.", "use": "{s:I} {n:didn't} {v:go} …", "m": ["I didn't go out last weekend. I didn't check my emails either."], "c": [["استخدمت `didn't`", "\\b(didn't|did not)\\b"], ["الفعل بعد `didn't` في المصدر (`didn't go`، لا `didn't went`)", "!\\b(didn't|did not)\\s+(went|saw|ate|had|took|made|got|came|bought|\\w+ed)\\b"]]},
+  {"p": "صحّح معلومة خاطئة عنك: «`You lived in Jeddah`» مثلًا.", "use": "{s:I} {n:didn't} {v:live} … . {s:I} {v:lived} …", "m": ["I didn't live in Jeddah. I lived in Riyadh."], "c": [["جملة منفية بـ `didn't` ثم جملة مثبتة بالماضي", "\\bdidn't\\b.*\\b\\w+(ed|went|had|was|were)\\b"]]}
+];

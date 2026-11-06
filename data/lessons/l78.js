@@ -47,3 +47,9 @@ window.LESSONS[78] = {
     { h: "بلا self", en: ["relax · feel · concentrate"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[78].apply = [
+  {"p": "اكتب عن أشياء فعلتها بنفسك دون مساعدة.", "use": "{s:I} {v:taught} {o:myself} … · {k:by myself}", "m": ["I taught myself to code. My son made breakfast by himself this morning."], "c": [["ضمير انعكاسي", "\\b(myself|yourself|himself|herself|ourselves|themselves|itself)\\b"], ["لم تكتب `hisself / theirselves`", "!\\b(hisself|theirselves|ourself)\\b"]]},
+  {"p": "اكتب جملة بـ `each other` (تبادل) لا `themselves`.", "use": "{s:My brother and I} {v:call} {o:each other} …", "m": ["My brother and I call each other every Friday."], "c": [["`each other / one another`", "\\b(each other|one another)\\b"]]}
+];

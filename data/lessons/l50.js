@@ -50,3 +50,9 @@ window.LESSONS[50] = {
     { h: "مع المدة", en: ["I've {v:known} him for years."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[50].apply = [
+  {"p": "اكتب جملتين: واحدة بفعل حالة بالمضارع البسيط، وواحدة بالفعل نفسه بمعنى حدث (`ing`).", "use": "{s:I} {v:think} it's good. · {s:I}{a:'m} {v:think}{e:ing} about …", "m": ["I think this course is useful. I'm thinking about changing my job.", "I have two cars. I'm having lunch now."], "c": [["`think / have` بمعنى الحالة بلا `ing`", "\\bI (think|have|see|taste)\\b"], ["الفعل نفسه بـ `ing` بمعنى نشاط", "\\b(thinking|having|seeing|tasting)\\b"]]},
+  {"p": "اكتب ثلاث جمل بأفعال حالة (`own, believe, belong, seem`).", "use": "{s:This house} {v:belongs} to …", "m": ["I believe hard work pays off. This flat belongs to my uncle. It seems expensive."], "c": [["لم تستخدم `ing` مع أفعال الحالة", "!\\b(believing|belonging|owning|seeming|knowing)\\b"]]}
+];

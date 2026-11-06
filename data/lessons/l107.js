@@ -43,3 +43,9 @@ window.LESSONS[107] = {
     { h: "بلا حرف", en: ["next week · last year · every day"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[107].apply = [
+  {"p": "اكتب عن مواعيدك بـ `at / on / in`، وعبارة بلا حرف جر.", "use": "{k:at} 8 · {k:on} Monday · {k:in} June · next week", "m": ["I start work at 8 a.m. I have a meeting on Monday. My exam is in March. I'm travelling next week."], "c": [["`at` + ساعة", "\\bat\\s+(\\d|noon|night|midnight|the weekend)"], ["`on` + يوم / تاريخ", "\\bon\\s+(monday|tuesday|wednesday|thursday|friday|saturday|sunday|\\d|my birthday|the \\d)"], ["`in` + شهر / سنة / فصل", "\\bin\\s+(january|february|march|april|may|june|july|august|september|october|november|december|\\d{4}|summer|winter|spring|autumn|the morning|the evening)"], ["لم تضع حرف جر قبل `next / last / this`", "!\\b(in|on|at)\\s+(next|last|this)\\s+(week|month|year|monday|friday|weekend)\\b"]]},
+  {"p": "اكتب جملة بـ `until` وأخرى بـ `by`.", "use": "{k:until} 5 · {k:by} Thursday", "m": ["I work until 4 p.m., but I need to submit the report by Thursday."], "c": [["`until`", "\\buntil\\b"], ["`by` + موعد", "\\bby\\s+(monday|tuesday|wednesday|thursday|friday|saturday|sunday|\\d|tomorrow|the end|next)"]]}
+];

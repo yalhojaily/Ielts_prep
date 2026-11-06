@@ -70,3 +70,9 @@ window.LESSONS[10] = {
     { h: "when / while", en: ["{k:when} + قصير · {k:while} + طويل"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[10].apply = [
+  {"p": "ماذا كنت تفعل أمس الساعة 8 مساءً؟ وماذا كان يفعل أفراد أسرتك؟", "use": "{k:At 8 p.m.}, {s:I} {a:was} {v:watch}{e:ing} …", "m": ["At 8 p.m. yesterday, I was having dinner. My children were doing their homework."], "c": [["استخدمت `was / were + ing`", "\\b(was|were)\\s+\\w+ing\\b"], ["ذكرت الوقت المحدد", "\\b(at \\d|at (8|nine|eight|seven)|this time yesterday)\\b"]]},
+  {"p": "اكتب جملة: حدث طويل قاطعه حدث قصير (`when`).", "use": "{s:I} {a:was} {v:driv}{e:ing} {k:when} {s:my phone} {v:rang}.", "m": ["I was driving to work when my phone rang."], "c": [["المستمر للحدث الطويل", "\\b(was|were)\\s+\\w+ing\\b"], ["`when` + الماضي البسيط للحدث القصير", "\\bwhen\\s+(\\w+\\s+){1,3}(\\w*ed|rang|came|saw|went|fell|broke|arrived|called|started)\\b"]]}
+];

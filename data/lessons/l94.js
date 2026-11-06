@@ -43,3 +43,9 @@ window.LESSONS[94] = {
     { h: "تقوية", en: ["{k:much} cheaper (لا very)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[94].apply = [
+  {"p": "قارن مدينتك بمدينة أخرى في ثلاث جمل.", "use": "Riyadh {a:is} {k:bigger} {k:than} … · {k:more} expensive {k:than} … · {k:better}", "m": ["Riyadh is bigger than Jeddah. Jeddah is more humid than Riyadh. The food in Jeddah is better."], "c": [["صفة قصيرة + `er + than`", "\\b\\w+er\\s+than\\b"], ["`more` + صفة طويلة", "\\bmore\\s+\\w+"], ["لم تكتب `more bigger` أو `more better`", "!\\bmore\\s+\\w+er\\b(?<!\\bmore (over|under|clever|tender|bitter|proper|eager))"]]},
+  {"p": "قارن بفرق كبير أو صغير (`much / a bit / slightly`).", "use": "{k:much} cheaper · {k:a bit} older", "m": ["My new car is much more comfortable than my old one, but it's slightly smaller."], "c": [["`much / far / a bit / slightly` + مقارنة", "\\b(much|far|a bit|a little|slightly|a lot)\\s+(more|less|\\w+er)\\b"]]}
+];

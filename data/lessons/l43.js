@@ -69,3 +69,9 @@ window.LESSONS[43].steps.push(
       note: "`told me` (بعده شخص) و`said` (بلا شخص). الأزمنة رجعت خطوة، و`next week` صارت `the following week`." }],
     check: { q: "His actual words were probably: \"Give me an answer ___.\"", o: ["the following week", "next week"], a: 1, why: "في الكلام المباشر قال `next week`، وفي النقل صارت `the following week`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[43].apply = [
+  {"p": "انقل ثلاثة أشياء قالها لك شخص هذا الأسبوع.", "use": "{s:My boss} {v:said} (that) {s:he} {a:was} …", "m": ["My manager said that the report was excellent. My son told me he was hungry. My friend said she would call me later."], "c": [["استخدمت `said / told`", "\\b(said|told)\\b"], ["`told` + شخص (`told me`)", "!\\btold\\s+that\\b"], ["لم تكتب `said me`", "!\\bsaid\\s+(me|him|her|us)\\b"]]},
+  {"p": "انقل جملة قالها أحد بزمن المضارع: «`I love this city`».", "use": "{s:He} {v:said} {s:he} {v:loved} …", "m": ["He said he loved the city."], "c": [["أرجعت الزمن خطوة للخلف (`loved`)", "\\bloved\\b"]]}
+];

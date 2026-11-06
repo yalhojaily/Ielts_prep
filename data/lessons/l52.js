@@ -65,3 +65,9 @@ window.LESSONS[52].steps.push(
       note: "`enjoy, keep` + ing. `want, plan, hope` + to. `start` تقبل الاثنين." }],
     check: { q: "In the text, which verb could ALSO be followed by \"to learn\" with the same meaning?", o: ["started", "kept"], a: 0, why: "`start` تقبل `to` و`ing` بنفس المعنى، أما `keep` فـ ing فقط." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[52].apply = [
+  {"p": "اكتب عن أهدافك وعاداتك: فعل + `to`، وفعل + `ing`.", "use": "{s:I} {v:want} {a:to} … · {s:I} {v:enjoy} {v:read}{e:ing} …", "m": ["I want to improve my writing. I enjoy reading about technology. I've decided to study every morning. I avoid eating late."], "c": [["`want / decide / hope / plan + to`", "\\b(want|wants|decided|hope|plan|need|would like|agreed|refuse|promise)\\s+to\\s+\\w+"], ["`enjoy / avoid / finish / mind / keep + ing`", "\\b(enjoy|avoid|finish|mind|keep|stop|consider|suggest|practise|practice|miss)\\s+\\w+ing\\b"], ["لم تكتب `enjoy to`", "!\\b(enjoy|avoid|finish|mind)\\s+to\\b"]]},
+  {"p": "استخدم `stop` أو `remember` بمعنيين مختلفين.", "use": "{s:I} {v:stopped} {v:smok}{e:ing}. · {s:I} {v:stopped} {a:to} {v:rest}.", "m": ["I stopped drinking coffee last year. On the way home, I stopped to buy bread."], "c": [["`stop / remember + ing`", "\\b(stop|stopped|remember|remembered)\\s+\\w+ing\\b"], ["`stop / remember + to`", "\\b(stop|stopped|remember|remembered)\\s+to\\b"]]}
+];

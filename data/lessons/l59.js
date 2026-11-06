@@ -49,3 +49,9 @@ window.LESSONS[59] = {
     { h: "ودّية", en: ["If I were you, I'd…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[59].apply = [
+  {"p": "صديقك يريد تحسين نومه. اكتب ثلاث نصائح بتراكيب مختلفة.", "use": "{s:You} {a:should} … · {k:Why don't you} …? · {k:If I were you}, {s:I}{a:'d} …", "m": ["You should stop using your phone at night. Why don't you go to bed at the same time every day? If I were you, I'd avoid coffee after 4 p.m."], "c": [["`should / ought to`", "\\b(should|ought to)\\b"], ["`Why don't you / How about / Let's`", "\\b(why don't you|how about|what about|let's)\\b"], ["`If I were you, I'd`", "\\bif I were you\\b"], ["بعد `How about` فعل بـ `ing` (`How about going`)", "!\\b(how|what) about\\s+(go|try|take|stop|sleep)\\b"]]},
+  {"p": "اقترح على زملائك نشاطًا لنهاية الأسبوع.", "use": "{k:Let's} {v:go} … · {k:How about} {v:go}{e:ing} …?", "m": ["How about going to the beach on Saturday?"], "c": [["`Let's` + فعل / `How about + ing`", "\\blet's\\s+\\w+|\\bhow about\\s+\\w+ing\\b"]]}
+];

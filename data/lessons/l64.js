@@ -65,3 +65,9 @@ window.LESSONS[64].steps.push(
       note: "تلميح: خطآن بسبب `the` زائدة في كلام عام، وخطآن بسبب أداة ناقصة قبل اسم معدود مفرد، وخطأ مع اسم مدينة، وخطأ مع `of`." }],
     check: { q: "\"My brother is ___ engineer.\"", o: ["(nothing)", "an", "the"], a: 1, why: "المهنة مع اسم معدود مفرد ← `an engineer`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[64].apply = [
+  {"p": "اكتب فقرة قصيرة (3 جمل) عن بلدك فيها أسماء أماكن (مع `the` وبدونها).", "use": "{o:the} Red Sea · Riyadh (بلا the) · {o:the} Kingdom", "m": ["Saudi Arabia is in the Middle East. Its capital is Riyadh. The Red Sea is on the west coast."], "c": [["لم تضع `the` مع أسماء المدن", "!\\bthe (riyadh|jeddah|london|paris|dubai|makkah|mecca|madinah)\\b"], ["`the` مع البحار والمناطق", "\\bthe (red sea|middle east|gulf|arabian gulf|west|east)\\b"]]},
+  {"p": "اكتب جملة عن وظيفتك أو وظيفة قريب لك (`a / an` قبل المهنة).", "use": "{s:My brother} {a:is} {o:an} engineer.", "m": ["My wife is a teacher and my brother is an engineer."], "c": [["`a / an` قبل المهنة", "\\b(is|am|are|was)\\s+(a|an)\\s+\\w+"], ["لم تكتب `is engineer` بلا أداة", "!\\b(is|am|was)\\s+(engineer|teacher|doctor|student|investor|manager|nurse|pilot)\\b"]]}
+];

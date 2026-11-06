@@ -45,3 +45,9 @@ window.LESSONS[25] = {
     { h: "by", en: ["invented {k:by} Bell"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[25].apply = [
+  {"p": "اكتب حقيقتين تاريخيتين بالمبني للمجهول في الماضي.", "use": "{s:The Kingdom} {a:was} {v:founded} {k:in} 1932.", "m": ["The Kingdom of Saudi Arabia was founded in 1932. Oil was discovered in 1938."], "c": [["`was / were + v3`", "\\b(was|were)\\s+(\\w+ed|built|found|made|written|discovered|founded|born)\\b"]]},
+  {"p": "صف شيئًا كان يُعمل لحظة حدوث شيء آخر.", "use": "{s:The road} {a:was being} {v:repaired} when …", "m": ["My car was being repaired when I needed it."], "c": [["`was / were being + v3`", "\\b(was|were)\\s+being\\s+\\w+"]]}
+];

@@ -39,3 +39,9 @@ window.LESSONS[84] = {
     { h: "= no matter", en: ["no matter what / where / how"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[84].apply = [
+  {"p": "اكتب ثلاث جمل بـ `whatever / wherever / whenever / whoever`.", "use": "{k:Whatever} you …, … · {k:Wherever} I go, …", "m": ["Wherever I go, I take a book. You can call me whenever you need help. Whatever happens, don't give up."], "c": [["كلمة بـ -`ever`", "\\b(whatever|wherever|whenever|whoever|however|whichever)\\b"], ["المضارع لا `will` بعد -`ever`", "!\\b(whatever|wherever|whenever|whoever)\\s+\\w+\\s+will\\b"]]},
+  {"p": "اكتب جملة بـ `however` بمعنى «مهما».", "use": "{k:However} hard {s:it} {v:is}, …", "m": ["However tired I am, I read before bed."], "c": [["`However` + صفة", "\\bhowever\\s+(hard|tired|busy|much|difficult|long|expensive|late)\\b"]]}
+];

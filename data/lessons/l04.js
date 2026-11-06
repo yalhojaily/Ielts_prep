@@ -108,3 +108,9 @@ window.LESSONS[4].steps.push(
       note: "`work` و`go` = ثابت وعادة. كل ما يحدث **هذه الفترة** جاء بالمستمر، ومعه كلمات مثل `at the moment` و`these days`." }],
     check: { q: "In the text, why is \"I'm studying every evening\" continuous?", o: ["It is a permanent habit.", "It is a temporary situation (these weeks only)."], a: 1, why: "المذاكرة كل مساء مرتبطة بفترة الاستعداد للاختبار، أي وضع مؤقت." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[4].apply = [
+  {"p": "صف ما يحدث حولك الآن في ثلاث جمل.", "use": "{s:I}{a:'m} {v:sit}{e:ting} … · {s:My son} {a:is} {v:play}{e:ing} …", "m": ["I'm sitting in my office. My colleague is talking on the phone. It's raining outside."], "c": [["استخدمت `am / is / are + ing`", "\\b(am|is|are|'m|'s|'re)\\s+(\\w+\\s+)?\\w+ing\\b"], ["لم تنسَ `am / is / are` (`I sitting` ✗)", null]]},
+  {"p": "اكتب عن مشروع أو شيء مؤقت تعمل عليه هذه الفترة.", "use": "{s:I}{a:'m} {v:study}{e:ing} … {k:these days}.", "m": ["These days I'm preparing for IELTS. I'm also reading a book about investing."], "c": [["استخدمت المستمر لشيء مؤقت", "\\b(am|is|are|'m|'s|'re)\\s+(also\\s+)?\\w+ing\\b"], ["استخدمت كلمة زمن مؤقت مثل `these days / this month / at the moment`", "\\b(these days|this (week|month|year)|at the moment|currently|now)\\b"]]}
+];

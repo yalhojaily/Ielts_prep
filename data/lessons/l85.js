@@ -40,3 +40,9 @@ window.LESSONS[85] = {
     { h: "There / It", en: ["There's a café. It's new."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[85].apply = [
+  {"p": "صف حيّك: ماذا يوجد فيه وماذا لا يوجد.", "use": "There {a:is} a … · There {a:are} some … · There {a:isn't} any …", "m": ["There is a big mosque in my street. There are two supermarkets nearby. There isn't a cinema."], "c": [["`There is` + مفرد", "\\bthere (is|'s)\\s+(a|an|one)\\b"], ["`There are` + جمع", "\\bthere are\\s+\\w+"], ["لم تكتب `It has` أو `there have` بمعنى يوجد", "!\\b(there have|there has)\\s+(a|an|many|some|two)\\b"]]},
+  {"p": "اكتب جملة بـ `there was / there were / there will be`.", "use": "There {a:were} … · There {a:will be} …", "m": ["There were many people at the wedding. There will be a new hospital next year."], "c": [["`there` + زمن آخر", "\\bthere (was|were|will be|has been|have been)\\b"]]}
+];

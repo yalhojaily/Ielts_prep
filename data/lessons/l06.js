@@ -63,3 +63,9 @@ window.LESSONS[6] = {
     { h: "بأدب", en: ["Please sit down.", "Could you…?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[6].apply = [
+  {"p": "اكتب ثلاث نصائح لطالب جديد يستعد لـ `IELTS` بصيغة الأمر.", "use": "{v:Read} … · {n:Don't} {v:forget} …", "m": ["Read English every day. Don't memorise answers. Practise writing for 30 minutes."], "c": [["بدأت جملة بفعل أصلي مباشرة", "(^|[.!]\\s*)(read|write|listen|practise|practice|study|take|try|learn|watch|speak|use|make|keep|start|sleep|plan|review|do)\\b"], ["استخدمت `Don't` للنهي", "\\bdon't\\b"]]},
+  {"p": "اكتب تعليمات قصيرة لصديق ليصل إلى بيتك.", "use": "{v:Turn} left … · {v:Go} straight …", "m": ["Take the second exit. Turn right at the mosque. Go straight and stop at the white house."], "c": [["استخدمت أفعال أمر", "\\b(turn|go|take|stop|drive|walk|follow|cross)\\b"], ["لم تضع `you` قبل الفعل", null]]}
+];

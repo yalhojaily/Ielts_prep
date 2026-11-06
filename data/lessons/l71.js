@@ -62,3 +62,9 @@ window.LESSONS[71].steps.push(
       note: "`The number / The percentage / One` مفرد. `a number of universities` = جامعات كثيرة ← جمع." }],
     check: { q: "The percentage of young people who smoke ___ fallen.", o: ["have", "has"], a: 1, why: "الفاعل الحقيقي `The percentage` مفرد ← `has`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[71].apply = [
+  {"p": "اكتب عن بلدك جملًا بفاعل يحتاج انتباهًا (`everyone, the number of, one of…`).", "use": "{k:Everyone} {v:knows} … · {k:One of} … {v:is} … · {k:The number of} … {v:has} …", "m": ["Everyone in my family loves dates. One of my friends lives in London. The number of tourists has increased."], "c": [["`everyone / everybody` + فعل مفرد", "\\b(everyone|everybody|nobody|someone)\\s+(in \\w+( \\w+)?\\s+)?(\\w+s|is|has|was)\\b"], ["`one of` + جمع + فعل مفرد", "\\bone of\\s+(my|the|our)\\s+\\w+s\\s+(is|has|was|\\w+s)\\b"], ["`the number of` + فعل مفرد", "\\bthe number of\\s+\\w+\\s+(is|has|was)\\b"]]},
+  {"p": "صف بيانات بـ `a number of` (فعل جمع).", "use": "{k:A number of} students {v:have} …", "m": ["A number of students have complained about the new rules."], "c": [["`a number of` + فعل جمع", "\\ba number of\\s+\\w+\\s+(have|are|were|\\w+ed)\\b"]]}
+];

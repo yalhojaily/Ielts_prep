@@ -46,3 +46,9 @@ window.LESSONS[104] = {
     { h: "كميات", en: ["too much + غير معدود · too many + جمع"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[104].apply = [
+  {"p": "صف موقفًا: شيء أكثر من اللازم (`too`) وشيء غير كافٍ (`not enough`).", "use": "{k:too} expensive {a:to} … · {k:not} old {k:enough} · {k:enough} money", "m": ["The car was too expensive for me. I'm not tall enough to play basketball. I don't have enough time to cook."], "c": [["`too` + صفة", "\\btoo\\s+\\w+"], ["صفة + `enough`", "\\b\\w+\\s+enough\\b"], ["`enough` + اسم", "\\benough\\s+(time|money|space|food|people|experience|sleep|water|chairs|information)\\b"], ["لم تكتب `enough tall`", "!\\benough\\s+(tall|old|big|good|fast|strong|rich|hot|cold|warm|clever)\\b"]]},
+  {"p": "اكتب جملة بـ `too … to`.", "use": "{k:too} tired {a:to} {v:study}", "m": ["I was too tired to finish my homework."], "c": [["`too` + صفة + `to`", "\\btoo\\s+\\w+\\s+(for \\w+\\s+)?to\\s+\\w+"]]}
+];

@@ -62,3 +62,9 @@ window.LESSONS[30].steps.push(
       note: "`had studied` (ماضٍ) ← `would be … now` (حاضر) = مختلط. `If I were` = النوع 2. `As long as` = بشرط أن." }],
     check: { q: "\"If I had studied medicine, I would be a doctor now\" — which part is about the present?", o: ["If I had studied medicine", "I would be a doctor now"], a: 1, why: "`would be … now` نتيجة في الحاضر." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[30].apply = [
+  {"p": "اكتب جملة شرط مختلطة: ماضٍ أثّر على الحاضر.", "use": "{k:If} {s:I} {a:had} {v:studied} medicine, {s:I} {a:would} {v:be} a doctor {k:now}.", "m": ["If I had saved more money, I would be richer now."], "c": [["`If + had + v3` ثم `would` + فعل أصلي", "\\bif\\b[^.]*\\bhad\\s+\\w+[^.]*\\bwould\\s+(?!have)\\w+"]]},
+  {"p": "استخدم `unless` أو `as long as` في جملة عن شروط عملك أو دراستك.", "use": "{s:I}{a:'ll} {v:pass} {k:as long as} {s:I} {v:practise} …", "m": ["I won't improve unless I practise every day."], "c": [["`unless / as long as / provided`", "\\b(unless|as long as|provided|providing)\\b"], ["لم تجمع `unless` مع `not`", "!\\bunless\\s+\\w+\\s+(don't|doesn't|not)\\b"]]}
+];

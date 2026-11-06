@@ -43,3 +43,9 @@ window.LESSONS[65] = {
     { h: "ربط", en: ["{k:This trend} has…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[65].apply = [
+  {"p": "في متجر: أشر إلى أشياء قريبة وبعيدة، مفردة وجمع.", "use": "{k:This} … {k:these} … · {k:that} … {k:those} …", "m": ["I like this watch, but these shoes are too small. How much is that bag? Can I see those glasses?"], "c": [["`this / that` مع المفرد", "\\b(this|that)\\s+\\w+"], ["`these / those` مع الجمع", "\\b(these|those)\\s+\\w+s\\b"], ["لم تكتب `this shoes`", "!\\bthis\\s+(shoes|glasses|books|people|clothes|days)\\b"]]},
+  {"p": "اكتب جملتين متتاليتين: الثانية تبدأ بـ `This` تشير إلى الفكرة الأولى.", "use": "Prices rose. {k:This} {v:caused} …", "m": ["Many people work from home now. This has reduced traffic in big cities."], "c": [["`This` تشير إلى الجملة السابقة", "\\.\\s*This\\s+\\w+"]]}
+];

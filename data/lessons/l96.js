@@ -42,3 +42,9 @@ window.LESSONS[96] = {
     { h: "تطابق", en: ["the same as"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[96].apply = [
+  {"p": "قارن بين شيئين متساويين وغير متساويين بـ `as … as`.", "use": "{k:as} tall {k:as} · {k:not as} expensive {k:as}", "m": ["My son is as tall as me now. Online courses are not as expensive as university."], "c": [["`as` + صفة + `as`", "\\bas\\s+\\w+\\s+as\\b"], ["`not as / not so … as`", "\\b(not|isn't|aren't|wasn't)\\s+(as|so)\\s+\\w+\\s+as\\b"], ["لم تضع صفة مقارنة بين `as` و `as`", "!\\bas\\s+(\\w+er|more \\w+)\\s+as\\b"]]},
+  {"p": "استخدم `twice as … as` أو `the same as`.", "use": "{k:twice as} big {k:as} · {k:the same} {k:as}", "m": ["My new flat is twice as big as my old one."], "c": [["`twice / three times as … as / the same as`", "\\b(twice|three times|half) as\\s+\\w+\\s+as\\b|\\bthe same\\s+(\\w+\\s+)?as\\b"]]}
+];

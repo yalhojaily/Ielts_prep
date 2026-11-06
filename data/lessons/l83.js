@@ -52,3 +52,9 @@ window.LESSONS[83] = {
     { h: "رسمي", en: ["the house {k:in which} I live"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[83].apply = [
+  {"p": "اختصر جملتي صلة: «`People who live in cities…`» و«`Cars which are made in Japan…`».", "use": "People {v:living} … · Cars {v:made} …", "m": ["People living in big cities often feel stressed. Cars made in Japan are very reliable."], "c": [["اختصار بـ `ing`", "\\b\\w+\\s+\\w+ing\\s+(in|near|on|at)\\b"], ["اختصار بـ `v3`", "\\b\\w+\\s+(made|built|written|produced|grown|sold|taken)\\s+(in|by)\\b"]]},
+  {"p": "اكتب جملة بـ `what` بمعنى «الشيء الذي».", "use": "{k:What} {s:I} {v:need} {a:is} …", "m": ["What I need now is a long holiday."], "c": [["`What … is …`", "^what\\b[^.]*\\bis\\b"]]}
+];

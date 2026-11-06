@@ -44,3 +44,9 @@ window.LESSONS[20] = {
     { h: "سؤال مهذب", en: ["Will you be using the car?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[20].apply = [
+  {"p": "ماذا ستكون تفعل غدًا الساعة 10 صباحًا؟", "use": "{k:At 10 tomorrow}, {s:I}{a:'ll be} {v:work}{e:ing} …", "m": ["This time tomorrow, I'll be sitting in the exam hall."], "c": [["استخدمت `will be + ing`", "\\b(will|'ll)\\s+be\\s+\\w+ing\\b"], ["ذكرت الوقت المحدد", "\\b(at \\d|this time|tomorrow)\\b"]]},
+  {"p": "اسأل شخصًا سؤالًا مهذبًا عن خططه بـ `Will you be …ing`.", "use": "{a:Will} {s:you} {a:be} {v:us}{e:ing} the car tonight?", "m": ["Will you be using your laptop this evening?"], "c": [["`Will you be + ing ?`", "\\bwill you be\\s+\\w+ing\\b.*\\?"]]}
+];

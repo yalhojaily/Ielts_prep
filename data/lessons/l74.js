@@ -47,3 +47,9 @@ window.LESSONS[74] = {
     { h: "الكسور", en: ["two thirds · two point five"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[74].apply = [
+  {"p": "اكتب معلومات رقمية عنك: تاريخ ميلاد بصيغة ترتيبية، وعدد كبير بالكلمات.", "use": "on the {o:fifth} of May · two {o:hundred} people", "m": ["My birthday is on the 12th of March. My city has about seven million people."], "c": [["عدد ترتيبي (1`st, 2nd, fifth…`)", "\\b(\\d+(st|nd|rd|th)|first|second|third|fourth|fifth|tenth|twelfth|twentieth)\\b"], ["لم تجمع `hundred / thousand / million` بعد عدد", "!\\b(two|three|four|five|six|seven|eight|nine|ten|\\d+)\\s+(hundreds|thousands|millions)\\b"]]},
+  {"p": "صف إحصاءة بالكسور أو النسب كما في `Task 1`.", "use": "{o:a third} of … · {o:half} of … · {o:25 per cent}", "m": ["Around a third of students study abroad, and half of them choose the UK."], "c": [["كسر أو نسبة", "\\b(half|a third|a quarter|two thirds|three quarters|per cent|percent|%)\\b"]]}
+];

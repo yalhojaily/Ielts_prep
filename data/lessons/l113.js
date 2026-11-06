@@ -62,3 +62,9 @@ window.LESSONS[113].steps.push(
       note: "القاعدة الذهبية: أداة واحدة لكل علاقة، وانتبه لما يأتي بعدها." }],
     check: { q: "___ the jobs are better, young people prefer the city.", o: ["Because of", "Because"], a: 1, why: "بعدها جملة كاملة ← `Because`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[113].apply = [
+  {"p": "اكتب رأيك في موضوع `IELTS` (العمل عن بعد) بأربع جمل وأدوات ربط متنوعة.", "use": "{k:Although} … · {k:because} … · {k:However}, … · {k:Therefore}, …", "m": ["Working from home has many benefits because it saves time. However, some people feel lonely. Although companies save money, they may lose team spirit. Therefore, a mix of both is the best option."], "c": [["أداة ربط داخل الجملة (`because / although`)", "\\b(because|although|while|whereas|even though)\\b"], ["أداة ربط بين الجمل (`However / Therefore`)", "\\b(however|therefore|moreover|in addition|as a result),"], ["لم تستخدم `but` في بداية جملة بعد نقطة", "!\\.\\s*but\\b"]]},
+  {"p": "اربط جملتين بـ `so that` (غرض).", "use": "…, {k:so that} {s:I} {a:can} …", "m": ["I wake up early so that I can study before work."], "c": [["`so that + can / could`", "\\bso that\\b[^.]*\\b(can|could|will|would)\\b"]]}
+];

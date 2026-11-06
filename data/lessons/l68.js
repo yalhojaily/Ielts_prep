@@ -43,3 +43,9 @@ window.LESSONS[68] = {
     { h: "في النفي", en: ["I don't {k:either}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[68].apply = [
+  {"p": "قارن بين شخصين أو خيارين بـ `both`، `either`، `neither`.", "use": "{k:Both} … · {k:Neither} … · {k:either} … {k:or} …", "m": ["Both my parents are teachers. Neither of my brothers likes football. We can meet either on Monday or on Tuesday."], "c": [["`both`", "\\bboth\\b"], ["`neither` (فعل مثبت بعدها)", "\\bneither\\b"], ["`either … or`", "\\beither\\b.*\\bor\\b"], ["لم تجمع `neither` مع `not`", "!\\bneither\\b[^.]*(n't|\\bnot\\b)"]]},
+  {"p": "رد على: «`I don't like horror films`.» بأنك مثله.", "use": "{k:Neither} {a:do} {s:I}. / {s:I} {a:don't} {k:either}.", "m": ["Neither do I."], "c": [["`Neither do I / I don't either`", "\\b(neither do I|me neither|I don't either)\\b"]]}
+];

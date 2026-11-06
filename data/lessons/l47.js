@@ -39,3 +39,9 @@ window.LESSONS[47] = {
     { h: "تذكّر", txt: "لا do · لا قلب · نقطة لا علامة استفهام" }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[47].apply = [
+  {"p": "انقل ثلاثة أسئلة سُئلتها في مقابلة أو اختبار `IELTS Speaking`.", "use": "{s:He} {v:asked} me {q:where} {s:I} {v:lived}. · {s:She} {v:asked} {k:if} …", "m": ["The examiner asked me where I lived. She asked if I enjoyed my job. He asked me what I did in my free time."], "c": [["`asked + wh / if`", "\\basked\\s+(me\\s+)?(where|what|when|why|how|if|whether)\\b"], ["ترتيب جملة عادي (`where I lived`، لا `where did I live`)", "!\\basked\\s+(me\\s+)?(where|what|when|why|how)\\s+(did|do|does|is|are)\\b"], ["لا علامة استفهام في السؤال المنقول", "!\\basked\\b[^.]*\\?"]]},
+  {"p": "انقل: «`Can you help me?`»", "use": "{s:She} {v:asked} me {k:if} {s:I} {a:could} …", "m": ["She asked me if I could help her."], "c": [["`if + could`", "\\b(if|whether)\\s+I\\s+could\\b"]]}
+];

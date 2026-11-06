@@ -44,3 +44,9 @@ window.LESSONS[110] = {
     { h: "في المقال", en: ["However, · In addition,"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[110].apply = [
+  {"p": "اكتب ثلاث جمل مركبة بـ `and, but, so, or`.", "use": "…, {k:but} … · …, {k:so} …", "m": ["I wanted to go out, but it was raining, so I stayed home and read a book. We can eat now or wait for Ali."], "c": [["`but` (تعارض)", "\\bbut\\b"], ["`so` (نتيجة)", ",\\s*so\\b"], ["`or` (اختيار)", "\\bor\\b"], ["لم تبدأ بـ `Although … , but`", "!\\balthough\\b[^.]*,\\s*but\\b"]]},
+  {"p": "اكتب جملة بـ `both … and` أو `either … or`.", "use": "{k:both} … {k:and} …", "m": ["My job is both interesting and well-paid."], "c": [["`both … and / either … or / neither … nor`", "\\b(both\\b[^.]*\\band|either\\b[^.]*\\bor|neither\\b[^.]*\\bnor)\\b"]]}
+];

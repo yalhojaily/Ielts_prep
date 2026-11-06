@@ -46,3 +46,9 @@ window.LESSONS[79] = {
     { h: "الصفة بعده", en: ["something {k:new} · someone {k:else}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[79].apply = [
+  {"p": "اكتب عن يومك بضمائر نكرة مختلفة.", "use": "{k:Someone} … · {k:nothing} … · {k:everywhere} · {k:anything}", "m": ["Someone called me this morning, but I didn't hear anything. I looked everywhere for my keys. Nobody knew where they were."], "c": [["`some- / every- / no`-", "\\b(some|every|no)(one|body|thing|where)\\b"], ["`any`- في النفي أو السؤال", "(n't|\\bnot)\\b.*\\bany(one|body|thing|where)\\b|\\bany(one|body|thing|where)\\b.*\\?"], ["لم تكتب `didn't … nothing`", "!(n't|\\bnot\\b)[^.]*\\bnothing\\b"]]},
+  {"p": "اكتب جملة بـ `everyone` + فعل مفرد.", "use": "{k:Everyone} {v:wants} …", "m": ["Everyone wants a good job."], "c": [["`everyone` + فعل بـ `s`", "\\b(everyone|everybody)\\s+\\w+s\\b"]]}
+];

@@ -45,3 +45,9 @@ window.LESSONS[48] = {
     { h: "الإرجاع", en: ["is → was · will → would · ago → before"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[48].apply = [
+  {"p": "انقل محادثة قصيرة جرت لك (سؤال، جواب، طلب).", "use": "asked if … · said that … · told me to …", "m": ["My neighbour asked if I had seen his cat. I said I hadn't. He asked me to call him if I saw it."], "c": [["نقل سؤال", "\\basked\\s+(\\w+\\s+)?(if|whether|where|what|when|how|why)\\b"], ["نقل جملة بـ `said`", "\\bsaid\\b"], ["نقل طلب أو أمر بـ `to`", "\\b(asked|told)\\s+\\w+\\s+to\\b"]]},
+  {"p": "انقل نصيحة بفعل نقل غير `said`.", "use": "{s:My father} {v:advised} me {a:to} …", "m": ["My father advised me to save part of my salary."], "c": [["فعل نقل + `to`", "\\b(advised|warned|encouraged|urged|reminded|recommended)\\b"]]}
+];

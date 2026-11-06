@@ -47,3 +47,9 @@ window.LESSONS[28] = {
     { h: "get", en: ["He {a:got} {v:arrested}. (كلام)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[28].apply = [
+  {"p": "اكتب عن خدمة تدفع لشخص ليفعلها لك (`have something done`).", "use": "{s:I} {v:have} {s:my car} {v:washed} every week.", "m": ["I have my car washed every Friday. I had my eyes tested last month."], "c": [["`have / get` + شيء + `v3`", "\\b(have|has|had|get|got)\\s+(my|his|her|the|our)\\s+\\w+\\s+(\\w+ed|cut|done|fixed|cleaned|serviced|tested|washed|painted|repaired)\\b"]]},
+  {"p": "انقل اعتقادًا شائعًا بأسلوب رسمي.", "use": "{s:It} {a:is} {v:said} that … / {s:X} {a:is} {v:said} to …", "m": ["It is believed that exercise improves memory."], "c": [["`It is said / believed / thought that`", "\\bit is (said|believed|thought|known|expected|reported)\\s+that\\b"]]}
+];

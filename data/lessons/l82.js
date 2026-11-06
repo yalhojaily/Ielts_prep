@@ -54,3 +54,9 @@ window.LESSONS[82].steps.push(
       note: "كل جملة بين فاصلتين يمكن حذفها والمعنى الأساسي يبقى. `, which would create…` تشير إلى تضاعف الزوار كله." }],
     check: { q: "In the last sentence, what does \"which\" refer to?", o: ["France", "The tripling of visitor numbers"], a: 1, why: "`, which` بعد فاصلة هنا تعلّق على الفكرة السابقة كلها." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[82].apply = [
+  {"p": "أضف معلومة إضافية بين فاصلتين عن مدينتك وشخص تعرفه.", "use": "Riyadh, {k:which} {v:is} …, … · My father, {k:who} …, …", "m": ["Riyadh, which is the capital of Saudi Arabia, is growing fast. My father, who is seventy, still walks every day."], "c": [[", `which`", ",\\s*which\\b"], [", `who`", ",\\s*who\\b"], ["لم تستخدم `that` بعد الفاصلة", "!,\\s*that\\b"]]},
+  {"p": "اكتب جملة تعلّق فيها بـ `which` على الجملة كلها.", "use": "I passed the exam, {k:which} {v:surprised} everyone.", "m": ["The meeting was cancelled, which meant I could go home early."], "c": [[", `which` تعود على الجملة كلها", ",\\s*which\\s+(meant|was|surprised|made|is)\\b"]]}
+];

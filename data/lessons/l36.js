@@ -55,3 +55,9 @@ window.LESSONS[36] = {
     { h: "How come", en: ["{q:How come} you are late?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[36].apply = [
+  {"p": "اكتب ثلاثة أسئلة مفتوحة تستخدمها لبدء حديث (تحتاج جوابًا طويلًا).", "use": "{q:What do you think about} …? · {q:How} {a:did} {s:you} {v:get} into …?", "m": ["What do you enjoy most about your job? How did you get into investing? What would you change about your city?"], "c": [["لم تبدأ بـ `Do / Is / Are` (أسئلة نعم/لا)", "!(^|[?.]\\s*)(do|does|is|are|did|can|have)\\b"], ["أسئلة بـ `What / How / Why`", "\\b(what|how|why)\\b"]]},
+  {"p": "اكتب سؤالًا مفتوحًا عن رأي شخص في موضوع `IELTS` (التقنية، التعليم…).", "use": "{q:How} {a:has} {s:technology} {v:changed} …?", "m": ["How has social media changed the way young people communicate?"], "c": [["سؤال مفتوح", "\\b(what|how|why)\\b.*\\?"]]}
+];

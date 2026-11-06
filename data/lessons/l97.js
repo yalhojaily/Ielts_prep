@@ -44,3 +44,9 @@ window.LESSONS[97] = {
     { h: "one of", en: ["one of the best {v:players}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[97].apply = [
+  {"p": "اكتب ثلاث جمل تفضيل عن تجاربك (أفضل، أسوأ، أجمل…).", "use": "{k:the best} … {k:I've ever} … · {k:the most} beautiful … {k:in} …", "m": ["It was the best holiday I've ever had. Abha is the most beautiful city in Saudi Arabia. That was the worst meal of my life."], "c": [["`the + est / the most`", "\\bthe\\s+(\\w+est|most\\s+\\w+|best|worst)\\b"], ["`ever` + المضارع التام", "\\b(I've|I have)\\s+ever\\b"], ["`in` + مكان / `of` + مجموعة (لا `of` + مكان)", "!\\b(\\w+est|best|worst)\\s+\\w+\\s+of\\s+(saudi|riyadh|the city|the world)\\b"]]},
+  {"p": "اكتب جملة بـ `one of the` + تفضيل + جمع.", "use": "{k:one of the} best {o:restaurants}", "m": ["Riyadh has one of the largest airports in the region."], "c": [["`one of the + est/most` + جمع", "\\bone of the\\s+(\\w+est|most \\w+|best|worst)\\s+\\w+s\\b"]]}
+];

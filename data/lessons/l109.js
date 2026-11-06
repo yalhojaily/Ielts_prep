@@ -40,3 +40,9 @@ window.LESSONS[109] = {
     { h: "in / of", en: ["a rise in prices · a rise of 5%"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[109].apply = [
+  {"p": "اكتب عن نفسك بثلاث صفات تتبعها حروف جر ملازمة.", "use": "{k:interested in} · {k:good at} · {k:afraid of} · {k:responsible for}", "m": ["I'm interested in technology. I'm good at maths, but I'm bad at drawing. I'm afraid of heights."], "c": [["صفة + حرف جر صحيح", "\\b(interested in|good at|bad at|afraid of|responsible for|proud of|tired of|fond of|keen on|worried about|married to|different from|similar to|famous for)\\b"], ["لم تكتب `interested about` أو `good in`", "!\\b(interested (about|on)|good in|afraid from|married with|different than|depend of)\\b"]]},
+  {"p": "اكتب جملة: صفة + حرف جر + `ing`.", "use": "{k:good at} {v:explain}{e:ing} · {k:tired of} {v:wait}{e:ing}", "m": ["I'm tired of waiting for the bus."], "c": [["حرف الجر يتبعه `ing`", "\\b(at|in|of|for|about|on)\\s+\\w+ing\\b"]]}
+];

@@ -44,3 +44,9 @@ window.LESSONS[100] = {
     { h: "مقارنة", en: ["{k:much} better (لا very)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[100].apply = [
+  {"p": "صف أشياء بدرجات مختلفة من الشدة.", "use": "{k:extremely} · {k:quite} · {k:a bit} · {k:fairly}", "m": ["The exam was extremely difficult. My hotel was quite comfortable. The food was a bit salty."], "c": [["ظرف درجة قوي (`extremely / really / very`)", "\\b(extremely|really|very|incredibly)\\b"], ["ظرف درجة متوسط أو خفيف (`quite / fairly / a bit / slightly`)", "\\b(quite|fairly|rather|a bit|slightly|pretty)\\b"]]},
+  {"p": "اكتب جملة بـ `hardly` بمعنى «بالكاد» عن شيء حدث بالكاد.", "use": "{s:I} {k:hardly} {v:slept} …", "m": ["I hardly slept last night because of the noise."], "c": [["`hardly / barely`", "\\b(hardly|barely|scarcely)\\b"]]}
+];

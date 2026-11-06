@@ -55,3 +55,9 @@ window.LESSONS[39] = {
     { h: "النفي الخفي", en: ["You never…, {a:do} you?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[39].apply = [
+  {"p": "اكتب ثلاث جمل مع أسئلة ذيلية تتأكد بها من معلومات عن زميل.", "use": "{s:You}{a:'re} new here, {a:aren't} {s:you}? · {s:He} {v:works} …, {a:doesn't} {s:he}?", "m": ["You're from Jeddah, aren't you? He doesn't speak French, does he? They finished the project, didn't they?"], "c": [["جملة مثبتة ← ذيل منفي", ",\\s*(isn't|aren't|don't|doesn't|didn't|haven't|hasn't|won't|can't|wasn't|weren't)\\s+\\w+\\?"], ["جملة منفية ← ذيل مثبت", "(n't|\\bnot\\b)[^,]*,\\s*(is|are|do|does|did|have|has|will|can|was|were)\\s+\\w+\\?"]]},
+  {"p": "اكتب ذيلًا لجملة بـ `I'm`.", "use": "{s:I}{a:'m} right, {a:aren't} {s:I}?", "m": ["I'm late again, aren't I?"], "c": [["`I'm … aren't I?`", "\\baren't I\\?"]]}
+];

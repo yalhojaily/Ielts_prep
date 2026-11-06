@@ -45,3 +45,9 @@ window.LESSONS[80] = {
     { h: "انتبه", en: ["its ≠ it's"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[80].apply = [
+  {"p": "صف ممتلكات أفراد عائلتك بـ `his / her / their` و'`s`.", "use": "{s:My sister}{o:'s} car · {o:her} phone · {o:my parents'} house", "m": ["My sister's car is red. Her husband's car is black. My parents' house is near mine."], "c": [["'`s` للملكية", "\\b\\w+'s\\s+\\w+"], ["`his / her / their / its`", "\\b(his|her|their|its)\\b"], ["لم تكتب `it's` بمعنى الملكية", "!\\bit's own\\b"]]},
+  {"p": "استخدم ضمير ملكية مستقل (`mine, yours, hers`).", "use": "This book is {o:mine}. · a friend of {o:mine}", "m": ["This phone isn't mine; it's my brother's."], "c": [["`mine / yours / hers / ours / theirs`", "\\b(mine|yours|hers|ours|theirs)\\b"]]}
+];

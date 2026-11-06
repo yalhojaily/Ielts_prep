@@ -32,3 +32,9 @@ window.LESSONS[26] = {
     { h: "تذكّر", txt: "be ضرورية قبل التصريف الثالث" }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[26].apply = [
+  {"p": "صف مشروعًا في مدينتك سيُنجز في المستقبل.", "use": "{s:A new metro line} {a:will be} {v:built} …", "m": ["A new stadium will be built in my city. It will be opened in 2030."], "c": [["`will be + v3`", "\\bwill\\s+be\\s+(\\w+ed|built|made|done|opened|finished|held|given)\\b"]]},
+  {"p": "اكتب ما سيكون قد أُنجز بحلول تاريخ معين.", "use": "{k:By} 2030, {s:…} {a:will have been} {v:finished}.", "m": ["By next summer, the new hospital will have been finished."], "c": [["`will have been + v3`", "\\bwill\\s+have\\s+been\\s+\\w+"]]}
+];

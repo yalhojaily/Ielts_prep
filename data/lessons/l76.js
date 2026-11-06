@@ -41,3 +41,9 @@ window.LESSONS[76] = {
     { h: "انتبه", en: ["almost all of (لا almost of)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[76].apply = [
+  {"p": "صف بأرقام تقريبية: كم شخصًا في عملك؟ كم ساعة تنام؟", "use": "{k:about} 50 · {k:around} 7 hours · {k:nearly} … · {k:roughly} …", "m": ["There are about 200 employees in my company. I sleep roughly seven hours a night. It takes nearly an hour to get to work."], "c": [["كلمة تقريب", "\\b(about|around|roughly|approximately|nearly|almost|over|more than|just under)\\b"], ["لم تجمع كلمتي تقريب (`around about`)", "!\\baround about\\b"]]},
+  {"p": "صف بيانات تقريبية بأسلوب `Task 1`.", "use": "{k:just over} half · {k:approximately} 30%", "m": ["Just under a quarter of the budget was spent on education."], "c": [["`just over / just under / approximately`", "\\b(just over|just under|approximately|roughly|nearly)\\b"]]}
+];

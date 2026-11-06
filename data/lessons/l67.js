@@ -45,3 +45,9 @@ window.LESSONS[67] = {
     { h: "انتبه", en: ["every day ≠ everyday"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[67].apply = [
+  {"p": "اكتب عن عادات يومية (`every`) وعن أفراد بشكل منفصل (`each`).", "use": "{k:Every} morning, … · {k:Each} {o:of} my children {v:has} …", "m": ["Every day I read for twenty minutes. Each of my children has a different hobby. Every student in my class passed."], "c": [["`every` + اسم مفرد", "\\bevery\\s+\\w+(?<!s)\\b"], ["`each of` + جمع + فعل مفرد", "\\beach of\\s+(my|the|our|his|her)\\s+\\w+\\s+(has|is|was|\\w+s)\\b"], ["لم تكتب `every of`", "!\\bevery of\\b"]]},
+  {"p": "اكتب جملة عن شيئين فقط بـ `each` (لا `every`).", "use": "{s:I} {v:have} two …, and {k:each} …", "m": ["I have two sisters, and each one lives in a different city."], "c": [["`each`", "\\beach\\b"]]}
+];

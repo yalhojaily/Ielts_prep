@@ -51,3 +51,9 @@ window.LESSONS[117] = {
     { h: "الخلاصة", en: ["Overall, (Task 1) · In conclusion, (Task 2)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[117].apply = [
+  {"p": "اشرح وصفة بسيطة أو طريقة لعمل شيء بأربع خطوات مرتبة.", "use": "{k:First}, … · {k:Then}, … · {k:After that}, … · {k:Finally}, …", "m": ["First, boil some water. Then, put the tea bag in a cup. After that, pour the water and wait three minutes. Finally, add milk or sugar."], "c": [["بداية: `First / To begin with`", "\\b(first|firstly|to begin with|to start with)\\b"], ["وسط: `Then / Next / After that`", "\\b(then|next|after that|afterwards)\\b"], ["نهاية: `Finally / Lastly`", "\\b(finally|lastly)\\b"], ["لم تكتب `After,` وحدها", "!\\bafter,"]]},
+  {"p": "اكتب جملة الملخص لـ `Task 1` تبدأ بـ `Overall`.", "use": "{k:Overall}, …", "m": ["Overall, the number of tourists increased significantly over the period."], "c": [["`Overall`,", "^overall,"], ["لم تكتب `At the end` للخاتمة", "!\\bat the end,"]]}
+];

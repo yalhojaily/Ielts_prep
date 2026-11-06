@@ -49,3 +49,9 @@ window.LESSONS[9] = {
     { h: "جواب قصير", en: ["Yes, I {a:did}. · No, I {a:didn't}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[9].apply = [
+  {"p": "اكتب ثلاثة أسئلة تسألها لصديق عاد من سفر.", "use": "{q:Where} {a:did} {s:you} {v:go}? · {a:Did} {s:you} {v:enjoy} it?", "m": ["Where did you go? How long did you stay? Did you enjoy the food?"], "c": [["استخدمت `did` في السؤال", "\\bdid\\s+(you|he|she|they)\\b"], ["الفعل بعد `did` في المصدر", "!\\bdid\\s+(you|he|she|they)\\s+(went|saw|ate|stayed|enjoyed|visited|had|took)\\b"], ["كل سؤال ينتهي بـ ؟", "\\?"]]},
+  {"p": "اكتب سؤالًا بـ `was / were` عن الرحلة (بلا `did`).", "use": "{a:Was} {s:the hotel} good? · {a:Were} {s:people} friendly?", "m": ["Was the weather nice? Were the people friendly?"], "c": [["استخدمت `was / were` في بداية السؤال", "(^|[.?!]\\s*)(was|were)\\b"], ["لم تجمع `did` مع `was`", "!\\bdid\\s+\\w+\\s+(was|were|be)\\b"]]}
+];

@@ -78,3 +78,9 @@ window.LESSONS[81].steps.push(
       note: "`who` = شخص فاعل. `where` = مكان. `(that)` بين قوسين = يمكن حذفها لأن بعدها فاعل (`he`, `I`). `whose` = ملكية." }],
     check: { q: "Why can \"that\" be removed in \"The advice (that) he gave me\"?", o: ["Because a new subject (he) follows it.", "Because advice is uncountable."], a: 0, why: "بعدها فاعل جديد ← هي مفعول ← يمكن حذفها." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[81].apply = [
+  {"p": "عرّف ثلاثة أشياء أو أشخاص بجمل صلة محددة.", "use": "a person {k:who} … · a place {k:where} … · the thing {k:that} …", "m": ["A pharmacist is a person who prepares medicine. A library is a place where you can borrow books. This is the phone that I bought last week."], "c": [["`who` للأشخاص", "\\bwho\\s+\\w+"], ["`which / that` للأشياء", "\\b(which|that)\\s+\\w+"], ["لم تكرر الضمير (`the book that I read it` ✗)", "!\\b(that|which|who)\\s+\\w+\\s+\\w+\\s+(it|him|her|them)\\b\\."]]},
+  {"p": "اكتب جملة صلة مع `whose`.", "use": "the man {k:whose} car …", "m": ["I have a friend whose father is a pilot."], "c": [["`whose` + اسم", "\\bwhose\\s+\\w+"]]}
+];

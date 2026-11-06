@@ -38,3 +38,9 @@ window.LESSONS[41] = {
     { h: "الرأي", en: ["I think so. · I hope not."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[41].apply = [
+  {"p": "أجب بإجابات قصيرة صادقة: `Are you a student?` · `Do you like coffee?` · `Have you been to Japan?` · `Can you swim?`", "use": "{k:Yes}, {s:I} {a:am}. · {k:No}, {s:I} {a:don't}.", "m": ["No, I'm not. Yes, I do. No, I haven't. Yes, I can."], "c": [["استخدمت الفعل المساعد في الإجابة", "\\b(yes|no),\\s*I\\s+(am|'m not|do|don't|have|haven't|can|can't|am not)\\b"], ["لم تختصر الإثبات: `Yes, I'm.` ✗", "!\\byes,\\s*I'm\\."]]},
+  {"p": "أجب: «`Will you be at the meeting?`» بإجابة قصيرة وسبب.", "use": "{k:No}, {s:I} {a:won't}. …", "m": ["No, I won't. I'll be travelling."], "c": [["إجابة بـ `will / won't`", "\\b(yes, I will|no, I won't)\\b"]]}
+];

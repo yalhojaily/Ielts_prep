@@ -96,3 +96,9 @@ window.LESSONS[63].steps.push(
       note: "`Education, Students, technology, information` = عام بلا أداة. `the internet / the government` = واحد معروف. `the cost of` = محدد بـ of. `the lowest` = تفضيل." }],
     check: { q: "Why is there no article before \"Education\" at the start?", o: ["It is used in a general sense.", "It is a proper name."], a: 0, why: "التعليم كمفهوم عام ← بلا أداة." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[63].apply = [
+  {"p": "صف غرفتك: شيء تذكره أول مرة (`a / an`) ثم تعود إليه (`the`).", "use": "{k:There's} {o:a} desk … · {o:The} desk {a:is} …", "m": ["There is a desk near the window. The desk is made of wood. There is also an old lamp on it."], "c": [["`a / an` أول مرة", "\\b(a|an)\\s+\\w+"], ["`the` عند العودة إليه", "\\bthe\\s+\\w+"], ["`an` قبل صوت متحرك", "!\\ba\\s+(old|apple|orange|hour|idea|umbrella|interesting|expensive)\\b"]]},
+  {"p": "اكتب جملة عامة بلا `the` عن شيء تحبه أو تكرهه.", "use": "{s:I} {v:love} {o:coffee}. {o:Cars} {v:are} …", "m": ["I think coffee is better than tea. Books are cheaper than courses."], "c": [["لم تكتب `the coffee` أو `the life` في كلام عام", "!\\bthe (life|coffee|people|money|nature|society|education|technology)\\b"]]}
+];

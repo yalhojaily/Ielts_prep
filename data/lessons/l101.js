@@ -45,3 +45,9 @@ window.LESSONS[101] = {
     { h: "توقف", en: ["no longer · not … any more"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[101].apply = [
+  {"p": "اكتب عن مهامك بظروف الزمان: `already, yet, still, just`.", "use": "{s:I}{a:'ve} {k:already} … · {s:I} {a:haven't} … {k:yet}. · {s:I}{a:'m} {k:still} …", "m": ["I've already finished the report. I haven't sent it yet. I'm still waiting for my manager's reply. He's just called me."], "c": [["`already`", "\\balready\\b"], ["`yet` في النفي أو السؤال", "(n't|\\bnot\\b)[^.]*\\byet\\b|\\byet\\?"], ["`still`", "\\bstill\\b"]]},
+  {"p": "اكتب جملة بـ `no longer` أو `any more`.", "use": "{s:I} {k:no longer} … · {s:I} {a:don't} … {k:any more}.", "m": ["I don't smoke any more. I no longer live with my parents."], "c": [["`no longer / any more / anymore`", "\\b(no longer|any more|anymore)\\b"]]}
+];

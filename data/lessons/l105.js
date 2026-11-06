@@ -45,3 +45,9 @@ window.LESSONS[105] = {
     { h: "احفظ", en: ["married to · depend on"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[105].apply = [
+  {"p": "اكتب ثلاث جمل عن حياتك بحروف جر متنوعة.", "use": "{k:in} · {k:on} · {k:at} · {k:with} · {k:by}", "m": ["I live in Riyadh with my family. I go to work by car. I usually have lunch at my desk."], "c": [["`by` + وسيلة (بلا `the`)", "\\bby\\s+(car|bus|train|plane|taxi|bike|metro)\\b"], ["لم تكتب `by the car` أو `by foot`", "!\\bby (the car|foot)\\b"]]},
+  {"p": "اكتب جملة فيها حرف جر يتبعه فعل بـ `ing`.", "use": "{k:before} {v:sleep}{e:ing} · {k:after} {v:finish}{e:ing}", "m": ["I always check my emails before starting work."], "c": [["حرف جر + `ing`", "\\b(before|after|without|by|instead of|about|of|for)\\s+\\w+ing\\b"]]}
+];

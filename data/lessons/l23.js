@@ -78,3 +78,9 @@ window.LESSONS[23].steps.push(
       note: "`is expected to`, `will probably`, `are likely to` = درجات يقين. `will have changed` = اكتمال قبل نقطة مستقبلية." }],
     check: { q: "Which form shows completion before a future point?", o: ["is expected to rise", "will have changed"], a: 1, why: "`will have changed` = مستقبل تام." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[23].apply = [
+  {"p": "اكتب عن عطلتك القادمة: خطة (`going to`)، موعد مرتب (`ing`)، وتوقع (`will`).", "use": "{s:I}{a:'m} {a:going to} … · {s:We}{a:'re} {v:fly}{e:ing} … · {s:It}{a:'ll} {v:be} …", "m": ["I'm going to visit my cousins in Abha. We're flying there on Friday. I think the weather will be cool."], "c": [["`going to`", "\\bgoing to\\b"], ["مضارع مستمر لموعد", "\\b(am|is|are|'m|'s|'re)\\s+(?!going)\\w+ing\\b"], ["`will`", "\\b(will|'ll|won't)\\b"]]},
+  {"p": "اكتب جملة بزمن مستقبلي مع `when / after` بالمضارع.", "use": "{k:When} {s:I} {v:finish} …, {s:I}{a:'ll} …", "m": ["When I finish this course, I'll book the exam."], "c": [["`when / after` + مضارع (لا `will`)", "\\b(when|after|as soon as|before)\\s+I\\s+(finish|get|arrive|have|see|come|pass)\\b"], ["لم تضع `will` بعد `when`", "!\\b(when|after|as soon as|before)\\s+\\w+\\s+will\\b"]]}
+];

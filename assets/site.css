@@ -440,3 +440,24 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .pg-en .t-s, .pg-en .t-v, .pg-en .t-a, .pg-en .t-k, .pg-en .t-n, .pg-en .t-q, .pg-en .t-o { padding: 0 2px; border-radius: 4px; background: color-mix(in srgb, currentColor 10%, transparent); }
 .pg-ar { margin: 0; color: var(--muted); }
 .pg-en .t-k { background: none; text-decoration: underline 2px; text-underline-offset: 5px; }
+
+/* طبّق على نفسك */
+.apply { display: grid; gap: 14px; }
+.ap { display: grid; gap: 10px; }
+.ap-n { font-size: .8rem; font-weight: 700; color: var(--accent); }
+.ap-p { margin: 0; font-weight: 600; line-height: 1.8; }
+.ap-use { display: grid; gap: 4px; background: var(--soft); border-radius: 14px; padding: 10px 12px; }
+.ap-use .s, .ap-model .s { text-align: left; direction: ltr; }
+.ap-ta { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.05rem; line-height: 1.6; padding: 12px 14px; border-radius: 14px; border: 2px solid var(--line); background: var(--bg); color: var(--ink); resize: vertical; text-align: left; }
+.ap-ta:focus { outline: none; border-color: var(--accent); }
+.ap-btns { display: flex; gap: 8px; }
+.ap-res { display: grid; gap: 10px; }
+.ap-chk { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.ap-chk li { display: flex; gap: 8px; align-items: flex-start; padding: 8px 10px; border-radius: 12px; background: var(--soft); line-height: 1.7; }
+.ap-chk .ic { font-weight: 800; min-width: 1.2em; text-align: center; }
+.ap-chk li.y { background: var(--ok-soft); } .ap-chk li.y .ic { color: var(--ok); }
+.ap-chk li.n { background: var(--bad-soft); } .ap-chk li.n .ic { color: var(--bad); }
+.ap-chk li.m .ic { color: var(--muted); }
+.ap-model { display: grid; gap: 4px; border-inline-start: 4px solid var(--accent); padding: 6px 12px; }
+.ap-note { margin: 0; font-size: .8rem; color: var(--muted); }
+.ap-warn { color: var(--bad); font-weight: 600; }

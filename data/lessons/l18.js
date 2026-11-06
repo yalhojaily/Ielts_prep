@@ -82,3 +82,9 @@ window.LESSONS[18].steps.push(
       note: "`going to visit` = خطة محجوزة مسبقًا. `'ll probably be` = توقع برأي. `'ll get` = قرار ووعد في لحظة الكلام." }],
     check: { q: "Why \"I'll get you some\" and not \"I'm going to get\"?", o: ["It was planned before.", "B decides at the moment of speaking."], a: 1, why: "القرار وُلد لحظة الطلب ← `will`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[18].apply = [
+  {"p": "اكتب ثلاثة توقعات عن المستقبل بعد عشر سنوات.", "use": "{s:I} {k:think} {s:people} {a:will} {v:work} …", "m": ["I think most people will work from home. Cars will probably drive themselves. I don't think paper books will disappear."], "c": [["استخدمت `will` + فعل أصلي", "\\b(will|won't|'ll)\\s+(probably\\s+)?\\w+"], ["استخدمت `I think / probably`", "\\b(think|probably|perhaps|maybe)\\b"], ["لم تضع `to` بعد `will`", "!\\bwill\\s+to\\b"]]},
+  {"p": "صديقك يقول: «`I'm thirsty`» أو «`This bag is heavy`». اعرض المساعدة فورًا.", "use": "{s:I}{a:'ll} {v:get} you …", "m": ["Don't worry, I'll carry it for you."], "c": [["قرار لحظي بـ `I'll`", "\\bI'll|I will\\b"]]}
+];

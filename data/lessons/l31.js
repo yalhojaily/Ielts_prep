@@ -71,3 +71,9 @@ window.LESSONS[31].steps.push(
       note: "الأولى نوع 0 (حقيقة)، الثانية نوع 1 (ممكن)، الثالثة نوع 2 (خيال الآن)، الرابعة نوع 3 (ماضٍ لم يحدث)." }],
     check: { q: "\"If smartphones hadn't been invented, our lives would have been different\" is…", o: ["Type 1", "Type 2", "Type 3"], a: 2, why: "`had` + v3 و`would have` + v3 ← النوع 3." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[31].apply = [
+  {"p": "اكتب ثلاث جمل شرط عن دراستك للإنجليزية: نوع 1 ونوع 2 ونوع 3.", "use": "If + present → will · If + past → would · If + had v3 → would have v3", "m": ["If I practise every day, I'll improve quickly. If I lived in London, I would speak better. If I had started earlier, I would have taken the exam last year."], "c": [["نوع 1 (`will`)", "\\bif\\b[^.]*\\b(will|'ll)\\b"], ["نوع 2 (`would` + فعل)", "\\bwould\\s+(?!have)\\w+"], ["نوع 3 (`would have + v3`)", "\\bwould have\\s+\\w+"]]},
+  {"p": "أكمل بصدق: `If I could change one thing in my city, …`", "use": "{k:If} {s:I} {a:could} …, {s:I} {a:would} …", "m": ["If I could change one thing in my city, I would build more parks."], "c": [["`would` في جزء النتيجة", "\\bwould\\b"]]}
+];

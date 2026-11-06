@@ -47,3 +47,9 @@ window.LESSONS[120] = {
     { h: "التوضيح", en: ["Sorry, could you repeat that? · Do you mean…?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[120].apply = [
+  {"p": "اكتب بداية حوار مع شخص قابلته في مؤتمر: تحية، سؤال، رد اهتمام.", "use": "{k:Nice to meet you}. {q:What} brings you here? … {k:Really? That sounds} …", "m": ["Hi, nice to meet you. What do you do? Oh really? That sounds interesting. How long have you been doing that?"], "c": [["تحية أو عبارة افتتاح", "\\b(nice to meet you|how are you|how's it going|hi|hello)\\b"], ["سؤال مفتوح", "\\b(what|how|where|why)\\b[^.?]*\\?"], ["رد يعبر عن الاهتمام (`Really? / That sounds…`)", "\\b(really\\?|that sounds|how interesting|oh,? really)\\b"]]},
+  {"p": "اختم الحديث بلطف.", "use": "{k:It was nice talking to you}. {k:I'd better} …", "m": ["Well, it was great talking to you. I'd better get going, but let's keep in touch."], "c": [["عبارة ختام", "\\b(nice talking|great talking|good to see you|I'd better|I should get going|keep in touch|see you)\\b"]]}
+];

@@ -44,3 +44,9 @@ window.LESSONS[77] = {
     { h: "الأشياء", en: ["it / they (لا he / she)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[77].apply = [
+  {"p": "اكتب ثلاث جمل عن أصدقائك بضمائر الفاعل والمفعول.", "use": "{s:She} {v:helped} {o:me}. · {s:I} {v:called} {o:them}.", "m": ["My friend Sara helped me with my essay. I thanked her. We often study together, and our teacher likes us."], "c": [["ضمير مفعول بعد الفعل (`me, him, her, us, them`)", "\\b\\w+\\s+(me|him|her|us|them)\\b"], ["لم تكتب `me and him went` أو `between you and I`", "!\\b(me and \\w+ (went|are|were)|between you and I)\\b"]]},
+  {"p": "اكتب جملة بـ `it` كفاعل للطقس أو الوقت.", "use": "{s:It}{a:'s} cold. {s:It} {v:takes} …", "m": ["It's very hot today, and it takes an hour to get to the city centre."], "c": [["`It + is / takes …`", "\\bit(\\s+is|'s|\\s+takes|\\s+was)\\b"]]}
+];

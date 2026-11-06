@@ -52,3 +52,9 @@ window.LESSONS[69] = {
     { h: "مفرد", en: ["The news {a:is}…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[69].apply = [
+  {"p": "اكتب جملًا عن عائلتك وبيتك بجموع شاذة أو خاصة (`children, people, men, women…`).", "use": "{s:My} {o:children} … · two {o:women} …", "m": ["I have three children. There are two women in my team. My feet hurt after the long walk."], "c": [["جمع شاذ", "\\b(children|people|men|women|feet|teeth|mice|wives|knives|lives|shelves)\\b"], ["لم تكتب `childs / peoples / mans`", "!\\b(childs|childrens|peoples|mans|womans|foots|tooths)\\b"]]},
+  {"p": "اكتب جملة فيها جمع بـ `ies` وجمع بـ `es`.", "use": "{o:cities} · {o:boxes}", "m": ["I have visited many cities and bought a lot of boxes of dates."], "c": [["`ies`", "\\b\\w+ies\\b"], ["`es` بعد `s / sh / ch / x`", "\\b\\w+(sses|shes|ches|xes)\\b"]]}
+];

@@ -70,3 +70,9 @@ window.LESSONS[12].steps.push(
       note: "`all week` (مدة) ← مستمر. `half of it` و`passed` (نتيجة) ← تام بسيط." }],
     check: { q: "Why \"I've passed\" and not \"I've been passing\"?", o: ["It is a completed result.", "It is an activity over time."], a: 0, why: "النجاح نتيجة مكتملة، لا نشاط يستمر ← التام البسيط." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[12].apply = [
+  {"p": "اكتب عن نشاط تمارسه منذ مدة ولا يزال مستمرًا.", "use": "{s:I}{a:'ve been} {v:learn}{e:ing} … {k:for} …", "m": ["I've been learning English for three months. I've been going to the gym since January."], "c": [["استخدمت `have / has been + ing`", "\\b(have|has|'ve|'s)\\s+been\\s+\\w+ing\\b"], ["ذكرت المدة بـ `for / since`", "\\b(for|since)\\b"]]},
+  {"p": "صف نتيجة ظاهرة الآن لنشاط حديث (ملابس متسخة، عينان متعبتان…).", "use": "{s:I}{a:'m} tired because {s:I}{a:'ve been} {v:work}{e:ing} …", "m": ["My eyes are tired because I've been reading all day."], "c": [["ربطت النتيجة بسبب بصيغة `have been + ing`", "\\bbecause\\b.*\\b(have|has|'ve|'s)\\s+been\\s+\\w+ing\\b"]]}
+];

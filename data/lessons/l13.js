@@ -87,3 +87,9 @@ window.LESSONS[13].steps.push(
       note: "الأحداث بالترتيب (`arrived, told, upgraded`) ماضٍ بسيط. ما حدث قبلها (`had been, had given, had booked`) ماضٍ تام." }],
     check: { q: "Which happened first?", o: ["They told me about the room.", "They gave my room to someone else."], a: 1, why: "`had given` ماضٍ تام ← حدث قبل `told`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[13].apply = [
+  {"p": "صف موقفًا وصلت فيه متأخرًا: ما الذي كان قد حدث قبل وصولك؟", "use": "{k:When} {s:I} {v:arrived}, {s:the meeting} {a:had} {k:already} {v:started}.", "m": ["When I got to the station, the train had already left."], "c": [["استخدمت `had + v3`", "\\bhad\\s+(already\\s+|just\\s+)?(\\w+ed|left|gone|begun|finished|eaten|taken|seen|done|written|been)\\b"], ["الحدث الثاني بالماضي البسيط (`when I arrived…`)", "\\b(when|by the time|before)\\b"]]},
+  {"p": "اكتب عن شيء فعلته لأول مرة، وأنك لم تكن قد فعلته قبل ذلك.", "use": "{s:I} {a:had} {n:never} {v:been} … before.", "m": ["I visited London in 2018. I had never been to Europe before."], "c": [["استخدمت `had never + v3`", "\\bhad\\s+never\\s+\\w+\\b"]]}
+];

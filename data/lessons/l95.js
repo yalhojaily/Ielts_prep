@@ -29,3 +29,9 @@ window.LESSONS[95] = {
     { h: "انتبه", txt: "the في الجزأين" }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[95].apply = [
+  {"p": "اكتب جملتين بـ `the` + مقارنة, `the` + مقارنة.", "use": "{k:The more} you practise, {k:the better} …", "m": ["The more I read, the more I understand. The earlier you start, the easier it is."], "c": [["`The … , the …`", "\\bthe\\s+(more|less|\\w+er)\\b[^.]*,\\s*the\\s+(more|less|\\w+er)\\b"]]},
+  {"p": "صف تغيرًا مستمرًا بتكرار المقارنة.", "use": "{k:hotter and hotter} · {k:more and more} expensive", "m": ["Summers are getting hotter and hotter. Houses are becoming more and more expensive."], "c": [["`X-er and X-er / more and more`", "\\b(\\w+er and \\w+er|more and more|less and less)\\b"]]}
+];

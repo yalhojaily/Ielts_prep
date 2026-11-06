@@ -43,3 +43,9 @@ window.LESSONS[27] = {
     { h: "الماضي", en: ["{a:should have been} {v:done}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[27].apply = [
+  {"p": "اكتب ثلاث قواعد لمكان عملك أو بيتك بالمبني للمجهول.", "use": "{s:Phones} {a:must} {a:be} {v:switched} off …", "m": ["Phones must be switched off in meetings. Shoes should be left at the door. The lights can be turned off after 10."], "c": [["`modal + be + v3`", "\\b(must|should|can|can't|could|may|might|has to|have to)\\s+be\\s+\\w+"], ["لم تنسَ `be` (`must switched` ✗)", "!\\b(must|should|can|may|might)\\s+(\\w+ed)\\b"]]},
+  {"p": "اقترح حلًا لمشكلة في مدينتك بالمبني للمجهول.", "use": "{s:More trees} {a:should be} {v:planted}.", "m": ["More buses should be provided to reduce traffic."], "c": [["`should be + v3`", "\\bshould\\s+be\\s+\\w+"]]}
+];

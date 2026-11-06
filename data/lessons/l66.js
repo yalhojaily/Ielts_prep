@@ -40,3 +40,9 @@ window.LESSONS[66] = {
     { h: "nobody", en: ["{k:Nobody} called. (لا didn't)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[66].apply = [
+  {"p": "صف أشياء غير موجودة في حيّك أو مدينتك.", "use": "There {a:are} {n:no} … · {n:None} {k:of} …", "m": ["There are no cinemas near my house. None of my neighbours have cats. There isn't any park in my street."], "c": [["`no` + اسم", "\\bno\\s+\\w+"], ["`none of` + الاسم", "\\bnone of\\b"], ["لم تكتب `none` قبل الاسم مباشرة", "!\\bnone\\s+(?!of\\b)\\w+s\\b"]]},
+  {"p": "أجب بكلمة واحدة: `How many mistakes did you make?` (لا شيء)", "use": "{n:None}.", "m": ["None. I didn't make any mistakes."], "c": [["`None` وحدها كإجابة", "\\bnone\\b"]]}
+];

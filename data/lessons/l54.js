@@ -47,3 +47,9 @@ window.LESSONS[54] = {
     { h: "يتغير المعنى", en: ["agree with / on / to"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[54].apply = [
+  {"p": "اكتب ثلاث جمل عن نفسك بأفعال يتبعها حرف جر.", "use": "{s:I} {v:depend} {k:on} … · {s:I}{a:'m} {v:think}{e:ing} {k:about} …", "m": ["I'm thinking about changing my job. I often worry about the future. I believe in hard work."], "c": [["فعل + حرف جر صحيح", "\\b(depend|depends|rely)\\s+on\\b|\\b(think|thinking|worry|worried|talk|dream|care)\\s+about\\b|\\bbelieve in\\b|\\b(apply|wait|look|listen)\\s+(for|at|to)\\b"], ["لم تكتب `discuss about` أو `listen music`", "!\\b(discuss about|listen music|wait me)\\b"]]},
+  {"p": "فعل + حرف جر + `ing`: اكتب جملة عن شيء تخطط له أو تخاف منه.", "use": "{s:I}{a:'m} {k:interested in} {v:start}{e:ing} …", "m": ["I'm looking forward to visiting Japan."], "c": [["حرف جر + `ing` (`look forward to visiting…`)", "\\b(in|about|of|to|for|on)\\s+\\w+ing\\b"], ["لم تكتب `look forward to visit`", "!\\blook(ing)? forward to\\s+(?!\\w+ing)\\w+\\b"]]}
+];

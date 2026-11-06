@@ -49,3 +49,9 @@ window.LESSONS[14] = {
     { h: "مقابل التام", en: ["had written 3 (نتيجة) · had been writing (مدة)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[14].apply = [
+  {"p": "صف حالتك عندما حدث شيء بعد نشاط طويل.", "use": "{s:I} {a:had been} {v:wait}{e:ing} for an hour when …", "m": ["I had been waiting for an hour when the bus finally came."], "c": [["استخدمت `had been + ing`", "\\bhad\\s+been\\s+\\w+ing\\b"], ["ذكرت المدة", "\\b(for|since)\\b"]]},
+  {"p": "فسّر سبب حالة في الماضي (تعب، بلل…) بنشاط سابق.", "use": "{s:She} {a:was} tired because {s:she} {a:had been} {v:work}{e:ing} …", "m": ["I was exhausted because I had been studying all night."], "c": [["`because + had been + ing`", "\\bbecause\\b.*\\bhad\\s+been\\s+\\w+ing\\b"]]}
+];

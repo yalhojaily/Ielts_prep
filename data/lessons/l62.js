@@ -47,3 +47,9 @@ window.LESSONS[62] = {
     { h: "انتبه", en: ["Maybe he's right. = He may be right."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[62].apply = [
+  {"p": "اكتب ثلاثة احتمالات لعطلة الأسبوع القادم.", "use": "{s:We} {a:may} … · {s:It} {a:could} … · {s:I} {a:might not} …", "m": ["We may visit my parents. It could be too hot to go out. I might not have time to read."], "c": [["`may / might / could` + فعل أصلي", "\\b(may|might|could)\\s+(not\\s+)?\\w+"], ["لم تكتب `maybe will` بدل `may`", "!\\bmaybe will\\b"]]},
+  {"p": "اكتب حقيقة عامة عن الإمكان بـ `can` (ليس عن نفسك).", "use": "{s:Summer in Riyadh} {a:can} {v:be} very hot.", "m": ["Driving in the city can be stressful."], "c": [["`can + be` للإمكان العام", "\\bcan\\s+be\\b"]]}
+];

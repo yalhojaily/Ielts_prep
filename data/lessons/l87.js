@@ -36,3 +36,9 @@ window.LESSONS[87] = {
     { h: "The reason", en: ["The reason is {k:that}…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[87].apply = [
+  {"p": "أكّد ثلاث معلومات عن نفسك بجمل تحويل التركيز.", "use": "{k:What} {s:I} {v:love} {a:is} … · {k:It was} … {k:that} …", "m": ["What I love about my job is the freedom. It was my father who taught me to read. The thing I need most is time."], "c": [["`What … is …`", "\\bwhat\\s+I\\s+\\w+[^.]*\\bis\\b"], ["`It was … that / who`", "\\bit (was|is)\\s+[^.]+\\s+(that|who)\\b"]]},
+  {"p": "صحّح معلومة بأسلوب التأكيد: «`You studied in London?`»", "use": "No, {k:it was} Manchester {k:that} …", "m": ["No, it was Manchester where I studied, not London."], "c": [["`It was … that / where`", "\\bit was\\b[^.]*\\b(that|where|who)\\b"]]}
+];

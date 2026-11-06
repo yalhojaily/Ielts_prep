@@ -76,3 +76,9 @@ window.LESSONS[70].steps.push(
       note: "لا `s` ولا `a` معها. `some / any / much` للكمية، و`a piece of` لعدّها." }],
     check: { q: "Which is correct?", o: ["How many luggages can I take?", "How much luggage can I take?"], a: 1, why: "`luggage` غير معدود ← `How much`، بلا s." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[70].apply = [
+  {"p": "اكتب ما في مطبخك الآن: أشياء معدودة وأشياء غير معدودة.", "use": "{k:some} rice · {k:a few} eggs · {k:a little} milk · {k:much} / {k:many}", "m": ["There are a few eggs and some rice. We don't have much milk, but we have many apples."], "c": [["`a few / many` مع المعدود", "\\b(a few|many|few)\\s+\\w+s\\b"], ["`a little / much` مع غير المعدود", "\\b(a little|much|little)\\s+(milk|rice|water|sugar|bread|money|time|cheese|oil|food|coffee|tea)\\b"], ["لم تكتب `breads / informations / advices`", "!\\b(breads|informations|advices|furnitures|rices|moneys|homeworks)\\b"]]},
+  {"p": "اطلب نصيحة أو معلومة بجملة صحيحة (`advice, information` غير معدودة).", "use": "Can you give me {k:some} {o:advice} / {k:a piece of} …", "m": ["Can you give me some advice about IELTS writing?"], "c": [["`advice / information` بلا `a` وبلا `s`", "\\b(some|any|a piece of|much)\\s+(advice|information)\\b"], ["لم تكتب `an advice`", "!\\ban advice\\b"]]}
+];

@@ -74,3 +74,9 @@ window.LESSONS[38].steps.push(
       note: "بعد كل عبارة تمهيد جاء الفاعل قبل الفعل. والجملة الأخيرة تنتهي بنقطة لأنها بدأت بـ `I'm not sure`." }],
     check: { q: "Why does the last sentence end with a full stop?", o: ["It starts with \"I'm not sure\" (a statement).", "It is a direct question."], a: 0, why: "بدأت بعبارة خبرية ← نقطة." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[38].apply = [
+  {"p": "اكتب ثلاثة أسئلة مهذبة لموظف استقبال في فندق.", "use": "{k:Could you tell me} {q:where} {s:the gym} {a:is}?", "m": ["Could you tell me where the gym is? Do you know what time breakfast starts? I was wondering if you have a room with a view."], "c": [["بدأت بعبارة مهذبة", "\\b(could you tell me|do you know|i was wondering|can you tell me|would you mind telling me)\\b"], ["ترتيب جملة عادي بعد أداة الاستفهام (`where the gym is`)", "\\b(where|what|when|how|if|whether)\\s+(the|it|breakfast|you|there|\\w+)\\s+\\w+"], ["لم تكتب `where is the…` بعد `Could you tell me`", "!\\b(tell me|you know)\\s+(where|what|when)\\s+(is|are|does|do)\\b"]]},
+  {"p": "حوّل السؤال المباشر: «`Is the bank open today?`» إلى سؤال غير مباشر.", "use": "{k:Do you know} {k:if} {s:the bank} {a:is} …?", "m": ["Do you know if the bank is open today?"], "c": [["استخدمت `if / whether`", "\\b(if|whether)\\b"], ["الفاعل قبل `is`", "\\bthe bank is\\b"]]}
+];

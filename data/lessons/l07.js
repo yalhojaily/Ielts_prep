@@ -72,3 +72,9 @@ window.LESSONS[7] = {
     { h: "الوقت", en: ["yesterday · last week · three years {k:ago}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[7].apply = [
+  {"p": "اكتب ثلاث جمل عن ما فعلته أمس.", "use": "{s:I} {v:visit}{e:ed} … · {s:I} {v:went} …", "m": ["Yesterday I went to work early. I finished a report and visited my parents in the evening."], "c": [["استخدمت ماضيًا منتظمًا (`ed`)", "\\b\\w+ed\\b"], ["استخدمت ماضيًا شاذًا (`went, had, ate…`)", "\\b(went|had|ate|saw|took|made|got|came|bought|met|wrote|drove|read|slept|spent|left|did|found|thought)\\b"], ["ذكرت وقتًا ماضيًا (`yesterday, last…`)", "\\b(yesterday|last|ago)\\b"]]},
+  {"p": "اكتب عن أهم حدث في حياتك قبل سنوات.", "use": "{s:I} {v:start}{e:ed} … {k:in 2015}.", "m": ["I started my first job in 2012. I moved to a new city two years later."], "c": [["حددت متى حدث (`in` + سنة / `ago`)", "\\b(in \\d{4}|ago|when I was)\\b"]]}
+];

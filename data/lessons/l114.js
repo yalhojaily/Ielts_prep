@@ -42,3 +42,9 @@ window.LESSONS[114] = {
     { h: "احفظ", en: ["impossible (لا unpossible)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[114].apply = [
+  {"p": "اكتب ثلاث جمل بكلمات فيها بادئات تغيّر المعنى (`un, dis, re, im, mis`).", "use": "{k:un}happy · {k:dis}agree · {k:re}write · {k:im}possible · {k:mis}understand", "m": ["I disagree with this idea. It's impossible to finish today. I had to rewrite my essay because my teacher misunderstood my point."], "c": [["كلمة ببادئة نفي (`un / dis / im / in / ir`)", "\\b(un|dis|im|in|ir|il)(happy|agree|possible|correct|responsible|legal|able|like|comfortable|patient|honest|formal|expensive|known|usual|fair|polite)\\b"], ["كلمة بـ `re` أو `mis`", "\\b(re|mis)(write|do|read|build|use|start|understand|understood|take|spell|use|visit|check|organise|organize)\\w*\\b"]]},
+  {"p": "اكتب جملة بكلمة ببادئة رقمية أو حجمية (`bi, multi, over, under`).", "use": "{k:over}crowded · {k:multi}national · {k:under}paid", "m": ["Many teachers feel underpaid, and classes are overcrowded."], "c": [["`over / under / multi / bi / inter`", "\\b(over|under|multi|bi|inter|post|pre|co)\\w{3,}\\b"]]}
+];

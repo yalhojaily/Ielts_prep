@@ -44,3 +44,9 @@ window.LESSONS[89] = {
     { h: "to", en: ["I'd love {a:to}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[89].apply = [
+  {"p": "قارن نفسك بشخص دون تكرار الفعل (حذف).", "use": "{s:He} {v:runs} faster than {s:I} {a:do}. · {s:I} {v:like} tea, {k:and} {s:so} {a:does} …", "m": ["My brother speaks English better than I do. I like coffee, and so does my wife. I can't swim, but my son can."], "c": [["`than I do / than she does`", "\\bthan\\s+(I|he|she|we|they|my \\w+)\\s+(do|does|did|can|am|is|was)\\b"], ["`so do I / so does …`", "\\bso\\s+(do|does|did|am|is|can|have)\\s+\\w+"], ["الفعل المساعد وحده في النهاية", "\\b(can|do|does|did|will|have)\\.\\s*"]]},
+  {"p": "رد بحذف: «`Have you finished?`» — نعم.", "use": "{k:Yes}, {s:I} {a:have}.", "m": ["Yes, I have. And I've sent it too."], "c": [["`Yes, I have`.", "\\byes, I have\\b"]]}
+];

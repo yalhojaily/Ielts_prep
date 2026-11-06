@@ -46,3 +46,9 @@ window.LESSONS[92] = {
     { h: "بعد الفعل", en: ["afraid · asleep · alone"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[92].apply = [
+  {"p": "صف شيئًا تملكه بثلاث صفات بترتيب صحيح (رأي، حجم، عمر، لون، أصل، مادة).", "use": "a {k:beautiful} {k:old} {k:wooden} table", "m": ["I have a lovely small black Italian bag. My father gave me a beautiful old wooden box."], "c": [["الرأي قبل الوصف الثابت", "\\b(beautiful|lovely|nice|great|ugly|amazing|comfortable|expensive)\\s+\\w+\\s+\\w+"], ["الترتيب: رأي ← حجم ← عمر ← لون ← أصل ← مادة", null]]},
+  {"p": "اكتب جملتين بصفة بعد فعل (`be, look, seem`).", "use": "{s:The food} {v:tastes} {k:delicious}.", "m": ["My new office looks modern, and the people there seem friendly."], "c": [["الصفة لا تأخذ `s` مع الجمع", "!\\b(goods|bigs|smalls|reds|olds)\\s+(cars|houses|people)\\b"]]}
+];

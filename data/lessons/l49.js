@@ -49,3 +49,9 @@ window.LESSONS[49] = {
     { h: "الربط", en: ["looks {k:happy} · tastes {k:good}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[49].apply = [
+  {"p": "اكتب جملتين: واحدة بفعل يحتاج مفعولًا (`transitive`) وأخرى بفعل لا يحتاجه.", "use": "{s:I} {v:bought} {o:a book}. · {s:The baby} {v:slept}.", "m": ["I sent an email to my manager. My daughter laughed."], "c": [["الجملة الأولى فيها مفعول بعد الفعل", null], ["الجملة الثانية تامة بلا مفعول", null]]},
+  {"p": "اكتب جملة بفعل ربط (`seem, look, become, feel`) + صفة.", "use": "{s:You} {v:look} {k:tired}.", "m": ["The exam seemed easy at first."], "c": [["فعل ربط + صفة (لا ظرف)", "\\b(seem|seems|seemed|look|looks|looked|feel|feels|felt|become|became|sound|sounds|sounded|get|got|taste|smell)s?\\s+(very\\s+|quite\\s+|so\\s+)?\\w+"], ["لم تكتب ظرفًا بعد فعل الربط (`looks happily` ✗)", "!\\b(seem|seems|seemed|look|looks|looked|feel|feels|felt|sound|sounds)\\s+\\w+ly\\b"]]}
+];

@@ -49,3 +49,9 @@ window.LESSONS[53] = {
     { h: "مفعولان", en: ["gave {s:me} a gift · gave a gift {k:to} me"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[53].apply = [
+  {"p": "اكتب ما يطلبه منك الآخرون أو يسمحون لك به (فعل + مفعول + `to`).", "use": "{s:My boss} {v:wants} {o:me} {a:to} … · {s:My parents} {v:let} {o:me} {v:go} …", "m": ["My manager wants me to finish the report today. My parents let me travel alone when I was eighteen. My doctor advised me to walk more."], "c": [["`want / ask / tell / advise` + شخص + `to`", "\\b(wants?|asked|asks|told|tells|advised|expects?|allowed|encouraged)\\s+(me|him|her|us|them)\\s+to\\b"], ["`let / make` + شخص + فعل بلا `to`", "\\b(let|lets|made|makes|make)\\s+(me|him|her|us|them)\\s+(?!to\\b)\\w+"], ["لم تكتب `want that you` أو `let me to`", "!\\b(want that|let me to|make me to|made me to)\\b"]]},
+  {"p": "اكتب شيئًا جعلك أحدهم تفعله رغمًا عنك.", "use": "{s:My teacher} {v:made} {o:me} {v:rewrite} …", "m": ["My teacher made me rewrite the essay."], "c": [["`made` + شخص + فعل بلا `to`", "\\bmade\\s+\\w+\\s+(?!to\\b)\\w+"]]}
+];

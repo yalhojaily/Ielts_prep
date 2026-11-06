@@ -43,3 +43,9 @@ window.LESSONS[57] = {
     { h: "الحواس", en: ["I {a:can} {v:hear}…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[57].apply = [
+  {"p": "اكتب عن قدراتك: شيء تستطيعه الآن، شيء استطعته في الطفولة، وشيء ستستطيعه.", "use": "{s:I} {a:can} … · {s:I} {a:could} … {k:when I was} … · {s:I}{a:'ll be able to} …", "m": ["I can drive. I could swim when I was six. Next year I'll be able to write academic essays."], "c": [["`can` للحاضر", "\\bcan\\s+\\w+"], ["`could` للقدرة العامة في الماضي", "\\bcould\\s+\\w+"], ["`will be able to` للمستقبل", "\\b(will|'ll)\\s+be able to\\b"], ["لم تكتب `will can`", "!\\bwill can\\b"]]},
+  {"p": "اكتب عن نجاح في موقف محدد في الماضي (`managed to / was able to`).", "use": "{s:I} {a:managed to} {v:find} … / {a:was able to}", "m": ["The traffic was terrible, but I managed to arrive on time."], "c": [["`managed to / was able to`", "\\b(managed to|was able to|were able to)\\b"]]}
+];

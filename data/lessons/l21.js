@@ -43,3 +43,9 @@ window.LESSONS[21] = {
     { h: "المدة", en: ["{a:will have been} {v:teaching} for 20 years"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[21].apply = [
+  {"p": "اكتب شيئين ستكون قد أنجزتهما قبل نهاية هذا العام.", "use": "{k:By} December, {s:I}{a:'ll have} {v:finish}{e:ed} …", "m": ["By the end of the year, I'll have finished this grammar course. I'll have saved enough money for a trip."], "c": [["استخدمت `will have + v3`", "\\b(will|'ll)\\s+have\\s+(\\w+ed|done|read|taken|written|finished|been)\\b"], ["استخدمت `by` + وقت", "\\bby\\s+(the end|next|december|\\w+)"]]},
+  {"p": "احسب مدة شيء ستصل إليها في تاريخ مستقبلي.", "use": "{k:Next year}, {s:I}{a:'ll have been} {v:work}{e:ing} here {k:for} 10 years.", "m": ["In June, I'll have been working here for ten years."], "c": [["`will have been + ing + for`", "\\b(will|'ll)\\s+have been\\s+\\w+ing\\b.*\\bfor\\b"]]}
+];

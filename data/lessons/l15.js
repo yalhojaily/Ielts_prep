@@ -50,3 +50,9 @@ window.LESSONS[15] = {
     { h: "لا تخلط", en: ["I'm {a:used to} {v:waking} early. = معتاد"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[15].apply = [
+  {"p": "اكتب ثلاثة أشياء كنت تفعلها في طفولتك ولم تعد تفعلها.", "use": "{s:I} {a:used to} {v:play} …", "m": ["I used to play football in the street. I used to watch cartoons every morning. I didn't use to like vegetables."], "c": [["استخدمت `used to` + فعل أصلي", "\\bused to\\s+\\w+"], ["في النفي: `didn't use to` (بلا `d`)", "!\\bdidn't used to\\b"]]},
+  {"p": "صف عادة متكررة في الماضي بـ `would` (أفعال لا حالات).", "use": "{k:Every summer}, {s:we} {a:would} {v:visit} …", "m": ["Every summer we would travel to Abha. My grandfather would tell us stories."], "c": [["استخدمت `would` لعادة ماضية", "\\bwould\\s+\\w+"], ["لم تستخدم `would` مع فعل حالة (`would have/like/know`)", "!\\bwould\\s+(know|like|have|own|be)\\b"]]}
+];

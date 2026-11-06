@@ -89,3 +89,9 @@ window.LESSONS[16].steps.push(
       note: "`'ve travelled` = تجربة حتى الآن. `was snowing` = خلفية المشهد. `landed, took, got, discovered, found` = الأحداث بالترتيب. `had lost` = حدث قبلها." }],
     check: { q: "Why \"It was snowing\"?", o: ["It describes the background scene.", "It happened before landing."], a: 0, why: "الماضي المستمر يرسم خلفية المشهد عند حدث رئيسي (الهبوط)." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[16].apply = [
+  {"p": "احكِ قصة قصيرة من ثلاث جمل: خلفية (`was …ing`)، حدث (ماضٍ بسيط)، وشيء سابق (`had …`).", "use": "{s:I} {a:was} {v:walk}{e:ing} … when … . {s:I} {a:had} …", "m": ["I was walking home last night when I saw my old teacher. I hadn't seen him for ten years, so we talked for an hour."], "c": [["ماضٍ مستمر", "\\b(was|were)\\s+\\w+ing\\b"], ["ماضٍ بسيط", "\\b(saw|met|went|came|\\w+ed)\\b"], ["ماضٍ تام", "\\b(had|hadn't)\\s+\\w+"]]},
+  {"p": "اكتب جملة عن عادة قديمة باستخدام `used to`.", "use": "{s:I} {a:used to} …", "m": ["I used to live in a small town."], "c": [["استخدمت `used to`", "\\bused to\\b"]]}
+];

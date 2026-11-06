@@ -98,3 +98,9 @@ window.LESSONS[29].steps.push(
       note: "النوع 1 = حل واقعي. النوع 2 (`were free`) = اقتراح بعيد. `Unless` = إذا لم." }],
     check: { q: "Why \"if public transport were completely free\"?", o: ["The writer sees it as unlikely.", "It is a scientific fact."], a: 0, why: "النوع 2 يعني أن الكاتب يراه بعيد الاحتمال." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[29].apply = [
+  {"p": "اكتب جملة شرط من كل نوع: حقيقة (0)، احتمال حقيقي (1)، تخيّل (2).", "use": "{k:If} {s:I} {v:pass}, {s:I}{a:'ll} … · {k:If} {s:I} {v:had} …, {s:I} {a:would} …", "m": ["If you heat ice, it melts. If I get band 7, I'll apply for the master's. If I had more time, I would learn French."], "c": [["النوع 1: `If` + مضارع، `will`", "\\bif\\b[^.]*\\b(will|'ll)\\b"], ["النوع 2: `If` + ماضٍ، `would`", "\\bif\\b[^.]*\\b(had|were|was|\\w+ed)\\b[^.]*\\bwould\\b"], ["لم تضع `will` بعد `if` مباشرة في نفس الجزء", "!\\bif\\s+\\w+\\s+will\\b"]]},
+  {"p": "اكتب ندمًا عن الماضي (النوع 3).", "use": "{k:If} {s:I} {a:had} {v:studied} …, {s:I} {a:would have} {v:passed}.", "m": ["If I had started earlier, I would have finished on time."], "c": [["`If + had + v3`، `would have + v3`", "\\bif\\b[^.]*\\bhad\\s+\\w+[^.]*\\bwould have\\s+\\w+"]]}
+];

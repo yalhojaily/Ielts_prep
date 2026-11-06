@@ -67,3 +67,9 @@ window.LESSONS[3] = {
     { h: "الإجابة القصيرة", en: ["Yes, I {a:do}. · No, he {a:doesn't}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[3].apply = [
+  {"p": "اكتب ثلاثة أسئلة تسألها لشخص تقابله أول مرة.", "use": "{q:Where} {a:do} {s:you} {v:live}? · {a:Does} {s:your} … {v:work}?", "m": ["Where do you live? What do you do? Do you like your job?"], "c": [["استخدمت `do / does` في الأسئلة", "\\b(do|does)\\s+(you|he|she|your|it|they)\\b"], ["كل سؤال ينتهي بعلامة ؟", "\\?"], ["لم تكتب `Where you live?` بلا `do`", "!\\b(where|what|when|why|how)\\s+(you|he|she)\\s+\\w+"]]},
+  {"p": "اكتب سؤالين عن شخص آخر (أخوك، زميلك…) باستخدام `does`.", "use": "{a:Does} {s:he} {v:speak} …? · {q:What} {a:does} {s:she} {v:do}?", "m": ["Does your brother speak English? What time does he finish work?"], "c": [["استخدمت `does`", "\\bdoes\\b"], ["الفعل بعد `does` بلا `s`", "!\\bdoes\\s+(he|she|it|your \\w+)\\s+\\w+[^s]s\\b"]]}
+];

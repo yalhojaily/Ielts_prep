@@ -83,3 +83,9 @@ window.LESSONS[24].steps.push(
       note: "كل الأفعال مجهولة لأن الكلام عن الحبوب والشوكولاتة. ولاحظ كلمات الترتيب: `First, then, Next, Finally`." }],
     check: { q: "Why don't we write \"Workers pick the beans\"?", o: ["Because the workers are not important here.", "Because \"pick\" is irregular."], a: 0, why: "المهم المنتج لا العامل ← مجهول." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[24].apply = [
+  {"p": "صف كيف يُصنع أو يُنتج شيء في بلدك (تمر، قهوة، نفط…).", "use": "{s:Dates} {a:are} {v:grown} … · {s:They} {a:are} {v:sold} …", "m": ["Dates are grown in many parts of Saudi Arabia. They are picked in summer and sold in local markets."], "c": [["استخدمت `is / are + v3`", "\\b(is|are)\\s+(\\w+ed|grown|sold|made|built|taken|eaten|known|found|kept)\\b"], ["لم تذكر `by` إلا إذا كان الفاعل مهمًا", null]]},
+  {"p": "اكتب عن شيء حدث مؤخرًا لكن الفاعل غير معروف أو غير مهم.", "use": "{s:A new mall} {a:has been} {v:opened} …", "m": ["A new park has been opened near my house."], "c": [["`has / have been + v3`", "\\b(has|have)\\s+been\\s+(\\w+ed|built|made|done|taken|stolen|sold)\\b"]]}
+];

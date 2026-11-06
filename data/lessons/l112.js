@@ -56,3 +56,9 @@ window.LESSONS[112].steps.push(
       note: "الترتيب: فكرة ← مثال (`For example`) ← إضافة (`In addition`) ← نتيجة (`As a result`) ← رأي مخالف (`However`)." }],
     check: { q: "Which word introduces a consequence?", o: ["For example", "As a result", "In addition"], a: 1, why: "`As a result` = نتيجة لذلك." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[112].apply = [
+  {"p": "اكتب فقرة صغيرة (3 جمل) عن التكنولوجيا تربط الجمل فيها بـ `However, Moreover, As a result`.", "use": "… . {k:However}, … . {k:Moreover}, …", "m": ["Smartphones make life easier. However, many people use them too much. As a result, they sleep less."], "c": [["`However`, في بداية جملة", "\\.\\s*however,"], ["أداة إضافة أو نتيجة (`Moreover / In addition / As a result / Therefore`)", "\\b(moreover|in addition|furthermore|as a result|therefore|consequently)\\b"], ["فاصلة بعد أداة الربط", "\\b(however|moreover|therefore|furthermore|as a result|in addition),"]]},
+  {"p": "اكتب جملة بـ `On the other hand` تقارن فيها رأيين.", "use": "{k:On the one hand}, … {k:On the other hand}, …", "m": ["Living in a city is convenient. On the other hand, it can be noisy."], "c": [["`On the other hand`,", "\\bon the other hand,"]]}
+];

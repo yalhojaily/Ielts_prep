@@ -46,3 +46,9 @@ window.LESSONS[61] = {
     { h: "الماضي", en: ["It {a:must have} {v:rained}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[61].apply = [
+  {"p": "انظر إلى مواقف حولك واستنتج: متأكد أنه صحيح، متأكد أنه مستحيل، محتمل.", "use": "{s:He} {a:must} {v:be} … · {s:It} {a:can't} {v:be} … · {s:She} {a:might} {v:be} …", "m": ["The lights are off, so they must be asleep. He can't be at work; it's Friday. She might be stuck in traffic."], "c": [["`must be` = متأكد أنه صحيح", "\\bmust\\s+be\\b"], ["`can't be` = مستحيل (لا `mustn't`)", "\\bcan't\\s+be\\b"], ["لم تستخدم `mustn't` للاستنتاج", "!\\bmustn't be\\b"]]},
+  {"p": "استنتج شيئًا عن الماضي: صديقك لم يرد على الهاتف أمس.", "use": "{s:He} {a:must have} {v:been} … / {a:might have} {v:forgotten}", "m": ["He must have been asleep. Or he might have left his phone at home."], "c": [["`must / might / can't have + v3`", "\\b(must|might|may|could|can't)\\s+have\\s+\\w+"]]}
+];

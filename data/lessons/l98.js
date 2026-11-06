@@ -48,3 +48,9 @@ window.LESSONS[98] = {
     { h: "انتبه", en: ["hardly = بالكاد · looks happy"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[98].apply = [
+  {"p": "صف كيف تفعل ثلاثة أشياء بظروف الحال.", "use": "{s:I} {v:drive} {k:carefully}. · {s:She} {v:speaks} {k:fluently}.", "m": ["I drive carefully. My teacher speaks slowly. I work hard and I don't sleep well before exams."], "c": [["ظرف `ly` بعد الفعل أو المفعول", "\\b\\w+ly\\b"], ["ظرف شاذ: `well / hard / fast`", "\\b(well|hard|fast|late|early)\\b"], ["لم تكتب `hardly` بمعنى بجد أو `good` بعد فعل", "!\\b(work|works|worked|study|studies|studied)\\s+hardly\\b|\\b(speak|speaks|play|plays|write|writes|did|does|do)\\s+(English\\s+)?good\\b"]]},
+  {"p": "اكتب جملة فيها صفة وظرف من الأصل نفسه.", "use": "a {k:quick} lunch · {s:I} {v:ate} {k:quickly}", "m": ["He is a careful driver; he drives carefully."], "c": [["صفة وظرف من الأصل نفسه", "\\b(\\w+)\\b.*\\b\\1ly\\b"]]}
+];

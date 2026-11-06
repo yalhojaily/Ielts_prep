@@ -53,3 +53,9 @@ window.LESSONS[34] = {
     { h: "have = يملك", en: ["{a:Do} you {v:have}…?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[34].apply = [
+  {"p": "اكتب أربعة أسئلة لمقابلة عمل، بأزمنة مختلفة.", "use": "{a:Do} you …? · {a:Have} you {k:ever} …? · {a:Did} you …? · {a:Will} you …?", "m": ["Do you enjoy working in a team? Have you ever managed a project? Why did you leave your last job? Will you be able to start next month?"], "c": [["سؤال بـ `do / does`", "\\b(do|does)\\s+you\\b"], ["سؤال بـ `have / has`", "\\b(have|has)\\s+you\\b"], ["سؤال بـ `did`", "\\bdid\\s+you\\b"], ["كل سؤال ينتهي بـ ؟", "\\?"]]},
+  {"p": "حوّل جملة عنك إلى سؤال بنعم/لا: «`I can drive`» ← …", "use": "{a:Can} {s:you} {v:drive}?", "m": ["Can you speak French?"], "c": [["قلبت الفعل المساعد قبل الفاعل", "^(can|do|does|did|is|are|was|were|have|has|will|would|could|should)\\s+\\w+"]]}
+];

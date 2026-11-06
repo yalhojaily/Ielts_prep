@@ -42,3 +42,9 @@ window.LESSONS[88] = {
     { h: "متى؟", txt: "الكتابة الرسمية · جملة واحدة تكفي" }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[88].apply = [
+  {"p": "اكتب جملتين للتأكيد بالقلب في أسلوب رسمي.", "use": "{k:Never} {a:have} {s:I} {v:seen} … · {k:Not only} {a:did} {s:he} …, but …", "m": ["Never have I seen such a beautiful city. Not only did he finish early, but he also helped others."], "c": [["ظرف نفي ثم فعل مساعد ثم فاعل", "\\b(never|rarely|seldom|not only|hardly|only then|little)\\s+(have|has|had|did|do|does|is|was|can|will)\\s+\\w+"], ["لم تكتب `Never I have…`", "!\\b(never|rarely|seldom)\\s+(I|he|she|we|they)\\s+(have|has|had|did)\\b"]]},
+  {"p": "اكتب جملة شرط مقلوبة بـ `Had` (= `If I had`).", "use": "{k:Had} {s:I} {v:known}, {s:I} {a:would have} …", "m": ["Had I known about the traffic, I would have left earlier."], "c": [["`Had` + فاعل + `v3`", "^had\\s+(I|we|you|he|she|they)\\s+\\w+"]]}
+];

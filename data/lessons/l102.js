@@ -47,3 +47,9 @@ window.LESSONS[102] = {
     { h: "دقيق", en: ["once a week · twice a month"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[102].apply = [
+  {"p": "اكتب عن عاداتك بأربعة ظروف تكرار مختلفة.", "use": "{s:I} {k:always} {v:drink} … · {s:I}{a:'m} {k:never} … · {k:once a week}", "m": ["I always drink water in the morning. I usually walk after dinner. I'm never late for work. I go to the gym twice a week."], "c": [["ظرف التكرار قبل الفعل الأساسي", "\\bI\\s+(always|usually|often|sometimes|rarely|never|seldom)\\s+\\w+"], ["بعد `be` (`I'm never…`)", "\\b(I'm|I am|is|are|he's|she's)\\s+(always|usually|often|sometimes|rarely|never)\\b"], ["عبارة تكرار في نهاية الجملة (`twice a week`)", "\\b(once|twice|three times|every)\\s+(a|day|week|month|year)\\b"], ["لم تكتب `I go always`", "!\\bI\\s+\\w+\\s+(always|usually|never|often)\\s+(to|the)\\b"]]},
+  {"p": "اكتب سؤالًا بـ `How often` وأجب عليه.", "use": "{q:How often} {a:do} you …? — …", "m": ["How often do you travel? About three times a year."], "c": [["`How often do / does`", "\\bhow often\\s+(do|does)\\b"]]}
+];

@@ -45,3 +45,9 @@ window.LESSONS[45] = {
     { h: "+ prep + ing", en: ["apologised {k:for} {v:being} late"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[45].apply = [
+  {"p": "انقل ثلاثة أشياء بأفعال نقل مختلفة (`advised, promised, suggested…`).", "use": "{s:She} {v:advised} me {a:to} … · {s:He} {v:suggested} {v:go}{e:ing} …", "m": ["My teacher advised me to read more. My friend promised to help me. My colleague suggested taking a break."], "c": [["`advise / tell / ask` + شخص + `to`", "\\b(advised|told|asked|warned|encouraged|reminded)\\s+\\w+\\s+to\\s+\\w+"], ["`promise / agree / refuse + to`", "\\b(promised|agreed|refused|offered|decided)\\s+to\\s+\\w+"], ["`suggest + ing` أو `that`", "\\bsuggested\\s+(\\w+ing|that)\\b"], ["لم تكتب `suggested me to`", "!\\bsuggested\\s+(me|him|her|us)\\s+to\\b"]]},
+  {"p": "انقل اعتذارًا: «`Sorry, I broke your pen`».", "use": "{s:He} {v:apologised} {k:for} {v:break}{e:ing} …", "m": ["He apologised for breaking my pen."], "c": [["`apologised for + ing`", "\\bapologi[sz]ed\\s+for\\s+\\w+ing\\b"]]}
+];

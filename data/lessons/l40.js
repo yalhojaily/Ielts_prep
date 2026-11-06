@@ -44,3 +44,9 @@ window.LESSONS[40] = {
     { h: "بكلمة", en: ["Who? · Where to? · Who with?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[40].apply = [
+  {"p": "صديقك يقول: «`I've just bought a new car`». اكتب رد اهتمام قصيرًا وسؤالًا بعده.", "use": "{a:Have} {s:you}? What kind?", "m": ["Have you? What kind is it?"], "c": [["رد بالفعل المساعد نفسه (`Have you?`)", "^(have|has|did|do|does|are|is|was|were|can|will)\\s+(you|he|she|they|it)\\?"]]},
+  {"p": "رد على: «`She doesn't eat meat`.» بسؤال قصير يعبر عن الاهتمام.", "use": "{a:Doesn't} {s:she}?", "m": ["Doesn't she? Since when?"], "c": [["استخدمت `doesn't she?`", "\\bdoesn't she\\?"]]}
+];

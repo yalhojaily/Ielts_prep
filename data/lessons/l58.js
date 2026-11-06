@@ -48,3 +48,9 @@ window.LESSONS[58] = {
     { h: "mind", en: ["Would you mind {v:waiting}? — No, not at all."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[58].apply = [
+  {"p": "اكتب ثلاثة طلبات مهذبة في مطعم أو فندق.", "use": "{a:Could} {s:I} {v:have} …? · {a:Would} {s:you} {k:mind} {v:open}{e:ing} …?", "m": ["Could I have the menu, please? Would you mind closing the window? Can I pay by card?"], "c": [["`Could / Can / May I …?`", "\\b(could|can|may) (I|you)\\b"], ["`Would you mind + ing`", "\\bwould you mind\\s+\\w+ing\\b"], ["لم تكتب `would you mind to`", "!\\bwould you mind to\\b"]]},
+  {"p": "اعرض مساعدتك على زميل بطريقتين.", "use": "{a:Shall} {s:I} …? · {s:I}{a:'ll} … if you like.", "m": ["Shall I print it for you? I'll carry that bag if you like."], "c": [["`Shall I / I'll / Can I help`", "\\b(shall I|I'll|can I help|let me)\\b"]]}
+];

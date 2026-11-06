@@ -45,3 +45,9 @@ window.LESSONS[51] = {
     { h: "صفة + to", en: ["It's important {a:to} {v:sleep}."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[51].apply = [
+  {"p": "اكتب جملتين بـ `to` للغرض: لماذا تتعلم الإنجليزية؟ ولماذا تعمل؟", "use": "{s:I}{a:'m} {v:study}{e:ing} English {a:to} {v:get} …", "m": ["I'm studying English to get a master's degree abroad. I work hard to give my children a good life."], "c": [["`to` + فعل للغرض", "\\bto\\s+(get|be|study|improve|give|pass|work|save|travel|help|find|have|become)\\b"], ["لم تكتب `for get` أو `for to`", "!\\bfor\\s+(to|get|study|improve)\\b"]]},
+  {"p": "اكتب جملة بصفتين: -`ed` (شعورك) و-`ing` (سبب الشعور).", "use": "{s:The film} {a:was} {k:boring}, {s:I} {a:was} {k:bored}.", "m": ["The lecture was so boring that I felt bored after ten minutes."], "c": [["صفة بـ `ing`", "\\b(boring|interesting|exciting|tiring|confusing|amazing|surprising|annoying|disappointing)\\b"], ["صفة بـ `ed`", "\\b(bored|interested|excited|tired|confused|amazed|surprised|annoyed|disappointed)\\b"]]}
+];

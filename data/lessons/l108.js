@@ -42,3 +42,9 @@ window.LESSONS[108] = {
     { h: "ثابتة", en: ["by hand · by mistake"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[108].apply = [
+  {"p": "اكتب ثلاث جمل بحروف جر أخرى (`about, like, as, with, without, for`).", "use": "{k:like} · {k:as} · {k:without} · {k:about}", "m": ["I work as an investor. My son looks like his grandfather. I can't start the day without coffee. We talked about the news."], "c": [["`as` (وظيفة/دور) أو `like` (تشبيه)", "\\b(work|works|worked)\\s+as\\s+(a|an)\\b|\\blooks?\\s+like\\b"], ["`without` + اسم أو `ing`", "\\bwithout\\s+\\w+"]]},
+  {"p": "اكتب جملة بـ `for` + مدة وأخرى بـ `during`.", "use": "{k:for} two hours · {k:during} the meeting", "m": ["I studied for two hours. My phone rang during the meeting."], "c": [["`for` + مدة", "\\bfor\\s+(\\w+\\s+)?(hours?|days?|weeks?|months?|years?|minutes?)\\b"], ["`during` + اسم", "\\bduring\\s+the\\b"], ["لم تكتب `during two hours`", "!\\bduring\\s+(two|three|\\d|a few)\\s+(hours|days|weeks)\\b"]]}
+];

@@ -51,3 +51,9 @@ window.LESSONS[72] = {
     { h: "أكاديمي", en: ["a rapid {v:increase} in prices"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[72].apply = [
+  {"p": "اكتب جملتين عن قيم مهمة لك بأسماء مجردة (`honesty, freedom, patience…`).", "use": "{o:Honesty} {v:is} … · {s:I} {v:value} {o:patience}.", "m": ["Honesty is the most important quality in a friend. I need more patience with my children."], "c": [["اسم مجرد", "\\b(honesty|freedom|patience|happiness|success|knowledge|education|health|love|trust|respect|courage|kindness)\\b"], ["بلا `the` في كلام عام", "!\\bthe (honesty|freedom|patience|happiness|success|knowledge)\\s+is\\b"]]},
+  {"p": "حوّل صفة إلى اسم مجرد في جملة: `kind` → `kindness`.", "use": "{o:kindness} · {o:freedom} · {o:importance}", "m": ["I will never forget the kindness of my first teacher."], "c": [["اسم ينتهي بـ `ness / dom / ity / ance / ment`", "\\b\\w+(ness|dom|ity|ance|ence|ment|ship|hood)\\b"]]}
+];

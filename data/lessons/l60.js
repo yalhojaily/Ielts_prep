@@ -46,3 +46,9 @@ window.LESSONS[60] = {
     { h: "الماضي", en: ["{a:had to}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[60].apply = [
+  {"p": "اكتب قواعد عملك أو دراستك: شيء إلزامي، شيء ممنوع، شيء غير ضروري.", "use": "{s:I} {a:have to} … · {s:You} {a:mustn't} … · {s:I} {a:don't have to} …", "m": ["I have to start work at 8. We mustn't use phones in meetings. I don't have to wear a suit on Thursdays."], "c": [["`have to / must`", "\\b(have to|has to|must)\\b"], ["`mustn't` = ممنوع", "\\bmustn't\\b"], ["`don't have to` = غير ضروري", "\\b(don't|doesn't) have to\\b"]]},
+  {"p": "اكتب شيئًا اضطررت لفعله في الماضي.", "use": "{s:I} {a:had to} …", "m": ["Last week I had to work on Saturday."], "c": [["`had to`", "\\bhad to\\b"], ["لم تكتب `musted`", "!\\bmusted\\b"]]}
+];

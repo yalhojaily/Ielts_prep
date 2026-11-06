@@ -40,3 +40,9 @@ window.LESSONS[22] = {
     { h: "على وشك", en: ["I {a:was about to} {v:leave} when…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[22].apply = [
+  {"p": "اكتب عن خطة كانت لديك في الماضي ولم تتحقق.", "use": "{s:I} {a:was} {a:going to} {v:travel}, but …", "m": ["I was going to study medicine, but I changed my mind."], "c": [["`was / were going to`", "\\b(was|were)\\s+going to\\s+\\w+"], ["ذكرت لماذا لم يحدث (`but…`)", "\\bbut\\b"]]},
+  {"p": "انقل وعدًا أو توقعًا قاله شخص في الماضي.", "use": "{s:He} {v:said} {s:he} {a:would} {v:call} me.", "m": ["My friend said he would help me, but he didn't."], "c": [["استخدمت `would` كمستقبل في الماضي", "\\bwould\\s+\\w+"]]}
+];

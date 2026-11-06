@@ -51,3 +51,9 @@ window.LESSONS[116] = {
     { h: "الكتابة", en: ["rise / raise · affect (v) / effect (n)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[116].apply = [
+  {"p": "اكتب جملتين تستخدم فيهما كلمتين يخلط بينهما العرب (`make / do`، `say / tell`، `borrow / lend…`).", "use": "{k:make} a mistake · {k:do} homework · {k:tell} me · {k:say} that", "m": ["I made a mistake when I did my homework. My friend told me the answer, but he said it quietly. Can you lend me your pen?"], "c": [["`make / do` مع العبارات الصحيحة", "\\b(made|make|makes) (a mistake|a decision|money|progress|an effort|a plan)\\b|\\b(do|did|does) (homework|my homework|business|research|exercise|the shopping|a course|my best)\\b"], ["`tell` + شخص / `say` + كلام", "\\b(told|tell)\\s+(me|him|her|us|them)\\b|\\b(said|say)\\s+(that|it|\\\")"], ["لم تكتب `said me` أو `make homework` أو `borrow me`", "!\\b(said me|make (my )?homework|do a mistake|borrow me|lend from)\\b"]]},
+  {"p": "اكتب جملة صحيحة بـ `fun` أو `funny`، أو بـ `lose` أو `loose`.", "use": "The trip was {k:fun}. · The joke was {k:funny}.", "m": ["The trip was fun, and my brother told some funny stories."], "c": [["`fun / funny / lose / loose`", "\\b(fun|funny|lose|loose|lost)\\b"]]}
+];

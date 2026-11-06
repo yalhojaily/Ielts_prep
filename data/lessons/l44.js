@@ -62,3 +62,9 @@ window.LESSONS[44].steps.push(
       note: "كلامه الأصلي: `will open` ← `would open`، `has been completed` ← `had been completed`، `is progressing` ← `was progressing`، `can create` ← `could create`، `may rise` ← `might rise`." }],
     check: { q: "What were the minister's actual words?", o: ["\"The airport would open in 2028.\"", "\"The airport will open in 2028.\""], a: 1, why: "`would` في النقل أصلها `will`." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[44].apply = [
+  {"p": "انقل هذه الجمل بالكلام المنقول: «`I'm working`.» «`I've finished`.» «`I will come`.»", "use": "is → was · have → had · will → would", "m": ["She said she was working. He said he had finished. They said they would come."], "c": [["`was + ing`", "\\bwas\\s+working\\b"], ["`had + v3`", "\\bhad\\s+finished\\b"], ["`would`", "\\bwould\\s+come\\b"]]},
+  {"p": "انقل وعدًا قاله شخص أمس: «`I'll send it tomorrow`».", "use": "{s:He} {v:said} {s:he} {a:would} {v:send} it {k:the next day}.", "m": ["He said he would send it the next day."], "c": [["`would`", "\\bwould\\b"], ["غيّرت `tomorrow` إلى `the next day / the following day`", "\\b(the next day|the following day)\\b"]]}
+];

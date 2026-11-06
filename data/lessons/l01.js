@@ -83,3 +83,9 @@ window.LESSONS[1] = {
     { h: "كلمات التكرار", en: ["She {k:always} drinks tea.", "He is {k:always} late."] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[1].apply = [
+  {"p": "اكتب جملتين عن روتينك اليومي، وجملة عن شخص من عائلتك (`he / she`).", "use": "{s:I} {v:work} … · {s:My brother} {v:work}{e:s} …", "m": ["I wake up at 6 every day. I drink coffee before work. My sister teaches English at a school."], "c": [["أضفت `s / es` للفعل بعد `he / she` / اسم مفرد", "\\b(he|she|my (brother|sister|father|mother|wife|husband|son|daughter|friend))\\s+(usually\\s+|always\\s+|often\\s+)?\\w+(s|es)\\b"], ["لم تضع `s` بعد `I` (`I works` ✗)", null], ["لم تضف `am / is` قبل الفعل (`I am work` ✗)", null]]},
+  {"p": "صف مدينتك أو بلدك بجملتين: حقيقة ثابتة لا تتغير.", "use": "{s:Riyadh} {v:has} … · {s:It} {v:get}{e:s} …", "m": ["Riyadh has very hot summers. It gets very little rain."], "c": [["استخدمت فعلًا بـ `s` مع الاسم المفرد أو `It`", "\\b(it|riyadh|\\w+)\\s+(has|is|gets|\\w+s)\\b"], ["لم تستخدم `ing` (هذه حقيقة ثابتة، لا شيء يحدث الآن)", null]]}
+];

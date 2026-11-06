@@ -46,3 +46,9 @@ window.LESSONS[37] = {
     { h: "دائمًا", en: ["{q:What} {v:happened}?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[37].apply = [
+  {"p": "اكتب سؤالين عن الفاعل (بلا `do / did`) عن عائلتك أو عملك.", "use": "{q:Who} {v:cook}{e:s} in your house? · {q:What} {v:happened}?", "m": ["Who usually drives the children to school? What happened at the meeting?"], "c": [["سؤال بـ `Who / What` بلا `do / did`", "\\b(who|what)\\s+(usually\\s+)?(\\w+s|\\w+ed|happened|made|wrote|called|won)\\b"], ["لم تضع `did` بعد `Who` الفاعل", "!\\bwho did\\s+\\w+\\s+(call|win|write)\\b"]]},
+  {"p": "اكتب سؤالًا عن المفعول بـ `Who + did`.", "use": "{q:Who} {a:did} {s:you} {v:call}?", "m": ["Who did you meet at the conference?"], "c": [["`Who + did` + فاعل + فعل", "\\bwho\\s+(did|do|does)\\s+\\w+\\s+\\w+"]]}
+];

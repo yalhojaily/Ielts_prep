@@ -112,3 +112,9 @@ window.LESSONS[11].steps.push(
       note: "التام = الوضع المستمر حتى الآن والتغيرات التي نرى نتيجتها. البسيط = أحداث في وقت منتهٍ (`when I was`، `last year`)." }],
     check: { q: "Why is \"moved\" in the past simple?", o: ["It has a result now.", "It happened at a finished time (when I was at university)."], a: 1, why: "الانتقال مرتبط بوقت منتهٍ ← ماضٍ بسيط." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[11].apply = [
+  {"p": "اكتب ثلاث تجارب في حياتك (لا تذكر متى).", "use": "{s:I}{a:'ve} {k:never} {v:been} to … · {s:I}{a:'ve} {v:read} …", "m": ["I've been to Turkey twice. I've never tried sushi. I've read many books about investing."], "c": [["استخدمت `have / has + v3`", "\\b(have|has|'ve|'s)\\s+(never\\s+|already\\s+|just\\s+|ever\\s+)?(been|seen|read|tried|visited|done|had|eaten|met|written|made|lived|worked|learned|learnt|travelled|traveled|\\w+ed)\\b"], ["لم تذكر وقتًا محددًا (`yesterday / in 2019`)", "!\\b(yesterday|last (week|year|month)|in \\d{4}|ago)\\b"]]},
+  {"p": "اكتب عن شيء بدأ في الماضي ومستمر حتى الآن (`for / since`).", "use": "{s:I}{a:'ve} {v:lived} here {k:for} … / {k:since} …", "m": ["I've lived in Riyadh since 2010. I've known my best friend for twenty years."], "c": [["استخدمت `for` أو `since`", "\\b(for|since)\\b"], ["استخدمت `have / has + v3`", "\\b(have|has|'ve|'s)\\s+(\\w+ed|known|been|had|lived)\\b"]]}
+];

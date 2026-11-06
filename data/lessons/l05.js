@@ -96,3 +96,9 @@ window.LESSONS[5].steps.push(
       note: "`use, depend` = حقائق عامة. `is changing, are paying, is growing` = تغيّر يجري الآن. و`believe` بسيط دائمًا لأنه فعل حالة." }],
     check: { q: "Why is \"believe\" in the simple form in the text?", o: ["Because it's a habit.", "Because it's a state verb."], a: 1, why: "`believe` فعل حالة ذهنية، فلا يأتي بـ ing." } }
 );
+
+// طبّق على نفسك
+window.LESSONS[5].apply = [
+  {"p": "اكتب جملة عن عادتك المعتادة، وجملة عن شيء مختلف تفعله هذا الأسبوع.", "use": "{s:I} {k:usually} {v:work} … but {k:this week} {s:I}{a:'m} {v:work}{e:ing} …", "m": ["I usually go to the office by car, but this week I'm working from home."], "c": [["جملة بالمضارع البسيط مع كلمة تكرار", "\\b(usually|always|often|normally|every)\\b"], ["جملة بالمضارع المستمر", "\\b(am|is|are|'m|'s|'re)\\s+\\w+ing\\b"]]},
+  {"p": "اكتب جملة بفعل حالة (`like, know, want, need, believe`) عن نفسك.", "use": "{s:I} {v:know} … (لا I'm knowing)", "m": ["I know a lot about investing, but I want to learn more about English grammar."], "c": [["استخدمت فعل حالة", "\\b(know|like|love|want|need|believe|understand|prefer|own)\\b"], ["لم تضعه بصيغة `ing`", "!\\b(knowing|wanting|needing|believing|understanding|preferring)\\b"]]}
+];

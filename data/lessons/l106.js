@@ -45,3 +45,9 @@ window.LESSONS[106] = {
     { h: "أخرى", en: ["opposite · in front of · between"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[106].apply = [
+  {"p": "صف مكان ثلاثة أشياء في غرفتك بحروف جر المكان.", "use": "{k:on} the desk · {k:in} the drawer · {k:next to} · {k:between} · {k:under}", "m": ["My laptop is on the desk. My keys are in the drawer. The lamp is next to the bed."], "c": [["`on / in / under / next to / between / opposite…`", "\\b(on|in|under|next to|between|opposite|behind|in front of|above|near)\\s+the\\b"], ["لم تكتب `next the` أو `in front the`", "!\\b(next the|in front the|opposite to)\\b"]]},
+  {"p": "اكتب أين تكون في أوقات مختلفة بـ `at` (نقطة) و `in` (داخل مكان كبير).", "use": "{k:at} work · {k:at} home · {k:in} Riyadh", "m": ["During the day I'm at work, and in the evening I'm at home."], "c": [["`at work / at home / at school`", "\\bat\\s+(work|home|school|university|the airport|the station)\\b"], ["لم تكتب `in home` أو `at Riyadh`", "!\\b(in home|at riyadh|at saudi)\\b"]]}
+];

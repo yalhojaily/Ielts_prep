@@ -38,3 +38,9 @@ window.LESSONS[46] = {
     { h: "الفرق", en: ["didn't say ≠ said … not"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[46].apply = [
+  {"p": "انقل ثلاث جمل منفية أو أوامر بالنهي.", "use": "{s:He} {v:said} {s:he} {a:didn't} … · {s:She} {v:told} me {n:not to} …", "m": ["He said he didn't like the plan. The doctor told me not to eat sugar. She said she hadn't seen the film."], "c": [["`told / asked` + شخص + `not to`", "\\b(told|asked|warned)\\s+\\w+\\s+not to\\b"], ["لم تكتب `told me don't`", "!\\btold\\s+\\w+\\s+(don't|to not)\\b"]]},
+  {"p": "انقل: «`Don't be late!`» قالها مديرك.", "use": "{s:My manager} {v:told} us {n:not to} {v:be} late.", "m": ["My manager told us not to be late."], "c": [["`not to be late`", "\\bnot to be late\\b"]]}
+];

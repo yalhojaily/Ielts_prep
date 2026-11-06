@@ -44,3 +44,9 @@ window.LESSONS[86] = {
     { h: "takes", en: ["It takes me an hour to…"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[86].apply = [
+  {"p": "اكتب ثلاث جمل تبدأ بـ `It` التمهيدية عن التعلم أو العمل.", "use": "{k:It}{a:'s} important {a:to} … · {k:It} {v:takes} … · {k:It}{a:'s} difficult {k:for me} …", "m": ["It's important to sleep well before the exam. It takes time to learn a language. It's difficult for me to write quickly."], "c": [["`It's` + صفة + `to`", "\\bit('s| is)\\s+(\\w+\\s+)?\\w+\\s+(for \\w+\\s+)?to\\s+\\w+"], ["`It takes` + وقت", "\\bit takes\\b"], ["لم تبدأ بـ `Is important…` بلا `it`", "!(^|[.]\\s*)is (important|difficult|easy|necessary)\\b"]]},
+  {"p": "اكتب جملة بـ `It seems that`.", "use": "{k:It seems that} …", "m": ["It seems that the weather will change soon."], "c": [["`It seems / appears that`", "\\bit (seems|appears|looks)\\b"]]}
+];

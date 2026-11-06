@@ -50,3 +50,9 @@ window.LESSONS[19] = {
     { h: "تذكّر", txt: "لا will بعد when / until / as soon as" }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[19].apply = [
+  {"p": "اكتب ثلاثة مواعيد مرتبة لديك هذا الأسبوع (بالمضارع المستمر).", "use": "{s:I}{a:'m} {v:meet}{e:ing} … {k:on Thursday}.", "m": ["I'm meeting my accountant on Monday. I'm having dinner with friends on Thursday."], "c": [["المضارع المستمر لموعد مرتب", "\\b(am|is|are|'m|'s|'re)\\s+\\w+ing\\b"], ["ذكرت وقت المستقبل", "\\b(on \\w+day|tomorrow|tonight|next|this (evening|weekend))\\b"]]},
+  {"p": "اكتب جملة عن جدول رسمي (رحلة، فيلم، دوام).", "use": "{s:My flight} {v:leave}{e:s} {k:at 6 a.m.} tomorrow.", "m": ["My flight leaves at 7:30 tomorrow morning."], "c": [["المضارع البسيط مع جدول", "\\b(leaves|starts|opens|closes|arrives|departs|begins|ends)\\b"]]}
+];

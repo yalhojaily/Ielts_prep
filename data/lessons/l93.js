@@ -35,3 +35,9 @@ window.LESSONS[93] = {
     { h: "quite", en: ["quite good (نوعًا ما) · quite right (تمامًا)"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[93].apply = [
+  {"p": "صف تجربة بصفات قصوى مع `absolutely`، وصفات عادية مع `very`.", "use": "{k:very} tired · {k:absolutely} exhausted", "m": ["The hike was very hard, and by the end I was absolutely exhausted. The view was absolutely amazing."], "c": [["`absolutely` + صفة قصوى", "\\babsolutely\\s+(amazing|exhausted|freezing|boiling|starving|delicious|terrible|awful|fantastic|huge|tiny|furious|brilliant|perfect|impossible|essential)\\b"], ["لم تكتب `very` + صفة قصوى", "!\\bvery\\s+(amazing|exhausted|freezing|boiling|starving|delicious|huge|tiny|furious|perfect|impossible|fantastic|terrible)\\b"]]},
+  {"p": "اكتب جملة بـ `really` أو `completely`.", "use": "{k:really} cold · {k:completely} wrong", "m": ["You're completely right; the plan is really expensive."], "c": [["`really / completely / totally`", "\\b(really|completely|totally|utterly)\\b"]]}
+];

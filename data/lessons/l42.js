@@ -44,3 +44,9 @@ window.LESSONS[42] = {
     { h: "ذيلي وقصير", en: ["…, {a:didn't} she? · {a:Did} she?"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[42].apply = [
+  {"p": "اكتب حوارًا قصيرًا (4 أسطر) تسأل فيه زميلًا جديدًا عن عمله، بأنواع أسئلة مختلفة.", "use": "{q:What} {a:do} you do? · You're new, {a:aren't} you? · {k:Could you tell me} …", "m": ["You're new here, aren't you? What do you do exactly? Could you tell me which team you're in? How long have you worked in this field?"], "c": [["سؤال ذيلي", ",\\s*\\w+n't\\s+\\w+\\?"], ["سؤال غير مباشر", "\\b(could you tell me|do you know)\\b"], ["سؤال بأداة استفهام", "\\b(what|where|how|which|why)\\b"]]},
+  {"p": "اكتب سؤالًا عن الفاعل وسؤالًا عن المفعول عن حدث في عملك.", "use": "{q:Who} {v:called}? · {q:Who} {a:did} {s:you} {v:call}?", "m": ["Who sent this email? Who did you send it to?"], "c": [["سؤال فاعل بلا `did`", "\\bwho\\s+(\\w+ed|sent|wrote|made|took)\\b"], ["سؤال مفعول بـ `did`", "\\bwho\\s+did\\b"]]}
+];

@@ -43,3 +43,9 @@ window.LESSONS[56] = {
     { h: "الماضي", en: ["{a:should have} {v:told}"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[56].apply = [
+  {"p": "اكتب جملًا عن عملك بخمسة أفعال ناقصة مختلفة.", "use": "{s:I} {a:can} … · {s:I} {a:must} … · {s:We} {a:should} … · {s:It} {a:might} …", "m": ["I can speak two languages. I must finish this report today. We should hire more staff. The meeting might be cancelled. You may leave early on Thursday."], "c": [["فعل أصلي بلا `to` بعد الفعل الناقص", "!\\b(can|must|should|might|may|will|would|could)\\s+to\\b"], ["لم تضف `s` للفعل الناقص (`cans / musts`)", "!\\b(cans|musts|shoulds|mights)\\b"], ["لا `s` على الفعل بعد الناقص", "!\\b(can|must|should|might|may)\\s+(goes|has|works|does|speaks|finishes)\\b"]]},
+  {"p": "لُم نفسك على شيء في الماضي باستخدام `should have`.", "use": "{s:I} {a:should have} {v:studied} …", "m": ["I should have started IELTS preparation earlier."], "c": [["`should have + v3`", "\\bshould(n't)? have\\s+\\w+"]]}
+];

@@ -47,3 +47,9 @@ window.LESSONS[32] = {
     { h: "انتبه", en: ["might not = ربما لا · couldn't = مستحيل"] }
   ]
 };
+
+// طبّق على نفسك
+window.LESSONS[32].apply = [
+  {"p": "قيّم احتمال ثلاثة أشياء في مستقبلك بدرجات مختلفة.", "use": "{s:I}{a:'ll} {k:definitely} … · {s:I} {a:might} … · {s:I} {k:probably} {a:won't} …", "m": ["I'll definitely take IELTS this year. I might study abroad. I probably won't move to another city."], "c": [["درجة يقين عالية (`definitely / certainly`)", "\\b(definitely|certainly|sure)\\b"], ["احتمال متوسط (`might / may / could`)", "\\b(might|may|could)\\b"], ["ترتيب `probably`: بعد `will` وقبل `won't`", "!\\bwon't probably\\b"]]},
+  {"p": "اكتب توقعًا بـ `likely / unlikely`.", "use": "{s:It}{a:'s} {k:likely} {a:to} {v:rain} … / {s:It}{a:'s} {k:unlikely} that …", "m": ["Prices are likely to rise next year."], "c": [["`be likely to / unlikely`", "\\b(likely|unlikely)\\b"]]}
+];

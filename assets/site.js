@@ -660,6 +660,57 @@
     });
   }
 
+  var APPLY_KEY = "grammar-apply-v1";
+  function loadApply() { try { return JSON.parse(localStorage.getItem(APPLY_KEY)) || {}; } catch (e) { return {}; } }
+  function saveApply(d) { try { localStorage.setItem(APPLY_KEY, JSON.stringify(d)); } catch (e) {} }
+
+  function applyBlock(id, u, items) {
+    var wrap = el("div", "apply"), store = loadApply(), mine = store[id] || [], areas = [];
+    items.forEach(function (it, i) {
+      var c = el("div", "card ap");
+      c.appendChild(el("div", "ap-n", "المهمة " + (i + 1)));
+      c.appendChild(el("p", "ap-p", rich(it.p)));
+      if (it.use) c.appendChild(el("div", "ap-use", '<span class="pg-lab">النمط</span><div class="s" dir="ltr">' + tk(it.use) + "</div>"));
+      var ta = el("textarea", "ap-ta"); ta.dir = "ltr"; ta.rows = 3; ta.spellcheck = false;
+      ta.placeholder = "Write in English…"; ta.value = mine[i] || ""; areas.push(ta);
+      ta.addEventListener("input", function () { mine[i] = ta.value; store[id] = mine; saveApply(store); });
+      c.appendChild(ta);
+      var res = el("div", "ap-res"); res.hidden = true;
+      var row = el("div", "ap-btns");
+      row.appendChild(btn("btn", "تحقق", function () {
+        var t = ta.value.trim();
+        res.hidden = false;
+        if (t.split(/\s+/).length < 3) { res.innerHTML = '<div class="ap-warn">اكتب جملة كاملة أولًا.</div>'; return; }
+        var html = '<ul class="ap-chk">';
+        (it.c || []).forEach(function (k) {
+          var label = k[0], re = k[1], st = "m";
+          if (re) {
+            var neg = re.charAt(0) === "!", rx = new RegExp(neg ? re.slice(1) : re, "i"), hit = rx.test(t);
+            st = (neg ? !hit : hit) ? "y" : "n";
+          }
+          html += '<li class="' + st + '"><span class="ic">' + (st === "y" ? "✓" : st === "n" ? "✗" : "؟") + "</span><span>" + rich(label) + "</span></li>";
+        });
+        html += "</ul>";
+        html += '<div class="ap-model"><span class="pg-lab">جملة نموذجية</span>' + [].concat(it.m).map(function (m) { return '<div class="s" dir="ltr">' + tk(m) + "</div>"; }).join("") + "</div>";
+        html += '<p class="ap-note">✓ و✗ فحص آلي تقريبي يبحث عن الكلمات المفتاحية فقط. علامة ؟ تعني: افحصها بنفسك.</p>';
+        res.innerHTML = html;
+      }));
+      c.appendChild(row); c.appendChild(res);
+      wrap.appendChild(c);
+    });
+    var copy = btn("btn ghost", "انسخ جملي لتصحيحها مع Claude", function () {
+      var lines = areas.map(function (a, i) { return a.value.trim() ? (i + 1) + ". " + a.value.trim() : ""; }).filter(Boolean);
+      if (!lines.length) { copy.textContent = "اكتب شيئًا أولًا"; return; }
+      var txt = "I'm practising English grammar: " + u.title + ". Please correct my sentences, explain each mistake briefly in Arabic, and suggest a more natural version:\n\n" + lines.join("\n");
+      var done = function () { copy.textContent = "نُسخ ✓ الصقه في محادثة مع Claude"; };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, function () { window.prompt("انسخ النص:", txt); });
+      else window.prompt("انسخ النص:", txt);
+    });
+    copy.style.justifySelf = "start";
+    wrap.appendChild(copy);
+    return wrap;
+  }
+
   function buildLesson(root, id, u, L) {
     var gi = groupIndexOf(id), g = CATALOG[gi];
     document.body.className = "c-" + (g ? g.color : "red");
@@ -739,6 +790,14 @@
     var quizBox = el("div", "quiz"); qsScreen.appendChild(quizBox);
     var practiceIndex = screens.length - 1;
 
+    // طبّق على نفسك
+    var applyIndex = -1;
+    if (L.apply && L.apply.length) {
+      var aps = addScreen("طبّق", "طبّق على نفسك", "اكتب جملك أنت", "الفهم وحده لا يكفي. اكتب عن حياتك أنت باستخدام القاعدة، ثم اضغط «تحقق» لترى ما أصبت فيه، وقارن بالنموذج.");
+      applyIndex = screens.length - 1;
+      aps.appendChild(applyBlock(id, u, L.apply));
+    }
+
     // الخلاصة
     var ss = addScreen("الخلاصة", "الخلاصة", "الدرس في بطاقة واحدة");
     var sumCards = L.sum || (u.formula || []).slice(0, 4).map(function (f) { return { h: f[0], en: [f[1]] }; });
@@ -759,7 +818,7 @@
     ss.appendChild(un);
 
     // الاختبار
-    runQuiz(quizBox, u.questions, { key: id, goodMsg: "ممتاز، أتقنت القاعدة. انتقل إلى الخلاصة.", badMsg: "راجع شاشات الشرح ثم أعد المحاولة. الهدف 80٪.", after: ["الخلاصة ←", function () { go(screens.length - 1); }] });
+    runQuiz(quizBox, u.questions, { key: id, goodMsg: "ممتاز، أتقنت القاعدة. انتقل إلى الخلاصة.", badMsg: "راجع شاشات الشرح ثم أعد المحاولة. الهدف 80٪.", after: applyIndex >= 0 ? ["طبّق على نفسك ←", function () { go(applyIndex); }] : ["الخلاصة ←", function () { go(screens.length - 1); }] });
 
     // التنقل
     var cur = 0, seen = {};
@@ -785,7 +844,7 @@
     prev.addEventListener("click", function () { go(cur - 1); });
     next.addEventListener("click", function () { go(cur + 1); });
     document.onkeydown = function (e) {
-      if (e.target.tagName === "INPUT" || e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.altKey || e.ctrlKey || e.metaKey) return;
       if (e.key === "ArrowLeft") go(cur + 1);
       if (e.key === "ArrowRight") go(cur - 1);
     };
