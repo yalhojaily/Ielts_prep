@@ -486,3 +486,21 @@ h1 em, h2 em { font-style: normal; color: var(--accent); }
 .srs-how summary { cursor: pointer; font-weight: 700; }
 .srs-how p { margin: 8px 0 0; line-height: 1.8; }
 .srs-cap { margin: 4px 0 0; font-size: .85rem; color: var(--muted); }
+
+/* الكتابة: مقال نموذجي */
+.essay { display: grid; gap: 12px; }
+.es-task { background: var(--soft); border-radius: 14px; padding: 10px 14px; display: grid; gap: 4px; }
+.es-task .lab { font-size: .8rem; font-weight: 800; color: var(--accent); }
+.es-task p { margin: 0; text-align: left; font-weight: 600; line-height: 1.7; font-style: italic; }
+.es-p { display: grid; gap: 6px; }
+.es-lab { font-size: .8rem; font-weight: 800; color: var(--muted); }
+.es-en { margin: 0; direction: ltr; text-align: left; line-height: 1.85; font-size: 1.04rem; }
+.es-en .t-k { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); text-underline-offset: 3px; }
+.es-note { border-inline-start: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 12px 12px 0; padding: 8px 12px; line-height: 1.8; font-size: .95rem; }
+[dir="rtl"] .es-note, .es-note { border-radius: 12px; }
+.es-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.es-wc, .ap-wc { font-size: .82rem; color: var(--muted); font-weight: 700; }
+.ap-wc.ok { color: var(--ok); }
+.opts.long { display: grid; }
+.opt.long { border-radius: 16px; font-weight: 600; line-height: 1.6; padding: 10px 16px; }
+.sec-divider { grid-column: 1 / -1; margin: 18px 4px 0; font-size: 1.4rem; }

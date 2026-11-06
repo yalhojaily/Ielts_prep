@@ -34,6 +34,7 @@
 
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function maxUnit() { var m = 0; (window.CATALOG || []).forEach(function (g) { g.units.forEach(function (u) { if (u[0] > m) m = u[0]; }); }); return m || 120; }
   function el(tag, cls, html) { var n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; }
   function btn(cls, html, fn) { var b = el("button", cls, html); b.type = "button"; if (fn) b.addEventListener("click", fn); return b; }
   var AR = /[؀-ۿ]/;
@@ -155,6 +156,7 @@
         if (onDone) onDone(ok);
       });
       if (AR.test(o)) { b.style.direction = "rtl"; b.style.textAlign = "right"; }
+      if (String(o).length > 38) { b.classList.add("long"); opts.classList.add("long"); }
       opts.appendChild(b); return b;
     });
     box.appendChild(opts); box.appendChild(fb);
@@ -624,6 +626,31 @@
     return card;
   };
 
+  // مقال نموذجي فقرة فقرة، مع تحليل يظهر عند الطلب
+  function words(t) { return String(t).replace(/\{[a-z]:([^{}]*)\}/g, "$1").split(/\s+/).filter(function (w) { return /[A-Za-z0-9]/.test(w); }).length; }
+  B.essay = function (s) {
+    var card = el("div", "card essay"), total = 0;
+    card.appendChild(el("div", "pg-lab", rich(s.h || "مقال نموذجي")));
+    if (s.task) card.appendChild(el("div", "es-task", '<span class="lab">السؤال</span><p dir="ltr">' + tk(s.task) + "</p>"));
+    var notes = [];
+    s.paras.forEach(function (p) {
+      total += words(p.en);
+      var d = el("div", "es-p");
+      if (p.lab) d.appendChild(el("div", "es-lab", rich(p.lab)));
+      d.appendChild(el("p", "es-en", tk(p.en)));
+      if (p.note) { var n = el("div", "es-note", rich(p.note)); n.hidden = true; notes.push(n); d.appendChild(n); }
+      card.appendChild(d);
+    });
+    var foot = el("div", "es-foot", '<span class="es-wc">' + total + " كلمة</span>");
+    if (notes.length) {
+      var L1 = s.btn || "اعرض التحليل", L2 = "أخفِ التحليل";
+      var b = btn("tr-btn", L1, function () { var show = notes[0].hidden; notes.forEach(function (n) { n.hidden = !show; }); b.textContent = show ? L2 : L1; });
+      foot.insertBefore(b, foot.firstChild);
+    }
+    card.appendChild(foot);
+    return card;
+  };
+
   B.big = function (s) {
     var card = el("div", "card");
     if (s.h) card.appendChild(el("h2", "", rich(s.h)));
@@ -665,7 +692,7 @@
 
   function renderUnit(root) {
     var m = /(\d+)/.exec(location.hash || ""), id = m ? parseInt(m[1], 10) : 1;
-    if (id < 1 || id > 120) id = 1;
+    if (id < 1 || id > maxUnit()) id = 1;
     var token = (renderUnit.seq = (renderUnit.seq || 0) + 1);
     window.UNITS = window.UNITS || {}; window.LESSONS = window.LESSONS || {};
     function withUnit(cb) { if (window.UNITS[id]) cb(); else loadScript("data/units/u" + pad(id) + ".js", cb); }
@@ -684,23 +711,27 @@
   function loadApply() { try { return JSON.parse(localStorage.getItem(APPLY_KEY)) || {}; } catch (e) { return {}; } }
   function saveApply(d) { try { localStorage.setItem(APPLY_KEY, JSON.stringify(d)); } catch (e) {} }
 
-  function applyBlock(id, u, items) {
+  function applyBlock(id, u, items, mode) {
     var wrap = el("div", "apply"), store = loadApply(), mine = store[id] || [], areas = [];
     items.forEach(function (it, i) {
       var c = el("div", "card ap");
       c.appendChild(el("div", "ap-n", "المهمة " + (i + 1)));
       c.appendChild(el("p", "ap-p", rich(it.p)));
+      if (it.task) c.appendChild(el("div", "es-task", '<span class="lab">السؤال</span><p dir="ltr">' + tk(it.task) + "</p>"));
       if (it.use) c.appendChild(el("div", "ap-use", '<span class="pg-lab">النمط</span><div class="s" dir="ltr">' + tk(it.use) + "</div>"));
-      var ta = el("textarea", "ap-ta"); ta.dir = "ltr"; ta.rows = 3; ta.spellcheck = false;
+      var ta = el("textarea", "ap-ta"); ta.dir = "ltr"; ta.rows = it.long ? 14 : 3; ta.spellcheck = false;
       ta.placeholder = "Write in English…"; ta.value = mine[i] || ""; areas.push(ta);
-      ta.addEventListener("input", function () { mine[i] = ta.value; store[id] = mine; saveApply(store); });
-      c.appendChild(ta);
+      var wc = null;
+      if (it.long || it.min) { wc = el("div", "ap-wc"); }
+      function upd() { if (!wc) return; var n = words(ta.value); wc.textContent = n + " كلمة" + (it.min ? " · المطلوب " + it.min + " على الأقل" : ""); wc.classList.toggle("ok", !!it.min && n >= it.min); }
+      ta.addEventListener("input", function () { mine[i] = ta.value; store[id] = mine; saveApply(store); upd(); });
+      c.appendChild(ta); if (wc) { c.appendChild(wc); upd(); }
       var res = el("div", "ap-res"); res.hidden = true;
       var row = el("div", "ap-btns");
       row.appendChild(btn("btn", "تحقق", function () {
         var t = ta.value.trim();
         res.hidden = false;
-        if (t.split(/\s+/).length < 3) { res.innerHTML = '<div class="ap-warn">اكتب جملة كاملة أولًا.</div>'; return; }
+        if (words(t) < 3) { res.innerHTML = '<div class="ap-warn">اكتب جملة كاملة أولًا.</div>'; return; }
         var html = '<ul class="ap-chk">';
         (it.c || []).forEach(function (k) {
           var label = k[0], re = k[1], st = "m";
@@ -718,10 +749,19 @@
       c.appendChild(row); c.appendChild(res);
       wrap.appendChild(c);
     });
-    var copy = btn("btn ghost", "انسخ جملي لتصحيحها مع Claude", function () {
+    var copy = btn("btn ghost", mode === "writing" ? "انسخ كتابتك لتقييمها مع Claude" : "انسخ جملي لتصحيحها مع Claude", function () {
       var lines = areas.map(function (a, i) { return a.value.trim() ? (i + 1) + ". " + a.value.trim() : ""; }).filter(Boolean);
       if (!lines.length) { copy.textContent = "اكتب شيئًا أولًا"; return; }
-      var txt = "I'm practising English grammar: " + u.title + ". Please correct my sentences, explain each mistake briefly in Arabic, and suggest a more natural version:\n\n" + lines.join("\n");
+      var txt;
+      if (mode === "writing") {
+        txt = "I'm preparing for IELTS Academic Writing Task 2 and my target is band 8. Lesson: " + u.title + ".\n" +
+          "Please examine my writing as a strict IELTS examiner would:\n" +
+          "1. Give an estimated band for each criterion (Task Response, Coherence and Cohesion, Lexical Resource, Grammatical Range and Accuracy) with a one-line reason.\n" +
+          "2. List every error with its correction, explained briefly in Arabic.\n" +
+          "3. Tell me the two changes that would raise my score most.\n" +
+          "4. Rewrite my text at band 8 level.\n\n";
+        areas.forEach(function (a, i) { if (a.value.trim()) txt += "Task " + (i + 1) + (items[i].task ? ": " + items[i].task.replace(/\{[a-z]:([^{}]*)\}/g, "$1") : ": " + items[i].p.replace(/`/g, "")) + "\nMy answer:\n" + a.value.trim() + "\n\n"; });
+      } else txt = "I'm practising English grammar: " + u.title + ". Please correct my sentences, explain each mistake briefly in Arabic, and suggest a more natural version:\n\n" + lines.join("\n");
       var done = function () { copy.textContent = "نُسخ ✓ الصقه في محادثة مع Claude"; };
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, function () { window.prompt("انسخ النص:", txt); });
       else window.prompt("انسخ النص:", txt);
@@ -813,9 +853,10 @@
     // طبّق على نفسك
     var applyIndex = -1;
     if (L.apply && L.apply.length) {
-      var aps = addScreen("طبّق", "طبّق على نفسك", "اكتب جملك أنت", "الفهم وحده لا يكفي. اكتب عن حياتك أنت باستخدام القاعدة، ثم اضغط «تحقق» لترى ما أصبت فيه، وقارن بالنموذج.");
+      var aps = L.applyMode === "writing" ? addScreen("اكتب", "اكتب أنت", "دورك في الكتابة", "اكتب، ثم اضغط «تحقق» لترى ما طبّقته وقارن بالنموذج. وللتقييم الكامل حسب معايير IELTS انسخ كتابتك إلى Claude.")
+        : addScreen("طبّق", "طبّق على نفسك", "اكتب جملك أنت", "الفهم وحده لا يكفي. اكتب عن حياتك أنت باستخدام القاعدة، ثم اضغط «تحقق» لترى ما أصبت فيه، وقارن بالنموذج.");
       applyIndex = screens.length - 1;
-      aps.appendChild(applyBlock(id, u, L.apply));
+      aps.appendChild(applyBlock(id, u, L.apply, L.applyMode));
     }
 
     // الخلاصة
@@ -829,7 +870,7 @@
     if (u.ielts) ss.appendChild(el("div", "card ielts", "<h2>في IELTS</h2><p>" + rich(u.ielts.text) + "</p>" + (u.ielts.en ? '<div class="line">' + tk(u.ielts.en) + "</div>" : "")));
     var acts = el("div", "actions");
     acts.appendChild(btn("btn ghost", "أعد التمارين", function () { go(practiceIndex); }));
-    if (id < 120) { var a = el("a", "btn", "الدرس التالي: " + pad(id + 1) + " ←"); a.href = "unit.html#u" + (id + 1); acts.appendChild(a); }
+    if (id < maxUnit()) { var a = el("a", "btn", "الدرس التالي: " + pad(id + 1) + " ←"); a.href = "unit.html#u" + (id + 1); acts.appendChild(a); }
     else { var a2 = el("a", "btn", "العودة للفهرس"); a2.href = "index.html"; acts.appendChild(a2); }
     ss.appendChild(acts);
     var un = el("div", "unit-nav");
@@ -839,7 +880,7 @@
 
     // الاختبار
     var lessonQs = u.questions.map(function (q, i) { var c = {}; for (var k in q) c[k] = q[k]; c._k = id + ":" + i; return c; });
-    runQuiz(quizBox, lessonQs, { key: id, goodMsg: "ممتاز، أتقنت القاعدة. انتقل إلى الخلاصة.", badMsg: "راجع شاشات الشرح ثم أعد المحاولة. الهدف 80٪.", after: applyIndex >= 0 ? ["طبّق على نفسك ←", function () { go(applyIndex); }] : ["الخلاصة ←", function () { go(screens.length - 1); }] });
+    runQuiz(quizBox, lessonQs, { key: id, goodMsg: "ممتاز، أتقنت القاعدة. انتقل إلى الخلاصة.", badMsg: "راجع شاشات الشرح ثم أعد المحاولة. الهدف 80٪.", after: applyIndex >= 0 ? [L.applyMode === "writing" ? "اكتب أنت ←" : "طبّق على نفسك ←", function () { go(applyIndex); }] : ["الخلاصة ←", function () { go(screens.length - 1); }] });
 
     // التنقل
     var cur = 0, seen = {};
@@ -1002,6 +1043,7 @@
         return '<li><a href="unit.html#u' + id + '"><span class="num">' + pad(id) + '</span><span class="nm">' + (ar ? "<b>" + esc(ar) + star + "</b><span>" + esc(u[1]) + "</span>" : '<b class="en" style="text-align:right">' + esc(u[1]) + star + "</b>") + "</span>" + st + "</a></li>";
       }).join("");
       var sp = prog["s" + gi];
+      if (g.skill && !(CATALOG[gi - 1] || {}).skill) root.appendChild(el("h2", "sec-divider", "مهارات IELTS"));
       var sec = el("section", "sec-card c-" + g.color);
       sec.innerHTML = '<header class="sec-head">' + ring(Math.round(mastered / g.units.length * 100), mastered + "/" + g.units.length) +
         '<div><h2>' + esc(g.ar) + '</h2><div class="sec-meta"><span class="en">' + esc(g.en) + "</span><span>" + pad(g.units[0][0]) + "–" + pad(g.units[g.units.length - 1][0]) + "</span></div></div></header>" +
